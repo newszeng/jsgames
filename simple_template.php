@@ -128,6 +128,7 @@ class SimpleTemplate {
 }
 
 // 辅助函数
+if (!function_exists('__')) {
 function __($key, $default = '') {
     global $i18n_data, $current_lang;
     
@@ -148,7 +149,9 @@ function __($key, $default = '') {
     
     return is_string($value) ? $value : $default;
 }
+}
 
+if (!function_exists('get_language_url')) {
 function get_language_url($lang = null) {
     global $current_lang, $debug_mode, $domain;
     
@@ -160,7 +163,9 @@ function get_language_url($lang = null) {
     
     return "/{$lang}/";
 }
+}
 
+if (!function_exists('get_page_url')) {
 function get_page_url($page, $lang = null) {
     global $current_lang, $debug_mode, $domain;
     
@@ -172,8 +177,11 @@ function get_page_url($page, $lang = null) {
     
     return "/{$lang}/{$page}";
 }
+}
 
+if (!function_exists('get_static_url')) {
 function get_static_url($path) {
     global $domain;
     return "/static/{$domain}/{$path}";
+}
 }
