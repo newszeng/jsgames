@@ -376,31 +376,46 @@ if ($template === 'home.php' && isset($lang_data['home']['title'])) {
     $GLOBALS['template_data'] = $template_data;
 }
 
-// 初始化 Twig
-require_once 'vendor/autoload.php';
-
-$loader = new \Twig\Loader\FilesystemLoader("tpl/{$domain}");
-$twig = new \Twig\Environment($loader, [
-    'cache' => false, // 开发时关闭缓存
-    'debug' => true,
-]);
-
-// 添加自定义函数
-$twig->addFunction(new \Twig\TwigFunction('__', function($key, $default = '') {
-    return __($key, $default);
-}));
-
-$twig->addFunction(new \Twig\TwigFunction('get_language_url', function($lang = null) {
-    return get_language_url($lang);
-}));
-
-$twig->addFunction(new \Twig\TwigFunction('get_page_url', function($page, $lang = null) {
-    return get_page_url($page, $lang);
-}));
-
-$twig->addFunction(new \Twig\TwigFunction('get_static_url', function($path) {
-    return get_static_url($path);
-}));
+// 初始化模板引擎 (PHP 7.3 兼容版本)
+if (file_exists('vendor/autoload.php')) {
+    // 使用 Twig (如果 Composer 可用)
+    require_once 'vendor/autoload.php';
+    
+    $loader = new \Twig\Loader\FilesystemLoader("tpl/{$domain}");
+    $twig = new \Twig\Environment($loader, [
+        'cache' => false,
+        'debug' => true,
+    ]);
+    
+    $twig->addFunction(new \Twig\TwigFunction('__', function($key, $default = '') {
+        return __($key, $default);
+    }));
+    
+    $twig->addFunction(new \Twig\TwigFunction('get_language_url', function($lang = null) {
+        return get_language_url($lang);
+    }));
+    
+    $twig->addFunction(new \Twig\TwigFunction('get_page_url', function($page, $lang = null) {
+        return get_page_url($page, $lang);
+    }));
+    
+    $twig->addFunction(new \Twig\TwigFunction('get_static_url', function($path) {
+        return get_static_url($path);
+    }));
+    
+    $use_twig = true;
+} else {
+    // 使用简单模板引擎 (备用方案)
+    require_once 'simple_template.php';
+    
+    $template = new SimpleTemplate("tpl/{$domain}");
+    $template->addFunction('__', '__');
+    $template->addFunction('get_language_url', 'get_language_url');
+    $template->addFunction('get_page_url', 'get_page_url');
+    $template->addFunction('get_static_url', 'get_static_url');
+    
+    $use_twig = false;
+}
 
 // 准备模板数据
 $template_vars = array_merge($template_data, [
@@ -435,11 +450,12 @@ try {
         $template = 'index.html';
     }
     
-    echo $twig->render($template, $template_vars);
-} catch (\Twig\Error\LoaderError $e) {
-    http_response_code(500);
-    die('Template not found: ' . htmlspecialchars($template));
-} catch (\Exception $e) {
+    if ($use_twig) {
+        echo $twig->render($template, $template_vars);
+    } else {
+        echo $template->render($template, $template_vars);
+    }
+} catch (Exception $e) {
     http_response_code(500);
     die('Template error: ' . htmlspecialchars($e->getMessage()));
 }
