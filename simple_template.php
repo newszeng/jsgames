@@ -79,24 +79,48 @@ class SimpleTemplate {
             return isset($vars[$key]) ? $vars[$key] : '';
         }, $content);
         
-        // 处理简单的 for 循环 {% for item in items %}...{% endfor %}
-        $content = preg_replace_callback('/\{%\s*for\s+(\w+)\s+in\s+([^%]+)\s*%\}(.*?)\{%\s*endfor\s*%\}/s', function($matches) use ($vars) {
-            $item_var = $matches[1];
-            $array_key = trim($matches[2]);
-            $loop_content = $matches[3];
+        // 处理 for 循环 {% for key, value in items %} 或 {% for item in items %}
+        $content = preg_replace_callback('/\{%\s*for\s+([^%]+)\s*%\}(.*?)\{%\s*endfor\s*%\}/s', function($matches) use ($vars) {
+            $for_expr = trim($matches[1]);
+            $loop_content = $matches[2];
             
-            $array = $this->getNestedValue($vars, $array_key);
-            if (!is_array($array)) {
-                return '';
+            // 检查是否是 key, value 形式
+            if (preg_match('/(\w+),\s*(\w+)\s+in\s+(.+)/', $for_expr, $kv_matches)) {
+                $key_var = $kv_matches[1];
+                $value_var = $kv_matches[2];
+                $array_key = trim($kv_matches[3]);
+                
+                $array = $this->getNestedValue($vars, $array_key);
+                if (!is_array($array)) {
+                    return '';
+                }
+                
+                $output = '';
+                foreach ($array as $k => $v) {
+                    $loop_vars = array_merge($vars, [$key_var => $k, $value_var => $v]);
+                    $output .= $this->parseTemplate($loop_content, $loop_vars);
+                }
+                return $output;
+                
+            } else if (preg_match('/(\w+)\s+in\s+(.+)/', $for_expr, $simple_matches)) {
+                // 简单形式 item in items
+                $item_var = $simple_matches[1];
+                $array_key = trim($simple_matches[2]);
+                
+                $array = $this->getNestedValue($vars, $array_key);
+                if (!is_array($array)) {
+                    return '';
+                }
+                
+                $output = '';
+                foreach ($array as $item) {
+                    $loop_vars = array_merge($vars, [$item_var => $item]);
+                    $output .= $this->parseTemplate($loop_content, $loop_vars);
+                }
+                return $output;
             }
             
-            $output = '';
-            foreach ($array as $item) {
-                $loop_vars = array_merge($vars, [$item_var => $item]);
-                $output .= $this->parseTemplate($loop_content, $loop_vars);
-            }
-            
-            return $output;
+            return '';
         }, $content);
         
         // 处理简单的 if 条件 {% if condition %}...{% endif %}
