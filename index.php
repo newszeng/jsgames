@@ -408,11 +408,11 @@ if (file_exists('vendor/autoload.php')) {
     // 使用简单模板引擎 (备用方案)
     require_once 'simple_template.php';
     
-    $template = new SimpleTemplate("tpl/{$domain}");
-    $template->addFunction('__', '__');
-    $template->addFunction('get_language_url', 'get_language_url');
-    $template->addFunction('get_page_url', 'get_page_url');
-    $template->addFunction('get_static_url', 'get_static_url');
+    $template_engine = new SimpleTemplate("tpl/{$domain}");
+    $template_engine->addFunction('__', '__');
+    $template_engine->addFunction('get_language_url', 'get_language_url');
+    $template_engine->addFunction('get_page_url', 'get_page_url');
+    $template_engine->addFunction('get_static_url', 'get_static_url');
     
     $use_twig = false;
 }
@@ -453,7 +453,7 @@ try {
     if ($use_twig) {
         echo $twig->render($template, $template_vars);
     } else {
-        echo $template->render($template, $template_vars);
+        echo $template_engine->render($template, $template_vars);
     }
 } catch (Exception $e) {
     http_response_code(500);
