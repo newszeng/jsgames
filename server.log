@@ -1,0 +1,1002 @@
+[Fri Dec  5 08:52:41 2025] PHP 8.3.6 Development Server (http://localhost:8080) started
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:62398 Accepted
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:64700 Accepted
+[Fri Dec  5 08:52:41 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:52:41 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:52:41 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:62398 [200]: GET /admin/
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:62398 Closing
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:50586 Accepted
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:57090 Accepted
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:57090 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:57090 Closing
+[Fri Dec  5 08:52:41 2025] 127.0.0.1:50808 Accepted
+[Fri Dec  5 08:52:45 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:52:45 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:64700 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:64700 Closing
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:50808 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:50808 Closing
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:50586 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 08:52:45 2025] 127.0.0.1:50586 Closing
+[Fri Dec  5 08:52:46 2025] 127.0.0.1:61964 Accepted
+[Fri Dec  5 08:52:46 2025] 127.0.0.1:61964 [200]: GET /admin/login.php
+[Fri Dec  5 08:52:46 2025] 127.0.0.1:61964 Closing
+[Fri Dec  5 08:53:52 2025] 127.0.0.1:60948 Accepted
+[Fri Dec  5 08:53:52 2025] 127.0.0.1:60948 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 08:53:52 2025] 127.0.0.1:60948 Closing
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:61968 Accepted
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:57557 Accepted
+[Fri Dec  5 08:53:57 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:53:57 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:61968 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:61968 Closing
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:57557 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:57557 Closing
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:52299 Accepted
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:59640 Accepted
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:59640 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:59640 Closing
+[Fri Dec  5 08:53:57 2025] 127.0.0.1:54768 Accepted
+[Fri Dec  5 08:54:35 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:54:35 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:52299 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:52299 Closing
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:54768 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:54768 Closing
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:63307 Accepted
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:63307 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 08:54:35 2025] 127.0.0.1:63307 Closing
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:55604 Accepted
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:63823 Accepted
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:55604 [302]: POST /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:55604 Closing
+[Fri Dec  5 08:54:46 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:54:46 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:54:46 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:63823 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 08:54:46 2025] 127.0.0.1:63823 Closing
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:61498 Accepted
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:65221 Accepted
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:65221 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:65221 Closing
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:61706 Accepted
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:61706 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:61706 Closing
+[Fri Dec  5 08:54:47 2025] 127.0.0.1:64733 Accepted
+[Fri Dec  5 08:55:58 2025] 127.0.0.1:61498 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 08:55:58 2025] 127.0.0.1:61498 Closing
+[Fri Dec  5 08:55:58 2025] 127.0.0.1:64733 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 08:55:58 2025] 127.0.0.1:64733 Closing
+[Fri Dec  5 08:56:22 2025] 127.0.0.1:54452 Accepted
+[Fri Dec  5 08:56:22 2025] 127.0.0.1:54452 [404]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 08:56:22 2025] 127.0.0.1:54452 Closing
+[Fri Dec  5 08:56:31 2025] 127.0.0.1:55710 Accepted
+[Fri Dec  5 08:56:31 2025] 127.0.0.1:56004 Accepted
+[Fri Dec  5 08:56:31 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 08:56:31 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 08:56:31 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 08:56:31 2025] 127.0.0.1:55710 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 08:56:31 2025] 127.0.0.1:55710 Closing
+[Fri Dec  5 08:56:32 2025] 127.0.0.1:57631 Accepted
+[Fri Dec  5 08:56:32 2025] 127.0.0.1:64073 Accepted
+[Fri Dec  5 08:56:32 2025] 127.0.0.1:64073 [404]: GET /robots.txt?490248 - No such file or directory
+[Fri Dec  5 08:56:32 2025] 127.0.0.1:64073 Closing
+[Fri Dec  5 08:56:32 2025] 127.0.0.1:52584 Accepted
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:56004 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:56004 Closing
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:57631 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:57631 Closing
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:52584 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 08:58:36 2025] 127.0.0.1:52584 Closing
+[Fri Dec  5 08:58:51 2025] 127.0.0.1:57495 Accepted
+[Fri Dec  5 08:58:51 2025] 127.0.0.1:57495 [503]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 08:58:51 2025] 127.0.0.1:57495 Closing
+[Fri Dec  5 09:01:05 2025] 127.0.0.1:57060 Accepted
+[Fri Dec  5 09:01:05 2025] 127.0.0.1:57060 [301]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:01:05 2025] 127.0.0.1:57060 Closing
+[Fri Dec  5 09:03:10 2025] 127.0.0.1:64724 Accepted
+[Fri Dec  5 09:03:10 2025] 127.0.0.1:64724 [301]: HEAD /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:03:10 2025] 127.0.0.1:64724 Closing
+[Fri Dec  5 09:03:44 2025] 127.0.0.1:59630 Accepted
+[Fri Dec  5 09:03:45 2025] 127.0.0.1:59630 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:03:45 2025] 127.0.0.1:59630 Closing
+[Fri Dec  5 09:05:50 2025] 127.0.0.1:59016 Accepted
+[Fri Dec  5 09:05:50 2025] 127.0.0.1:59016 [500]: GET /index.php?domain=wordly-game.com&page=terms&lang=en
+[Fri Dec  5 09:05:50 2025] 127.0.0.1:59016 Closing
+[Fri Dec  5 09:17:26 2025] 127.0.0.1:55838 Accepted
+[Fri Dec  5 09:17:26 2025] 127.0.0.1:49185 Accepted
+[Fri Dec  5 09:17:26 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:17:26 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:17:26 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 09:17:26 2025] 127.0.0.1:55838 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:17:26 2025] 127.0.0.1:55838 Closing
+[Fri Dec  5 09:17:26 2025] 127.0.0.1:50414 Accepted
+[Fri Dec  5 09:17:27 2025] 127.0.0.1:50717 Accepted
+[Fri Dec  5 09:17:27 2025] 127.0.0.1:50717 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:17:27 2025] 127.0.0.1:50717 Closing
+[Fri Dec  5 09:17:27 2025] 127.0.0.1:49836 Accepted
+[Fri Dec  5 09:17:29 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:17:29 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:17:29 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 09:17:29 2025] 127.0.0.1:49185 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:17:29 2025] 127.0.0.1:49185 Closing
+[Fri Dec  5 09:17:29 2025] 127.0.0.1:49836 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:17:29 2025] 127.0.0.1:49836 Closing
+[Fri Dec  5 09:17:31 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:17:31 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:50414 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:50414 Closing
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:53478 Accepted
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:53478 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:53478 Closing
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:61885 Accepted
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:61885 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:17:31 2025] 127.0.0.1:61885 Closing
+[Fri Dec  5 09:17:32 2025] 127.0.0.1:62502 Accepted
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:53120 Accepted
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:58137 Accepted
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:53120 [302]: POST /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:53120 Closing
+[Fri Dec  5 09:17:35 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:17:35 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:17:35 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 234
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:58137 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:58137 Closing
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:62502 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:17:35 2025] 127.0.0.1:62502 Closing
+[Fri Dec  5 09:17:36 2025] 127.0.0.1:59942 Accepted
+[Fri Dec  5 09:17:36 2025] 127.0.0.1:53945 Accepted
+[Fri Dec  5 09:17:36 2025] 127.0.0.1:53945 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:17:36 2025] 127.0.0.1:53945 Closing
+[Fri Dec  5 09:18:28 2025] 127.0.0.1:57636 Accepted
+[Fri Dec  5 09:18:28 2025] 127.0.0.1:57636 [302]: GET /admin/index.php
+[Fri Dec  5 09:18:28 2025] 127.0.0.1:57636 Closing
+[Fri Dec  5 09:18:37 2025] 127.0.0.1:59942 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 09:18:37 2025] 127.0.0.1:59942 Closing
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:49819 Accepted
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:51305 Accepted
+[Fri Dec  5 09:19:55 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:19:55 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:19:55 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:49819 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:49819 Closing
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:51306 Accepted
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:62520 Accepted
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:62520 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:19:55 2025] 127.0.0.1:62520 Closing
+[Fri Dec  5 09:19:56 2025] 127.0.0.1:61851 Accepted
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:51305 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:51305 Closing
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:51306 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:61851 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:61851 Closing
+[Fri Dec  5 09:20:00 2025] 127.0.0.1:51306 Closing
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:58551 Accepted
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:58551 [200]: GET /games/wordle/classic/index.html
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:58551 Closing
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:57540 Accepted
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:57540 [404]: GET /static/wordly-game.com/images/favicon.ico - No such file or directory
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:57540 Closing
+[Fri Dec  5 09:20:01 2025] 127.0.0.1:64291 Accepted
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:64291 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:64291 Closing
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:62027 Accepted
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:62027 [200]: GET /games/wordle/classic/index.html
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:62027 Closing
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:61690 Accepted
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:54992 Accepted
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:54992 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:61690 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:61690 Closing
+[Fri Dec  5 09:20:12 2025] 127.0.0.1:54992 Closing
+[Fri Dec  5 09:20:13 2025] 127.0.0.1:62404 Accepted
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:58335 Accepted
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:60265 Accepted
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:58335 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:60265 [404]: GET /.well-known/appspecific/com.chrome.devtools.json - No such file or directory
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:60265 Closing
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:58335 Closing
+[Fri Dec  5 09:20:19 2025] 127.0.0.1:55890 Accepted
+[Fri Dec  5 09:21:05 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:21:05 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:21:05 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:21:05 2025] 127.0.0.1:55890 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:21:05 2025] 127.0.0.1:55890 Closing
+[Fri Dec  5 09:21:05 2025] 127.0.0.1:62404 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:21:05 2025] 127.0.0.1:62404 Closing
+[Fri Dec  5 09:21:05 2025] 127.0.0.1:63949 Accepted
+[Fri Dec  5 09:22:43 2025] 127.0.0.1:63949 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 09:22:43 2025] 127.0.0.1:63949 Closing
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:54152 Accepted
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:54152 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:54152 Closing
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:57122 Accepted
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:57122 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:57122 Closing
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:52079 Accepted
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:52079 [200]: GET /games/wordle/classic/index.html
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:52079 Closing
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:50373 Accepted
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:50373 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:50373 Closing
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:64009 Accepted
+[Fri Dec  5 09:32:05 2025] 127.0.0.1:60846 Accepted
+[Fri Dec  5 09:32:14 2025] 127.0.0.1:64009 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:32:14 2025] 127.0.0.1:64009 Closing
+[Fri Dec  5 09:32:14 2025] 127.0.0.1:60846 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:32:14 2025] 127.0.0.1:60846 Closing
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:56629 Accepted
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:56629 [200]: GET /games/wordle/classic/index.html
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:56629 Closing
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:63655 Accepted
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:63655 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:32:15 2025] 127.0.0.1:63655 Closing
+[Fri Dec  5 09:36:04 2025] 127.0.0.1:56968 Accepted
+[Fri Dec  5 09:36:04 2025] 127.0.0.1:56968 [503]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:36:04 2025] 127.0.0.1:56968 Closing
+[Fri Dec  5 09:38:17 2025] 127.0.0.1:54525 Accepted
+[Fri Dec  5 09:38:17 2025] 127.0.0.1:54525 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:38:17 2025] 127.0.0.1:54525 Closing
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:55229 Accepted
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:58772 Accepted
+[Fri Dec  5 09:42:39 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:42:39 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:42:39 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:55229 [200]: GET /admin/index.php
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:55229 Closing
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:51931 Accepted
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:61836 Accepted
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:61836 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:61836 Closing
+[Fri Dec  5 09:42:39 2025] 127.0.0.1:49345 Accepted
+[Fri Dec  5 09:42:41 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:42:41 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:58772 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:58772 Closing
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:51931 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:51931 Closing
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:49345 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:41 2025] 127.0.0.1:49345 Closing
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:59533 Accepted
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:62599 Accepted
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:59533 [302]: POST /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:59533 Closing
+[Fri Dec  5 09:42:45 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:42:45 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:42:45 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:62599 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:62599 Closing
+[Fri Dec  5 09:42:45 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:61427 Accepted
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:61427 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:61427 Closing
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:62994 Accepted
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:62994 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:62994 Closing
+[Fri Dec  5 09:42:46 2025] 127.0.0.1:62079 Accepted
+[Fri Dec  5 09:42:47 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:42:47 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:42:47 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:42:47 2025] 127.0.0.1:49669 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:42:47 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 09:42:47 2025] 127.0.0.1:62079 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:47 2025] 127.0.0.1:62079 Closing
+[Fri Dec  5 09:42:48 2025] 127.0.0.1:56584 Accepted
+[Fri Dec  5 09:42:51 2025] 127.0.0.1:56584 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:42:51 2025] 127.0.0.1:56584 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:54925 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:54925 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:54925 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53475 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:61508 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:63030 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53475 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53475 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:61508 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:63030 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:61508 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:63030 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:62984 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53762 Accepted
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:62984 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53762 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:62984 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:53762 Closing
+[Fri Dec  5 09:42:52 2025] 127.0.0.1:50743 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60272 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60460 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60272 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60272 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:50743 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:50743 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60460 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:60460 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:64547 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:64547 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:64547 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:54370 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:51964 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:61633 Accepted
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:54370 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:51964 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:61633 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:54370 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:51964 Closing
+[Fri Dec  5 09:43:43 2025] 127.0.0.1:61633 Closing
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:54940 Accepted
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:50638 Accepted
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:53953 Accepted
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:53953 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:53953 Closing
+[Fri Dec  5 09:44:27 2025] 127.0.0.1:52790 Accepted
+[Fri Dec  5 09:44:33 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:44:33 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:33 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:44:33 2025] 127.0.0.1:54940 [200]: GET /admin/index.php?updated=1
+[Fri Dec  5 09:44:33 2025] 127.0.0.1:54940 Closing
+[Fri Dec  5 09:44:33 2025] 127.0.0.1:52790 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:33 2025] 127.0.0.1:52790 Closing
+[Fri Dec  5 09:44:36 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:50638 [200]: GET /admin/website_pages.php?domain=wordly-game.com&act=homepage
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:50638 Closing
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:65490 Accepted
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:51426 Accepted
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:51426 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:51426 Closing
+[Fri Dec  5 09:44:36 2025] 127.0.0.1:52157 Accepted
+[Fri Dec  5 09:44:37 2025] 127.0.0.1:65490 [200]: GET /admin/lib/get_prompts.php
+[Fri Dec  5 09:44:37 2025] 127.0.0.1:65490 Closing
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:56168 Accepted
+[Fri Dec  5 09:44:40 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:44:40 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:40 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:56168 [200]: GET /admin/index.php
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:56168 Closing
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:52157 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:52157 Closing
+[Fri Dec  5 09:44:40 2025] 127.0.0.1:63616 Accepted
+[Fri Dec  5 09:44:41 2025] 127.0.0.1:50728 Accepted
+[Fri Dec  5 09:44:42 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:42 2025] 127.0.0.1:63616 [200]: GET /admin/website_pages.php?domain=wordly-game.com&act=homepage
+[Fri Dec  5 09:44:42 2025] 127.0.0.1:63616 Closing
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:60555 Accepted
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:60555 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:60555 Closing
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:56497 Accepted
+[Fri Dec  5 09:44:43 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:50728 [200]: GET /admin/website_pages.php?domain=wordly-game.com&act=template
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:50728 Closing
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:56497 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:43 2025] 127.0.0.1:56497 Closing
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:53405 Accepted
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:53405 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:53405 Closing
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:61199 Accepted
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:61199 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:61199 Closing
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:65276 Accepted
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:65276 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:44:44 2025] 127.0.0.1:65276 Closing
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:64610 Accepted
+[Fri Dec  5 09:44:48 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:64610 [200]: GET /admin/website_pages.php?domain=wordly-game.com&act=template&file=index.html
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:64610 Closing
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:54973 Accepted
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:54973 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:54973 Closing
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:58536 Accepted
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:58536 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:58536 Closing
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:59315 Accepted
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:59315 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:59315 Closing
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:63468 Accepted
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:55445 Accepted
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:63468 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:44:48 2025] 127.0.0.1:63468 Closing
+[Fri Dec  5 09:44:49 2025] 127.0.0.1:59246 Accepted
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:55445 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:55445 Closing
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:59246 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:59246 Closing
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:52162 Accepted
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:52162 [200]: GET /index.php?domain=wordly-game.com&lang=en&debug=1
+[Fri Dec  5 09:46:07 2025] 127.0.0.1:52162 Closing
+[Fri Dec  5 09:46:12 2025] 127.0.0.1:56683 Accepted
+[Fri Dec  5 09:46:12 2025] 127.0.0.1:62302 Accepted
+[Fri Dec  5 09:46:12 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:46:12 2025] 127.0.0.1:56683 [200]: GET /admin/website_pages.php?domain=wordly-game.com&act=template
+[Fri Dec  5 09:46:12 2025] 127.0.0.1:56683 Closing
+[Fri Dec  5 09:46:13 2025] 127.0.0.1:53346 Accepted
+[Fri Dec  5 09:46:13 2025] 127.0.0.1:49334 Accepted
+[Fri Dec  5 09:46:13 2025] 127.0.0.1:49334 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:46:13 2025] 127.0.0.1:49334 Closing
+[Fri Dec  5 09:46:13 2025] 127.0.0.1:59866 Accepted
+[Fri Dec  5 09:46:15 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:46:15 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:46:15 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:46:15 2025] 127.0.0.1:62302 [200]: GET /admin/index.php
+[Fri Dec  5 09:46:15 2025] 127.0.0.1:62302 Closing
+[Fri Dec  5 09:46:15 2025] 127.0.0.1:59866 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:46:15 2025] 127.0.0.1:59866 Closing
+[Fri Dec  5 09:46:19 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 09:46:19 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 09:46:19 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:53346 [200]: GET /admin/index.php
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:53346 Closing
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:53460 Accepted
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:55114 Accepted
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:55114 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:46:19 2025] 127.0.0.1:55114 Closing
+[Fri Dec  5 09:46:20 2025] 127.0.0.1:60262 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:53460 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:53460 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:60262 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:60262 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:64403 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:64403 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:64403 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:61726 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:50225 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:60982 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:62395 Accepted
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:61726 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:50225 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:60982 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:62395 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:61726 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:50225 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:60982 Closing
+[Fri Dec  5 09:46:24 2025] 127.0.0.1:62395 Closing
+[Fri Dec  5 09:47:10 2025] 127.0.0.1:59382 Accepted
+[Fri Dec  5 09:47:10 2025] 127.0.0.1:62415 Accepted
+[Fri Dec  5 09:47:10 2025] 127.0.0.1:59382 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:47:10 2025] 127.0.0.1:59382 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:62415 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:62415 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:55542 Accepted
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:55542 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:55542 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:58844 Accepted
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:61157 Accepted
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:52336 Accepted
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:51590 Accepted
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:58844 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:58844 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:61157 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:52336 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:51590 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:61157 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:52336 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:51590 Closing
+[Fri Dec  5 09:47:11 2025] 127.0.0.1:62146 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:61533 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:53082 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:61533 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:61533 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:62146 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:62146 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:53082 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:53082 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65360 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65360 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65360 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:59691 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65071 Accepted
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:59691 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:49669 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65071 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:59691 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 09:47:54 2025] 127.0.0.1:65071 Closing
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:54525 Accepted
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:54525 [200]: GET /games/wordle/classic/index.html
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:54525 Closing
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:60848 Accepted
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:55446 Accepted
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:65042 Accepted
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:65042 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:65042 Closing
+[Fri Dec  5 09:48:00 2025] 127.0.0.1:53560 Accepted
+[Fri Dec  5 09:48:02 2025] 127.0.0.1:53560 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:48:02 2025] 127.0.0.1:53560 Closing
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:60848 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:60848 Closing
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:55446 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:55446 Closing
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:59814 Accepted
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:59814 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:48:32 2025] 127.0.0.1:59814 Closing
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:51181 Accepted
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:55495 Accepted
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:50694 Accepted
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:64606 Accepted
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:51181 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:55495 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:50694 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:64606 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:51181 Closing
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:55495 Closing
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:50694 Closing
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:64606 Closing
+[Fri Dec  5 09:48:33 2025] 127.0.0.1:61026 Accepted
+[Fri Dec  5 09:50:01 2025] 127.0.0.1:61026 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 09:50:01 2025] 127.0.0.1:61026 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:60885 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:61312 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:60885 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:60885 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:61312 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:61312 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:56118 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:56118 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:56118 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:63166 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:57916 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:55946 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:63166 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:63166 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:57916 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:55946 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:49669 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:57916 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:55946 Closing
+[Fri Dec  5 09:51:22 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 09:51:23 2025] 127.0.0.1:56125 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57983 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:54583 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57983 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57983 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:56125 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:56125 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:54583 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:54583 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57677 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57677 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:57677 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:49691 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:56748 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:63249 Accepted
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:49691 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:56748 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:63249 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:49691 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:56748 Closing
+[Fri Dec  5 09:51:34 2025] 127.0.0.1:63249 Closing
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:62475 Accepted
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:49679 Accepted
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:62475 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:62475 Closing
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:49679 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:49679 Closing
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:52546 Accepted
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:52546 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:56:14 2025] 127.0.0.1:52546 Closing
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:64627 Accepted
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:59444 Accepted
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:62597 Accepted
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:60142 Accepted
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:64627 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:64627 Closing
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:59444 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:62597 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:60142 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:59444 Closing
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:62597 Closing
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:60142 Closing
+[Fri Dec  5 09:56:15 2025] 127.0.0.1:50434 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53558 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53539 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53558 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53558 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:50434 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:50434 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53539 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:53539 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:50932 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:50932 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:50932 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:60615 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:57646 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:58776 Accepted
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:60615 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:57646 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:58776 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:60615 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:57646 Closing
+[Fri Dec  5 09:56:19 2025] 127.0.0.1:58776 Closing
+[Fri Dec  5 09:56:20 2025] 127.0.0.1:53025 Accepted
+[Fri Dec  5 09:56:20 2025] 127.0.0.1:53025 [404]: GET /static/wordly-game.com/images/favicon.ico - No such file or directory
+[Fri Dec  5 09:56:20 2025] 127.0.0.1:53025 Closing
+[Fri Dec  5 09:56:20 2025] 127.0.0.1:49790 Accepted
+[Fri Dec  5 09:56:38 2025] 127.0.0.1:49790 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:56:38 2025] 127.0.0.1:49790 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:57224 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:57224 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:57224 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:62515 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:62515 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:62515 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:65324 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:55896 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:54125 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:53603 Accepted
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:65324 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:55896 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:54125 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:53603 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:65324 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:55896 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:54125 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:53603 Closing
+[Fri Dec  5 09:56:39 2025] 127.0.0.1:59134 Accepted
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:59134 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:59134 Closing
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:49691 Accepted
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:59419 Accepted
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:49691 [404]: GET /favicon.ico - No such file or directory
+[Fri Dec  5 09:56:40 2025] 127.0.0.1:49691 Closing
+[Fri Dec  5 09:56:41 2025] 127.0.0.1:51989 Accepted
+[Fri Dec  5 09:56:44 2025] 127.0.0.1:59419 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:56:44 2025] 127.0.0.1:59419 Closing
+[Fri Dec  5 09:56:45 2025] 127.0.0.1:61738 Accepted
+[Fri Dec  5 09:56:45 2025] 127.0.0.1:61738 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:45 2025] 127.0.0.1:61738 Closing
+[Fri Dec  5 09:56:45 2025] 127.0.0.1:61832 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:51989 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:51989 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:61832 [404]: GET /robots.txt?490249 - No such file or directory
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:61832 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:57434 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:57434 [200]: GET /static/wordly-game.com/css/main.css
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:57434 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:49950 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:59288 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:56352 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:58547 Accepted
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:49950 [200]: GET /static/wordly-game.com/js/main.js
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:59288 [200]: GET /static/wordly-game.com/images/wordly.png
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:56352 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:58547 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:49950 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:59288 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:56352 Closing
+[Fri Dec  5 09:56:55 2025] 127.0.0.1:58547 Closing
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 10:08:34 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 10:08:34 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 10:08:34 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:49669 [200]: GET /admin/index.php
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:59543 Accepted
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:52001 Accepted
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:52001 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:08:34 2025] 127.0.0.1:52001 Closing
+[Fri Dec  5 10:08:35 2025] 127.0.0.1:64987 Accepted
+[Fri Dec  5 10:08:36 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/website.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 10:08:36 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:59543 [200]: GET /admin/website.php?edit=wordly-game.com
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:59543 Closing
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:64987 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:64987 Closing
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:49669 [200]: GET /admin/get_themes.php?type=wordle
+[Fri Dec  5 10:08:36 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 10:08:41 2025] 127.0.0.1:53453 Accepted
+[Fri Dec  5 10:08:41 2025] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from /mnt/d/www/jsgames/admin/index.php on line 2) in /mnt/d/www/jsgames/admin/header.php on line 2
+[Fri Dec  5 10:08:41 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/header.php on line 177
+[Fri Dec  5 10:08:41 2025] PHP Warning:  Undefined array key "role" in /mnt/d/www/jsgames/admin/index.php on line 235
+[Fri Dec  5 10:08:41 2025] 127.0.0.1:53453 [200]: GET /admin/index.php
+[Fri Dec  5 10:08:41 2025] 127.0.0.1:53453 Closing
+[Fri Dec  5 10:08:41 2025] 127.0.0.1:56683 Accepted
+[Fri Dec  5 10:08:42 2025] 127.0.0.1:58628 Accepted
+[Fri Dec  5 10:08:42 2025] 127.0.0.1:61411 Accepted
+[Fri Dec  5 10:08:42 2025] 127.0.0.1:61411 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:08:42 2025] 127.0.0.1:61411 Closing
+[Fri Dec  5 10:08:42 2025] 127.0.0.1:59785 Accepted
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:56683 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:56683 Closing
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:59785 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:59785 Closing
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:58628 [200]: GET /static/wordly-game.com/css/main.min.css
+[Fri Dec  5 10:08:44 2025] 127.0.0.1:58628 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:58248 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:54168 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65300 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:58248 [200]: GET /static/wordly-game.com/css/wordly.css
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:54168 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65300 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:58248 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:54168 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65300 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:56197 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:49176 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:56197 [200]: GET /static/wordly-game.com/js/libs.min.js
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:49176 [404]: GET /assets/img/phrazle-play.png - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:49176 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:56197 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57948 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65312 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57061 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52339 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57948 [404]: GET /assets/img/strands-play.png - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57948 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65312 [404]: GET /assets/img/wordblast-play.png - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57061 [404]: GET /assets/img/spellingbee-play.png - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52339 [404]: GET /assets/img/squares-play.gif - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:65312 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:57061 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52339 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:63701 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:61735 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:63701 [404]: GET /assets/img/combinations-play.png - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:63701 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:61735 [200]: GET /static/wordly-game.com/js/main.min.js
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:61735 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52751 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51555 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52751 [200]: GET /static/wordly-game.com/js/wordly.js
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:59399 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51555 [404]: GET /assets/img/spritesvg.svg - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:59399 [404]: GET /static/wordly-game.com/img/stars.svg - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:52751 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51555 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:59399 Closing
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51254 Accepted
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51254 [404]: GET /files/wordle/en/config.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:45 2025] 127.0.0.1:51254 Closing
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:57001 Accepted
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51645 Accepted
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51514 Accepted
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:57001 [404]: GET /files/wordle/en/targets.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:57001 Closing
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51645 [404]: GET /files/wordle/en/dictionary.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51645 Closing
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51514 [404]: GET /assets/img/spritesvg.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:49796 Accepted
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:51514 Closing
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:59390 Accepted
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:49796 [404]: GET /assets/img/logo.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:49796 Closing
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:59390 [200]: GET /static/wordly-game.com/favicon.ico
+[Fri Dec  5 10:08:46 2025] 127.0.0.1:59390 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50685 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50783 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50685 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50685 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50783 [200]: GET /static/wordly-game.com/css/main.min.css
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:50783 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:58110 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:58110 [200]: GET /static/wordly-game.com/css/wordly.css
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:58110 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:64706 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:52209 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:51079 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:64706 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:64706 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:52209 [200]: GET /static/wordly-game.com/js/libs.min.js
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:51079 [404]: GET /assets/img/strands-play.png - No such file or directory
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:51079 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:52209 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53866 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:54310 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:60268 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53294 Accepted
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53866 [404]: GET /assets/img/wordblast-play.png - No such file or directory
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53866 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:54310 [404]: GET /assets/img/phrazle-play.png - No such file or directory
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:60268 [200]: GET /static/wordly-game.com/js/main.min.js
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53294 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:54310 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:60268 Closing
+[Fri Dec  5 10:08:53 2025] 127.0.0.1:53294 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:56934 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:58787 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49362 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:58787 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49362 [404]: GET /assets/img/spellingbee-play.png - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49362 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:58787 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:62724 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49669 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:57845 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54567 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:62724 [404]: GET /assets/img/squares-play.gif - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:62724 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49669 [404]: GET /assets/img/combinations-play.png - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:57845 [200]: GET /static/wordly-game.com/js/wordly.js
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54567 [404]: GET /assets/img/spritesvg.svg - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:49669 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54567 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:57845 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:55297 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:55297 [404]: GET /files/wordle/en/config.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:55297 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59880 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59490 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54517 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54770 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:56051 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59880 [404]: GET /files/wordle/en/targets.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59880 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59490 [404]: GET /files/wordle/en/dictionary.json?v45.12 - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54517 [404]: GET /static/wordly-game.com/img/stars.svg - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54770 [404]: GET /assets/img/spritesvg.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:56051 [404]: GET /assets/img/logo.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:59490 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54517 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:54770 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:56051 Closing
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:64268 Accepted
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:64268 [200]: GET /static/wordly-game.com/favicon.ico
+[Fri Dec  5 10:08:54 2025] 127.0.0.1:64268 Closing
+[Fri Dec  5 10:08:55 2025] 127.0.0.1:58816 Accepted
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:58816 [200]: GET /static/wordly-game.com/css/main.min.css
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:58816 Closing
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:65186 Accepted
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:55448 Accepted
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:65186 [200]: GET /static/wordly-game.com/css/wordly.css
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:55448 [404]: GET /.well-known/appspecific/com.chrome.devtools.json - No such file or directory
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:55448 Closing
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:65186 Closing
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62996 Accepted
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62257 Accepted
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62996 [404]: GET /static/wordly-game.com/maps/libs.min.js.map - No such file or directory
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62996 Closing
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62257 [404]: GET /static/wordly-game.com/js/main.170941ca.js.map - No such file or directory
+[Fri Dec  5 10:09:03 2025] 127.0.0.1:62257 Closing
+[Fri Dec  5 10:09:20 2025] 127.0.0.1:56934 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:09:20 2025] 127.0.0.1:56934 Closing
+[Fri Dec  5 10:09:21 2025] 127.0.0.1:63613 Accepted
+[Fri Dec  5 10:09:21 2025] 127.0.0.1:60157 Accepted
+[Fri Dec  5 10:09:48 2025] 127.0.0.1:63613 [404]: GET /.well-known/appspecific/com.chrome.devtools.json - No such file or directory
+[Fri Dec  5 10:09:48 2025] 127.0.0.1:63613 Closing
+[Fri Dec  5 10:09:48 2025] 127.0.0.1:60157 [404]: GET /static/wordly-game.com/maps/libs.min.js.map - No such file or directory
+[Fri Dec  5 10:09:48 2025] 127.0.0.1:60157 Closing
+[Fri Dec  5 10:09:49 2025] 127.0.0.1:62925 Accepted
+[Fri Dec  5 10:09:49 2025] 127.0.0.1:62925 [404]: GET /static/wordly-game.com/js/main.170941ca.js.map - No such file or directory
+[Fri Dec  5 10:09:49 2025] 127.0.0.1:62925 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53811 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:59894 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53811 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53811 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:59894 [200]: GET /static/wordly-game.com/css/main.min.css
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:59894 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65224 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65224 [200]: GET /static/wordly-game.com/css/wordly.css
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65224 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:62617 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:62617 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:62617 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65060 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:50550 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65060 [200]: GET /static/wordly-game.com/js/libs.min.js
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:50550 [404]: GET /assets/img/wordblast-play.png - No such file or directory
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:50550 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:65060 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:55317 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:51730 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:64666 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:57197 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:55317 [404]: GET /assets/img/phrazle-play.png - No such file or directory
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:55317 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:51730 [404]: GET /assets/img/strands-play.png - No such file or directory
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:64666 [200]: GET /static/wordly-game.com/js/main.min.js
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:57197 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:51730 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:64666 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:57197 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:64995 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:63479 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53161 Accepted
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:63479 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53161 [404]: GET /assets/img/spellingbee-play.png - No such file or directory
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:53161 Closing
+[Fri Dec  5 10:10:09 2025] 127.0.0.1:63479 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:63337 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:57931 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53475 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:62262 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:63337 [404]: GET /assets/img/squares-play.gif - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:63337 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:57931 [404]: GET /assets/img/combinations-play.png - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53475 [200]: GET /static/wordly-game.com/js/wordly.js
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:62262 [404]: GET /assets/img/spritesvg.svg - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:57931 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:62262 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53475 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:56199 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:56199 [404]: GET /files/wordle/en/config.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:56199 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58926 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:59875 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:49794 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58723 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53431 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58926 [404]: GET /files/wordle/en/targets.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58926 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:59875 [404]: GET /files/wordle/en/dictionary.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:49794 [404]: GET /static/wordly-game.com/img/stars.svg - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58723 [404]: GET /assets/img/spritesvg.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53431 [404]: GET /assets/img/logo.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:59875 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:49794 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:58723 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:53431 Closing
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:61001 Accepted
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:61001 [200]: GET /static/wordly-game.com/favicon.ico
+[Fri Dec  5 10:10:10 2025] 127.0.0.1:61001 Closing
+[Fri Dec  5 10:10:11 2025] 127.0.0.1:61898 Accepted
+[Fri Dec  5 10:10:19 2025] 127.0.0.1:61898 [200]: GET /index.php?domain=wordly-game.com&lang=en
+[Fri Dec  5 10:10:19 2025] 127.0.0.1:61898 Closing
+[Fri Dec  5 10:10:19 2025] 127.0.0.1:64995 [404]: GET /robots.txt?490250 - No such file or directory
+[Fri Dec  5 10:10:19 2025] 127.0.0.1:64995 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50716 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50716 [200]: GET /static/wordly-game.com/css/main.min.css
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50716 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52942 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52071 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:62490 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52942 [200]: GET /static/wordly-game.com/css/wordly.css
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52071 [200]: GET /static/wordly-game.com/images/apple.svg
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:62490 [200]: GET /static/wordly-game.com/images/android.svg
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52942 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52071 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:62490 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:64202 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61099 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:55581 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:65268 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52149 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50119 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:64202 [200]: GET /static/wordly-game.com/js/libs.min.js
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61099 [404]: GET /assets/img/strands-play.png - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:55581 [404]: GET /assets/img/phrazle-play.png - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:65268 [404]: GET /assets/img/wordblast-play.png - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52149 [404]: GET /assets/img/spellingbee-play.png - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50119 [404]: GET /assets/img/squares-play.gif - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61099 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:55581 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:65268 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:52149 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:50119 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:64202 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:63985 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61313 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:51223 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:54826 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:58576 Accepted
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:63985 [404]: GET /assets/img/combinations-play.png - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:63985 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61313 [200]: GET /static/wordly-game.com/js/main.min.js
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:51223 [200]: GET /static/wordly-game.com/js/wordly.js
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:54826 [404]: GET /assets/img/spritesvg.svg - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:58576 [404]: GET /static/wordly-game.com/img/stars.svg - No such file or directory
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:54826 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:58576 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:61313 Closing
+[Fri Dec  5 10:10:20 2025] 127.0.0.1:51223 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:54970 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:64147 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:54970 [404]: GET /files/wordle/en/config.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:54970 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:64147 [404]: GET /files/wordle/en/targets.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:64147 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53395 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:65175 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53834 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53395 [404]: GET /files/wordle/en/dictionary.json?v45.12 - No such file or directory
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53395 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:65175 [404]: GET /assets/img/spritesvg.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53834 [404]: GET /assets/img/logo.svg?v45.12 - No such file or directory
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:65175 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:53834 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:60430 Accepted
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:60430 [200]: GET /static/wordly-game.com/favicon.ico
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:60430 Closing
+[Fri Dec  5 10:10:21 2025] 127.0.0.1:58912 Accepted
+[Fri Dec  5 10:11:31 2025] 127.0.0.1:58912 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Dec  5 10:11:31 2025] 127.0.0.1:58912 Closing

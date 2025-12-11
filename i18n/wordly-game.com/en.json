@@ -1,0 +1,179 @@
+{
+    "site": {
+        "title": "Wordle Game - Play Unlimited",
+        "description": "Play Wordle with unlimited words! Wordly is a spinoff of the Wordle game, only with words from 4 to 11 letters and in various languages. Can you guess the hidden word in 6 tries?",
+        "keywords": "wordly, wordle, game, puzzle, word, words, letters, play, online, guess"
+    },
+    "home": {
+        "title": "Wordly Game: Guess the Hidden Word",
+        "main_heading": "Wordly Game: Guess the Hidden Word",
+        "subtitle": "The rules are very simple: You have to guess the hidden word (from 4 to 11 letters) in 6 tries. To get started, just type any word on the first line. If the letter is guessed correctly and is in the correct place, it will be highlighted in green, if the letter is in the word, but in the wrong place - in yellow, and if the letter is not in the word, it will remain gray. Can you guess the hidden word in 6 tries?",
+        "play_button": "Play"
+    },
+    "game": {
+        "loading": "Loading..."
+    },
+    "how_to_play": {
+        "title": "How to play the Wordly Game?",
+        "example_text": "To start the game, just enter any word, for example:",
+        "try_again": "Another try to find matching letters in the target word.",
+        "close": "So close!",
+        "got_it": "Got it! 🏆",
+        "steps": [
+            {
+                "title": "Enter the first word",
+                "description": "To get started, simply enter any five-letter word to find out which letters match the hidden word. In total, you will have 6 tries to guess the hidden word.",
+                "image": "https://wordly.org/assets/img/wordle-how-to-1.png"
+            },
+            {
+                "title": "Find out what letters are in the hidden word",
+                "description": "If any letters are marked in yellow, this means that this letter is in the hidden word, but doesn't match the exact location in this word. If any letter is marked in green, then it is in that word and is in the exact location. If the letter remains gray, then it isn't in the hidden word.",
+                "image": "https://wordly.org/assets/img/wordle-how-to-2.png"
+            },
+            {
+                "title": "Try to guess the hidden word",
+                "description": "Now if you know a few letters with the exact location (green) and a few letters that are in the word (yellow) you can try to solve the hidden word and win the game!",
+                "image": "https://wordly.org/assets/img/wordle-how-to-3.png"
+            }
+        ]
+    },
+    "game_rules": {
+        "title": "Rules of the game",
+        "rule1": "is in the word and in the correct spot.",
+        "rule2": "is in the word but in the wrong spot.", 
+        "rule3": "aren't in the target word at all."
+    },
+    "word_length": {
+        "title": "Number of letters",
+        "section_title": "Play Wordle with Various Number of Letters",
+        "section_description": "Choose a word puzzle with the length of the hidden word from 4 to 11 letters.",
+        "options": [
+            {"value": 4, "label": "4 Letter Words"},
+            {"value": 5, "label": "5 Letter Words"},
+            {"value": 6, "label": "6 Letter Words"},
+            {"value": 7, "label": "7 Letter Words"},
+            {"value": 8, "label": "8 Letter Words"},
+            {"value": 9, "label": "9 Letter Words"},
+            {"value": 10, "label": "10 Letter Words"},
+            {"value": 11, "label": "11 Letter Words"}
+        ]
+    },
+    "languages": {
+        "title": "Language",
+        "section_title": "Play Wordle in Different Languages",
+        "section_description": "Guess the hidden words in different languages! It will be helpful for learning new words and improving foreign language skills.",
+        "list": [
+            {"code": "en", "name": "English (US)"},
+            {"code": "uk", "name": "English (UK)"},
+            {"code": "es", "name": "Español"},
+            {"code": "fr", "name": "Français"},
+            {"code": "de", "name": "Deutsch"},
+            {"code": "pt", "name": "Português"},
+            {"code": "it", "name": "Italiano"},
+            {"code": "nl", "name": "Nederlands"},
+            {"code": "ru", "name": "Русский"},
+            {"code": "pl", "name": "Polski"},
+            {"code": "ua", "name": "Українська"},
+            {"code": "sv", "name": "Svenska"},
+            {"code": "ie", "name": "Gaeilge"},
+            {"code": "cs", "name": "Čeština"},
+            {"code": "el", "name": "Ελληνικά"},
+            {"code": "tr", "name": "Türkçe"},
+            {"code": "id", "name": "Indonesian"},
+            {"code": "ph", "name": "Filipino"}
+        ]
+    },
+    "tools": {
+        "solver": "Wordle Solver",
+        "solver_title": "Wordle Solver",
+        "solver_description": "This Wordle Solver will help you find the hidden word if you get stuck. Enter a set of correct, valid and wrong letters and find out all possible answers.",
+        "solver_button": "Find the Answer",
+        "generator": "Wordly Generator",
+        "generator_title": "Wordly Generator",
+        "generator_description": "Generate your own Wordly puzzle with any word from 4 to 11 letters and challenge your friends! Can your friend guess the hidden word in 6 tries?",
+        "generator_button": "Create Puzzle",
+        "kids": "Wordly for Kids",
+        "kids_title": "Wordly for Kids",
+        "kids_description": "This edition of the Wordly for kids contains a dictionary of words for children up to 8th grade and has a word length starting from 3 letters. This game will be very useful for developing memory and logical thinking skills in children.",
+        "kids_button": "Play Wordly for Kids"
+    },
+    "mobile_apps": {
+        "title": "Download Wordly",
+        "description": "Play on your mobile device",
+        "download_ios": "Download for iOS",
+        "download_android": "Download for Android",
+        "ios_url": "https://apps.apple.com/th/app/wordly-guess-the-word/id6450461446",
+        "android_url": "https://play.google.com/store/apps/details?id=com.appstation.wordly"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "questions": [
+            {
+                "q": "What are the rules of the Wordly game?",
+                "a": "The main goal of the game is to guess the hidden word in 6 tries. In each line, you need to enter any word from 4 to 11 letters to find out what letters are in the target word. Depending on which word you entered, the letters will be highlighted in three colors.<br><b>Color marking:</b><br><span></span>The letter isn't in the target word at all.<br><span class=\"yellow\"></span> The letter is in the word but in the wrong spot.<br><span class=\"green\"></span> The letter is in the word and in the correct spot.<br><br>To win you need to completely guess the hidden word (all letters are <span class=\"green\"></span> green)."
+            },
+            {
+                "q": "What is the best word to start the game?",
+                "a": "At the beginning of the game, try to use a word without repeating letters and with as many vowels as possible, such as the word \"RADIO\". However, mathematician Grant Sanderson found that the best starting word is \"CRANE\" or \"SLOTH\", which includes frequently used letters."
+            },
+            {
+                "q": "What dictionary are you using?",
+                "a": "In American English, we use a dictionary from the <a href=\"https://github.com/words/an-array-of-english-words\" target=\"_blank\" rel=\"nofollow\">Letterpress word list</a> that includes a list of ~275,000 words. This dictionary is constantly updated with new words based on real feedback from people."
+            },
+            {
+                "q": "Why did I get a \"Word not found\" message?",
+                "a": "This alert message means that the given word was not found in our word bank. Try another word, or if you think the word is correct, <a href=\"mailto:hello@wordly.org\">let us know.</a>"
+            },
+            {
+                "q": "The hidden word was incorrect. Can you fix this?",
+                "a": "If you think that the hidden word is wrong or incorrect, <a href=\"mailto:hello@wordly.org\">let us know</a>. We will definitely fix this as soon as possible."
+            },
+            {
+                "q": "How to change the entered letter?",
+                "a": "If you want to change an incorrectly entered letter, just press the \"Backspace\" button, but remember that you cannot change the entered word."
+            },
+            {
+                "q": "Can I download the Wordly game?",
+                "a": "Of course, our game is available for free on <a href=\"https://apps.apple.com/th/app/wordly-guess-the-word/id6450461446\" target=\"_blank\">AppStore</a> and <a href=\"https://play.google.com/store/apps/details?id=com.appstation.wordly\" target=\"_blank\">Google Play</a>."
+            },
+            {
+                "q": "Can I guess a word to challenge my friends?",
+                "a": "Certainly! Just click on the icon (W+) in the top left corner, then guess any word from 4 to 11 letters (without spaces, hyphens, apostrophes) and click the \"Copy Link\" button. If this word is found in our word bank, the link will be copied to the clipboard and then you can easily share it on social media."
+            },
+            {
+                "q": "Can I play in different languages?",
+                "a": "We have developed many versions of the Wordly Game for different languages and dictionaries. Now you can play in American English, UK English, Spanish, French, German, Portuguese, Italian, Dutch, Russian, Polish, Swedish, Irish, Czech, Greek, Turkish, Indonesian, and Filipino."
+            },
+            {
+                "q": "The game seems easy to me. Can I make it harder?",
+                "a": "You can make the game harder by turning on \"Hard Mode\" in the settings. Then any revealed hints must be used in subsequent guesses."
+            },
+            {
+                "q": "Can kids play Wordly?",
+                "a": "Wordly is suitable for all ages. This game will be especially useful for children to develop memory and logical thinking skills. We have developed a special <a href=\"https://wordly.org/wordle-for-kids\">edition for kids</a> with a dictionary for children up to 8th grade, and the ability to select a target word from 3 letters to 11 letters."
+            }
+        ]
+    },
+    "related_games": {
+        "title": "Play Other Games",
+        "games": [
+            {"name": "SpellBee", "description": "Make words from 7 letters", "url": "https://spellbee.org/", "image": "/assets/img/spellingbee-play.png"},
+            {"name": "Squares", "description": "Find words in a 4x4 grid.", "url": "https://squares.org/", "image": "/assets/img/squares-play.gif"},
+            {"name": "Combinations", "description": "Combine letters and create words", "url": "https://combinations.org/", "image": "/assets/img/combinations-play.png"},
+            {"name": "Phrazle", "description": "Guess the Phrase", "url": "https://phrazle.gg/", "image": "/assets/img/phrazle-play.png"},
+            {"name": "Word Blast", "description": "Drag the blocks and blast the words! 💥", "url": "https://wordblast.com/", "image": "/assets/img/wordblast-play.png"},
+            {"name": "Strands", "description": "Solve a 6x8 letter grid", "url": "https://strands.game/", "image": "/assets/img/strands-play.png"}
+        ]
+    },
+    "rating": {
+        "title": "Rate Wordly:",
+        "score": "4.7",
+        "votes": "20,530"
+    },
+    "footer": {
+        "links": {
+            "feedback": "Feedback",
+            "privacy": "Privacy Policy"
+        }
+    }
+}

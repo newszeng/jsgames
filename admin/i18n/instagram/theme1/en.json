@@ -1,0 +1,176 @@
+{
+    "site_name": "InstaDown",
+    "site_description": "{site_name} is the fastest free Instagram video downloader online. Download Instagram videos, Reels, Stories, and IGTV in HD quality without watermark. Save Instagram content instantly to your device.",
+    "meta_description": "Download Instagram videos, Reels & Stories online for free. Fast Instagram video downloader with no watermark. Save Instagram content in HD quality. Works on all devices.",
+    
+    "nav": {
+        "home": "Home",
+        "features": "Features",
+        "how_to": "How to Use",
+        "contact": "Contact",
+        "about": "About"
+    },
+    
+    "home": {
+        "title": "Instagram Video Downloader",
+        "h1": "Instagram Video Downloader",
+        "placeholder": "Paste Instagram video link here",
+        "start_btn": "Download",
+        "terms_text": "By using our service you accept our",
+        "terms_link": "Terms of Service"
+    },
+    
+    "hero_title": "Instagram Video Downloader",
+    "hero_subtitle": "Download Instagram videos, Reels, Stories & IGTV in HD quality",
+    "input_placeholder": "Paste Instagram video link here",
+    "download_button": "Download",
+    "processing_text": "Processing your Instagram video...",
+    "terms_text": "By using our service you accept our",
+    "privacy_text": "and",
+    
+    "download": {
+        "paste_url": "Paste Instagram Video URL",
+        "choose_quality": "Choose Download Quality",
+        "audio_only": "Audio Only"
+    },
+    
+    "descriptions": {
+        "title": "Download Instagram videos, Reels & Stories for free",
+        "main_desc": "{site_name} is the ultimate Instagram video downloader that lets you save Instagram videos, Reels, Stories, and IGTV content in HD quality. Whether you want to download Instagram Reels for offline viewing or save Stories before they disappear, our tool makes it fast and easy. No app installation needed - just paste the Instagram URL and download instantly.",
+        "how_to_title": "How to download Instagram videos without watermark?",
+        "how_to_subtitle": "Download any Instagram content in just 3 simple steps.",
+        "step1_title": "Step 1: Copy Instagram Link",
+        "step1_desc": "Open Instagram app or website, find the video, Reel, or Story you want to download. Tap the three dots menu and select <b>Copy link</b>.",
+        "step2_title": "Step 2: Paste the Link",
+        "step2_desc": "Return to <strong>{site_name}</strong> and paste the Instagram URL into the input field, then click the <b>Download</b> button.",
+        "step3_title": "Step 3: Save Video",
+        "step3_desc": "Choose your preferred quality and download the Instagram video, Reel, or Story directly to your device.",
+        "note": "<b>Note:</b> {site_name} respects Instagram's terms of service and creators' rights. Download content only for personal use and always credit original creators when sharing."
+    },
+    
+    "features_section": {
+        "title": "Why choose {site_name} Instagram Downloader?",
+        "hd_quality": {
+            "title": "HD Quality Downloads",
+            "desc": "Download Instagram videos in original quality up to 1080p HD resolution."
+        },
+        "all_content": {
+            "title": "All Instagram Content",
+            "desc": "Support for Instagram videos, Reels, Stories, IGTV, and carousel posts."
+        },
+        "no_watermark": {
+            "title": "No Watermark",
+            "desc": "Download clean Instagram videos without watermarks or logos."
+        },
+        "fast_download": {
+            "title": "Lightning Fast",
+            "desc": "Instant processing and download of Instagram content with our optimized servers."
+        },
+        "free": {
+            "title": "100% Free",
+            "desc": "{site_name} is completely free with unlimited Instagram downloads."
+        },
+        "secure": {
+            "title": "Safe & Private",
+            "desc": "SSL encrypted connection ensures your Instagram downloads are secure and private."
+        }
+    },
+    
+    "faq_section": {
+        "title": "Instagram Downloader FAQ",
+        "q1": "Can I download Instagram Reels?",
+        "a1": "Yes, you can download Instagram Reels in HD quality. Just copy the Reel URL and paste it into our downloader.",
+        "q2": "How do I download Instagram Stories?",
+        "a2": "Copy the Story URL while viewing it and paste it into our tool. Stories can be downloaded before they expire.",
+        "q3": "Can I download private Instagram videos?",
+        "a3": "You can only download Instagram content that you have access to view. For private accounts, you must be following them.",
+        "q4": "What video formats are supported?",
+        "a4": "We support MP4 video format which works on all devices. You can also extract audio in MP3 format.",
+        "q5": "Is there a download limit?",
+        "a5": "No limits! Download unlimited Instagram videos, Reels, and Stories for free."
+    },
+    
+    "features": {
+        "title": "Instagram Video Downloader Features",
+        "subtitle": "The best way to save Instagram content",
+        "reels": {
+            "title": "Download Reels",
+            "desc": "Save trending Instagram Reels in high quality"
+        },
+        "stories": {
+            "title": "Save Stories",
+            "desc": "Download Instagram Stories before they disappear"
+        },
+        "igtv": {
+            "title": "IGTV Videos",
+            "desc": "Save long-form IGTV content for offline viewing"
+        }
+    },
+    
+    "how_to": {
+        "title": "How to Download Instagram Videos",
+        "subtitle": "Save any Instagram content in 3 easy steps",
+        "step1": {
+            "title": "Copy Instagram URL",
+            "desc": "Find the Instagram video, Reel, or Story you want and copy its URL"
+        },
+        "step2": {
+            "title": "Paste & Process",
+            "desc": "Paste the URL into our Instagram downloader and click Download"
+        },
+        "step3": {
+            "title": "Save Content",
+            "desc": "Choose your quality and download the Instagram content to your device"
+        }
+    },
+    
+    "tips": {
+        "title": "Pro Tips for Instagram Downloads",
+        "tip1": {
+            "title": "Download Instagram Reels",
+            "desc": "Save viral Reels for inspiration or offline viewing. Perfect for content creators and marketers."
+        },
+        "tip2": {
+            "title": "Save Stories Quickly",
+            "desc": "Download Instagram Stories within 24 hours before they automatically disappear."
+        },
+        "tip3": {
+            "title": "IGTV & Long Videos",
+            "desc": "Save IGTV videos and longer Instagram content for educational or entertainment purposes."
+        }
+    },
+    
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Is this Instagram downloader free?",
+        "a1": "Yes, our Instagram video downloader is 100% free with unlimited downloads and no registration required.",
+        "q2": "Can I download HD Instagram videos?",
+        "a2": "Yes, you can download Instagram videos in HD quality (up to 1080p) when available from the original post.",
+        "q3": "Does it work with Instagram Reels and Stories?",
+        "a3": "Yes, our downloader supports Instagram Reels, Stories, regular videos, IGTV, and carousel posts.",
+        "q4": "Is it safe to download Instagram videos?",
+        "a4": "Absolutely! We use SSL encryption and don't store any personal data or downloaded videos on our servers."
+    },
+    
+    "footer": {
+        "about_text": "The best Instagram video downloader online. Download Instagram videos, Reels, Stories & IGTV in HD quality. Fast, free, and easy to use.",
+        "quick_links": "Quick Links",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "download_formats": "Supported Formats",
+        "formats_text": "Download Instagram videos in MP4 and extract audio in MP3 format.",
+        "related_tools": "Related Tools",
+        "faq": "FAQ",
+        "copyright": "All rights reserved.",
+        "disclaimer": "This tool is not affiliated with Instagram or Meta. Please respect intellectual property rights and use downloads for personal purposes only."
+    },
+    
+    "error": {
+        "empty_url": "Please enter an Instagram video URL",
+        "invalid_url": "Please enter a valid Instagram URL",
+        "download_failed": "Failed to process Instagram video",
+        "network": "Network error. Please try again."
+    }
+}

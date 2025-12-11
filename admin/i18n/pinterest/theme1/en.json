@@ -1,0 +1,176 @@
+{
+    "site_name": "Pinterest Downloader",
+    "site_description": "{site_name} is the best free Pinterest video downloader online. Download Pinterest videos and images in HD quality, including Pins from any board. Fast, easy, and no registration required.",
+    "meta_description": "Download Pinterest videos online for free. Save Pinterest videos and images from any Pin or board in HD quality. The fastest Pinterest downloader with no watermark. Works on all devices.",
+    
+    "nav": {
+        "home": "Home",
+        "features": "Features",
+        "how_to": "How to Use",
+        "contact": "Contact",
+        "about": "About"
+    },
+    
+    "home": {
+        "title": "Pinterest Video Downloader",
+        "h1": "Pinterest Video Downloader",
+        "placeholder": "Paste Pinterest video or Pin link here",
+        "start_btn": "Download",
+        "terms_text": "By using our service you accept our",
+        "terms_link": "Terms of Service"
+    },
+    
+    "hero_title": "Pinterest Video Downloader",
+    "hero_subtitle": "Download Pinterest videos, images, and Pins in HD quality",
+    "input_placeholder": "Paste Pinterest video or Pin link here",
+    "download_button": "Download",
+    "processing_text": "Processing your Pinterest video...",
+    "terms_text": "By using our service you accept our",
+    "privacy_text": "and",
+    
+    "download": {
+        "paste_url": "Paste Pinterest Video URL",
+        "choose_quality": "Choose Download Quality",
+        "audio_only": "Audio Only"
+    },
+    
+    "descriptions": {
+        "title": "Download Pinterest videos online for free",
+        "main_desc": "{site_name} is a powerful Pinterest video downloader that allows you to save Pinterest videos, images, and Pins in HD quality. Whether you want to download videos from Pinterest boards or individual Pins, our tool makes it simple and fast. No software installation required - just paste the URL and download instantly.",
+        "how_to_title": "How to download Pinterest videos?",
+        "how_to_subtitle": "Follow these simple steps to download any Pinterest video or Pin.",
+        "step1_title": "Step 1: Copy Pin Link",
+        "step1_desc": "Go to Pinterest and find the video Pin you want to download. Click on the share button and select 'Copy link'.",
+        "step2_title": "Step 2: Paste the Link",
+        "step2_desc": "Come back to {site_name} and paste the Pinterest video URL into the input field above.",
+        "step3_title": "Step 3: Download Video",
+        "step3_desc": "Click the Download button and choose your preferred quality. The video will be saved to your device.",
+        "note": "<b>Note:</b> {site_name} respects Pinterest's terms of service and content creators' rights. Please download videos only for personal use and always credit the original creators."
+    },
+    
+    "features_section": {
+        "title": "Why choose {site_name} Pinterest Downloader?",
+        "hd_quality": {
+            "title": "HD Quality Downloads",
+            "desc": "Download Pinterest videos in original quality up to 1080p HD resolution."
+        },
+        "all_content": {
+            "title": "All Pinterest Content",
+            "desc": "Support for video Pins, image Pins, and content from any Pinterest board."
+        },
+        "fast_download": {
+            "title": "Lightning Fast",
+            "desc": "Our servers ensure the fastest download speeds for Pinterest videos and images."
+        },
+        "no_login": {
+            "title": "No Login Required",
+            "desc": "Download Pinterest videos without logging in or providing personal information."
+        },
+        "free": {
+            "title": "100% Free",
+            "desc": "{site_name} is completely free with unlimited downloads and no hidden fees."
+        },
+        "secure": {
+            "title": "Safe & Secure",
+            "desc": "SSL encrypted connection ensures your downloads are private and secure."
+        }
+    },
+    
+    "faq_section": {
+        "title": "Frequently Asked Questions",
+        "q1": "Can I download videos from private Pinterest boards?",
+        "a1": "You can only download Pins that are publicly accessible. Private board content requires appropriate permissions.",
+        "q2": "What video formats are supported?",
+        "a2": "We support MP4 video format which works on all devices. You can also download images in JPEG and PNG formats.",
+        "q3": "Is there a limit on downloads?",
+        "a3": "No, there are no limits. You can download unlimited Pinterest videos and images for free.",
+        "q4": "Can I download entire Pinterest boards?",
+        "a4": "Currently, you need to download Pins individually by pasting each Pin's URL.",
+        "q5": "Why can't I download some Pins?",
+        "a5": "Some Pins may be restricted by privacy settings or may not contain downloadable video content."
+    },
+    
+    "features": {
+        "title": "Pinterest Video Downloader Features",
+        "subtitle": "The most powerful tool to download Pinterest videos",
+        "pins": {
+            "title": "Download Video Pins",
+            "desc": "Save Pinterest video Pins in high quality"
+        },
+        "boards": {
+            "title": "From Any Board",
+            "desc": "Download videos from public Pinterest boards"
+        },
+        "images": {
+            "title": "Images & Videos",
+            "desc": "Download both video and image content from Pinterest"
+        }
+    },
+    
+    "how_to": {
+        "title": "How to Download Pinterest Videos",
+        "subtitle": "3 simple steps to save any Pinterest video",
+        "step1": {
+            "title": "Find & Copy URL",
+            "desc": "Locate the Pinterest video Pin and copy its URL from the share menu"
+        },
+        "step2": {
+            "title": "Paste Link Here",
+            "desc": "Paste the copied URL into our Pinterest downloader input field"
+        },
+        "step3": {
+            "title": "Download HD Video",
+            "desc": "Click download and save the Pinterest video in your preferred quality"
+        }
+    },
+    
+    "tips": {
+        "title": "Pro Tips for Pinterest Downloads",
+        "tip1": {
+            "title": "Download Recipe Videos",
+            "desc": "Save cooking and recipe videos from Pinterest for offline viewing."
+        },
+        "tip2": {
+            "title": "Save DIY Tutorials",
+            "desc": "Download DIY and craft tutorial videos to follow along without internet."
+        },
+        "tip3": {
+            "title": "Inspiration Boards",
+            "desc": "Download videos from your inspiration boards to create offline collections."
+        }
+    },
+    
+    "faq": {
+        "title": "Pinterest Downloader FAQ",
+        "q1": "Is this Pinterest downloader free?",
+        "a1": "Yes, our Pinterest video downloader is 100% free with unlimited downloads and no registration required.",
+        "q2": "Can I download HD Pinterest videos?",
+        "a2": "Yes, you can download Pinterest videos in HD quality (up to 1080p) when available.",
+        "q3": "Does it work with all Pinterest content?",
+        "a3": "Our downloader supports video Pins, image Pins, and content from public Pinterest boards.",
+        "q4": "Is it safe to use?",
+        "a4": "Absolutely! We use SSL encryption and don't store any of your personal data or downloaded content."
+    },
+    
+    "footer": {
+        "about_text": "The best Pinterest video downloader online. Download Pinterest videos and images from any Pin or board in HD quality. Fast, free, and easy to use.",
+        "quick_links": "Quick Links",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "download_formats": "Supported Formats",
+        "formats_text": "Download Pinterest videos in MP4 and images in JPEG/PNG format.",
+        "related_tools": "Related Tools",
+        "faq": "FAQ",
+        "copyright": "All rights reserved.",
+        "disclaimer": "This tool is not affiliated with Pinterest. Please respect intellectual property rights."
+    },
+    
+    "error": {
+        "empty_url": "Please enter a Pinterest video or Pin URL",
+        "invalid_url": "Please enter a valid Pinterest URL",
+        "download_failed": "Failed to process Pin",
+        "network": "Network error. Please try again."
+    }
+}

@@ -1,0 +1,64 @@
+First, let's remove the repositories we just created:
+
+sudo rm /etc/yum.repos.d/CentOS-Stream-*.repo
+
+
+Now, let's use the CentOS Stream 8 End-of-Life (EOL) repositories. These should still be available:
+
+sudo tee /etc/yum.repos.d/CentOS-Stream-AppStream.repo << EOF
+[appstream]
+name=CentOS Stream 8 - AppStream
+baseurl=https://vault.centos.org/8-stream/AppStream/\$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOF
+
+sudo tee /etc/yum.repos.d/CentOS-Stream-BaseOS.repo << EOF
+[baseos]
+name=CentOS Stream 8 - BaseOS
+baseurl=https://vault.centos.org/8-stream/BaseOS/\$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOF
+
+sudo tee /etc/yum.repos.d/CentOS-Stream-Extras.repo << EOF
+[extras]
+name=CentOS Stream 8 - Extras
+baseurl=https://vault.centos.org/8-stream/extras/\$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOF
+
+
+Clean the DNF cache again:
+
+sudo dnf clean all
+
+
+Now try updating:
+
+sudo dnf update
+
+
+
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+# 重新加载 shell 配置
+source ~/.bashrc
+# 安装最新的 LTS 版本的 Node.js
+nvm install --lts
+# 使用新安装的版本
+nvm use --lts
+# 验证新版本
+node -v
+npm -v
+npm install express axios mathjs crypto-js
+npm install -g pm2
+pm2 -v
+
+pm2 delete server
+
+pm2 start server.js -i 5

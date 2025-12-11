@@ -1,0 +1,130 @@
+{
+    "site_name": "TikTokio",
+    "site_description": "{site_name} is a Popular free TikTok video Downloader that allows users to easily convert and download videos from TikTok in High quality quickly and easily.",
+    "meta_description": "Download TikTok videos without watermark in HD quality. Fast, free, and easy to use TikTok downloader. Save TikTok videos to your device instantly.",
+    
+    "nav": {
+        "home": "Home",
+        "save_video": "Save TikTok Video",
+        "download_mp3": "Download TikTok MP3"
+    },
+    
+    "home": {
+        "title": "TikTok Video Downloader",
+        "subtitle": "Download TikTok videos without watermark in HD quality",
+        "placeholder": "Paste TikTok video link here...",
+        "terms_text": "By using our service you accept our",
+        "terms_link": "Terms of Service"
+    },
+    
+    "paste_button": "Paste",
+    "download_button": "Download",
+    "processing": "Processing...",
+    "supported_formats": "Supported formats: MP4, MP3 | Quality: HD, Full HD, 4K",
+    
+    "features": {
+        "title": "Why Choose Our TikTok Downloader?",
+        "fast": {
+            "title": "Fast & Free",
+            "desc": "Download TikTok videos quickly and completely free. No registration required."
+        },
+        "watermark": {
+            "title": "No Watermark",
+            "desc": "Remove TikTok watermarks automatically and save clean videos in original quality."
+        },
+        "formats": {
+            "title": "Multiple Formats",
+            "desc": "Download as MP4 video or extract MP3 audio. Choose the format that suits you best."
+        },
+        "mobile": {
+            "title": "All Devices",
+            "desc": "Works on desktop, tablet, and mobile devices. No app installation needed."
+        },
+        "safe": {
+            "title": "Safe & Secure",
+            "desc": "Your privacy is protected. We don't store your videos or personal data."
+        },
+        "quality": {
+            "title": "HD Quality",
+            "desc": "Download videos in the highest available quality, including HD and Full HD."
+        }
+    },
+    
+    "how_to": {
+        "title": "How to Download TikTok Videos?",
+        "step1": {
+            "title": "Find the TikTok video",
+            "desc": "Open TikTok app or website and find the video you want to download."
+        },
+        "step2": {
+            "title": "Copy the video link",
+            "desc": "Tap the Share button and select \"Copy link\" to copy the video URL."
+        },
+        "step3": {
+            "title": "Paste and download",
+            "desc": "Paste the link in the input field above and click the Download button."
+        },
+        "step4": {
+            "title": "Save to your device",
+            "desc": "Choose your preferred format and quality, then save the video to your device."
+        }
+    },
+    
+    "descriptions": {
+        "title": "Download TikTok videos without watermark for free",
+        "main_desc": "{site_name} is a free TikTok video downloader that allows you to download TikTok videos without watermark in MP4 format and HD, Full HD, or 4K quality. You don't need to install any application on your mobile or computer; you only need a TikTok video link, and we will do the rest. Using {site_name}, you can save videos to your device with just a single click.",
+        "how_to_title": "How to download TikTok videos without watermark?",
+        "how_to_subtitle": "{site_name} has made it easy for you. Just follow the steps below.",
+        "step1_title": "Step 1: Copy Link",
+        "step1_desc": "On the TikTok application, open your desired video, tap the Share button at the bottom right, and then tap the Copy Link option.",
+        "step2_title": "Step 2: Paste the Link",
+        "step2_desc": "Return to the {site_name} website, paste the copied URL into the address field, and then tap the Download button.",
+        "step3_title": "Step 3: Download",
+        "step3_desc": "Wait while {site_name} processes the video. Choose the desired quality and download the video.",
+        "note": "{site_name} is a website that allows users to remove watermarks from TikTok videos for free without profits. We only support downloading public TikTok videos. We are not responsible for copyright issues if you use that video for any other profitable purpose."
+    },
+    
+    "tips": {
+        "title": "Pro Tips for TikTok Downloads",
+        "tip1": {
+            "title": "Best Quality Downloads",
+            "desc": "Always choose HD quality for the best video experience on any device."
+        },
+        "tip2": {
+            "title": "Mobile Friendly",
+            "desc": "Use our tool directly from your mobile browser - no app installation needed."
+        },
+        "tip3": {
+            "title": "Respect Creators",
+            "desc": "Use downloads for personal purposes and always credit original creators."
+        }
+    },
+    
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Is it free to use this TikTok downloader?",
+        "a1": "Yes, our TikTok video downloader is completely free to use. You can download unlimited videos without any registration or subscription.",
+        "q2": "Can I download TikTok videos without watermark?",
+        "a2": "Yes, our tool can remove TikTok watermarks automatically and provide you with clean video downloads in original quality.",
+        "q3": "What video formats are supported?",
+        "a3": "We support MP4 video downloads and MP3 audio extraction. You can choose the format that best suits your needs.",
+        "q4": "Is it safe to download TikTok videos?",
+        "a4": "Yes, it's completely safe. We don't store your videos or personal data on our servers. Your privacy is fully protected."
+    },
+    
+    "footer": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "contact": "Contact",
+        "dmca": "DMCA",
+        "about": "About",
+        "copyright": "All rights reserved.",
+        "disclaimer": "This tool is for personal use only. Please respect content creators and TikTok's terms of service. We are not affiliated with TikTok."
+    },
+    "error": {
+        "empty_url": "Please enter a TikTok video URL",
+        "invalid_url": "Please enter a valid TikTok URL",
+        "download_failed": "Failed to process video",
+        "network": "Network error. Please try again later."
+    }
+}

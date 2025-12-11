@@ -1,0 +1,103 @@
+
+游戏多站管理：jsgames.com 后台管理主域名
+
+比如我要添加一个新站 spellsbee.cv，100%还原 https://wordly.org/ 这个网站的样式和网站结构，做到所以内容可以配置管理，以下是目录结构
+
+admin/  #后台管理
+  data/
+        users.json #后台用户
+	website.json #网站列表
+        backlinks.json #站群公共链接库
+        
+  lib/
+        translate.php #翻译器
+ 
+  conftpl/  创建站点时候的默认配置，包含语言包，apache, 模版页面示例
+       en.json
+       site.conf
+       index.html
+       header.html
+       footer.html
+       terms.html 
+       privacy.html
+
+  login.php #网站登录
+  index.php  #网站列表
+  website.php  #网站管理，网站创建和配置，header验证，adsense 广告代码添加等
+  website_home.php #网站首页管理
+  website_tag.php #网站内页标签页管理, 参考 downloaders/tagpage.php
+  website_tpl.php #网站模版管理，tpl/ 目录下，用ace加载模版文件
+  i18n.php #网站翻译工具 ，参考 i18n_manager.php 和 translate_gemini.php
+  traffic.php #网站流量统计，参考 downloaders/traffic.php
+  backlinks.php #站群公共链接库，用于站和站直接做互链
+  
+i18n/
+
+  spellsbee.cv/ #网站多语言目录
+     home/
+         en.json
+         fr.json
+
+     2-words/
+         en.json
+         fr.json
+
+static/
+
+  spellsbee.cv/ #网站资源目录
+    css/
+	  main.css
+    js/
+	  game.js  #游戏的核心js文件
+
+    images/
+	  spellsbee.cv.ico
+    
+   fonts/
+         
+    
+api/
+    traffic.php  #流量统计
+js/
+   counter.js #流量统计
+
+analytics/  #访问日志
+   spellsbee.cv/
+      202512/
+         20251202.txt
+
+vhost/   #apache配置文件，站点配置
+    spellsbee.cv.conf
+
+tpl/
+
+  spellsbee.cv/ #网站模版目录，采用 twig 模版标签语法
+     index.html
+     header.html
+     footer.html
+     terms.html 
+     privacy.html
+	 
+router.php #网站路由管理
+index.php #网站入口
+vendor/  #第三方库
+    src/
+        twig/
+
+    autoload.php
+
+.htacess
+
+后台调试访问用 
+首页：https://jsgames.com/index.php?domain=spellsbee.cv&lang=en
+静态页：https://jsgames.com/index.php?domain=spellsbee.cv&page=terms&lang=en
+
+线上访问
+
+en
+首页： https://spellsbee.cv/
+静态页： https://spellsbee.cv/terms
+
+fr
+首页： https://spellsbee.cv/fr/
+静态页： https://spellsbee.cv/fr/terms

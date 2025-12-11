@@ -1,0 +1,176 @@
+{
+    "site_name": "Twitter Downloader",
+    "site_description": "{site_name} is the best free Twitter video downloader online. Download Twitter videos, Tweets, Retweets, GIFs, and media in HD quality. Fast, easy, and no registration required.",
+    "meta_description": "Download Twitter videos online for free. Save Twitter videos, Tweets, GIFs, and media in HD quality. The fastest Twitter downloader with no watermark. Works on all devices.",
+    
+    "nav": {
+        "home": "Home",
+        "features": "Features",
+        "how_to": "How to Use",
+        "contact": "Contact",
+        "about": "About"
+    },
+    
+    "home": {
+        "title": "Twitter Video Downloader",
+        "h1": "Twitter Video Downloader",
+        "placeholder": "Paste Twitter video link here",
+        "start_btn": "Download",
+        "terms_text": "By using our service you accept our",
+        "terms_link": "Terms of Service"
+    },
+    
+    "hero_title": "Twitter Video Downloader",
+    "hero_subtitle": "Download Twitter videos, Tweets, Retweets, and GIFs in HD quality",
+    "input_placeholder": "Paste Twitter video link here",
+    "download_button": "Download",
+    "processing_text": "Processing your Twitter video...",
+    "terms_text": "By using our service you accept our",
+    "privacy_text": "and",
+    
+    "download": {
+        "paste_url": "Paste Twitter Video URL",
+        "choose_quality": "Choose Download Quality",
+        "audio_only": "Audio Only"
+    },
+    
+    "descriptions": {
+        "title": "Download Twitter videos online for free",
+        "main_desc": "{site_name} is a powerful Twitter video downloader that allows you to save Twitter videos, Tweets, Retweets, GIFs, and media content in HD quality. Whether you want to download viral Twitter videos or save important Tweets, our tool makes it simple and fast. No software installation required - just paste the URL and download instantly.",
+        "how_to_title": "How to download Twitter videos?",
+        "how_to_subtitle": "Follow these simple steps to download any Twitter video.",
+        "step1_title": "Step 1: Copy Tweet Link",
+        "step1_desc": "Go to Twitter and find the video Tweet you want to download. Click on the share icon and select 'Copy link to Tweet'.",
+        "step2_title": "Step 2: Paste the Link",
+        "step2_desc": "Come back to {site_name} and paste the Twitter video URL into the input field above.",
+        "step3_title": "Step 3: Download Video",
+        "step3_desc": "Click the Download button and choose your preferred quality. The video will be saved to your device.",
+        "note": "<b>Note:</b> {site_name} respects Twitter's terms of service and content creators' rights. Please download videos only for personal use and always credit the original creators."
+    },
+    
+    "features_section": {
+        "title": "Why choose {site_name} Twitter Downloader?",
+        "hd_quality": {
+            "title": "HD Quality Downloads",
+            "desc": "Download Twitter videos in original quality up to 1080p HD resolution."
+        },
+        "all_content": {
+            "title": "All Twitter Content",
+            "desc": "Support for video Tweets, Retweets, GIFs, images, and Twitter Spaces audio."
+        },
+        "fast_download": {
+            "title": "Lightning Fast",
+            "desc": "Our servers ensure the fastest download speeds for Twitter videos and media."
+        },
+        "no_login": {
+            "title": "No Login Required",
+            "desc": "Download Twitter videos without logging in or providing personal information."
+        },
+        "free": {
+            "title": "100% Free",
+            "desc": "{site_name} is completely free with unlimited downloads and no hidden fees."
+        },
+        "secure": {
+            "title": "Safe & Secure",
+            "desc": "SSL encrypted connection ensures your downloads are private and secure."
+        }
+    },
+    
+    "faq_section": {
+        "title": "Frequently Asked Questions",
+        "q1": "Can I download private Twitter videos?",
+        "a1": "You can only download videos from public Tweets. Private or protected account videos require appropriate access permissions.",
+        "q2": "What video formats are supported?",
+        "a2": "We support MP4 video format which works on all devices. You can also extract audio in MP3 format from Twitter videos.",
+        "q3": "Is there a limit on downloads?",
+        "a3": "No, there are no limits. You can download unlimited Twitter videos for free.",
+        "q4": "Can I download Twitter GIFs?",
+        "a4": "Yes, you can download Twitter GIFs and convert them to MP4 video format.",
+        "q5": "Why can't I download some videos?",
+        "a5": "Some videos may be from private accounts, deleted Tweets, or restricted by geographical limitations."
+    },
+    
+    "features": {
+        "title": "Twitter Video Downloader Features",
+        "subtitle": "The most powerful tool to download Twitter videos",
+        "tweets": {
+            "title": "Download Tweets",
+            "desc": "Save video Tweets in high quality with original resolution"
+        },
+        "retweets": {
+            "title": "Save Retweets",
+            "desc": "Download retweeted videos and maintain original quality"
+        },
+        "gifs": {
+            "title": "Twitter GIFs",
+            "desc": "Save Twitter GIFs as MP4 videos or animated GIFs"
+        }
+    },
+    
+    "how_to": {
+        "title": "How to Download Twitter Videos",
+        "subtitle": "3 simple steps to save any Twitter video",
+        "step1": {
+            "title": "Find & Copy URL",
+            "desc": "Locate the Twitter video Tweet and copy its URL from the address bar or share menu"
+        },
+        "step2": {
+            "title": "Paste Link Here",
+            "desc": "Paste the copied URL into our Twitter downloader input field"
+        },
+        "step3": {
+            "title": "Download HD Video",
+            "desc": "Click download and save the Twitter video in your preferred quality"
+        }
+    },
+    
+    "tips": {
+        "title": "Pro Tips for Twitter Downloads",
+        "tip1": {
+            "title": "Download Viral Videos",
+            "desc": "Save trending Twitter videos before they get deleted or lost in the feed."
+        },
+        "tip2": {
+            "title": "Save Twitter Threads",
+            "desc": "Download videos from Twitter threads to keep important content offline."
+        },
+        "tip3": {
+            "title": "Extract Audio",
+            "desc": "Convert Twitter videos to MP3 for podcasts or audio content from Twitter Spaces."
+        }
+    },
+    
+    "faq": {
+        "title": "Twitter Downloader FAQ",
+        "q1": "Is this Twitter downloader free?",
+        "a1": "Yes, our Twitter video downloader is 100% free with unlimited downloads and no registration required.",
+        "q2": "Can I download HD Twitter videos?",
+        "a2": "Yes, you can download Twitter videos in HD quality (up to 1080p) when available from the original Tweet.",
+        "q3": "Does it work with Twitter GIFs?",
+        "a3": "Yes, our downloader supports Twitter GIFs, video Tweets, Retweets, and image content.",
+        "q4": "Is it safe to use?",
+        "a4": "Absolutely! We use SSL encryption and don't store any of your personal data or downloaded videos."
+    },
+    
+    "footer": {
+        "about_text": "The best Twitter video downloader online. Download Twitter videos, Tweets, Retweets, and GIFs in HD quality. Fast, free, and easy to use.",
+        "quick_links": "Quick Links",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "download_formats": "Supported Formats",
+        "formats_text": "Download Twitter videos in MP4 and extract audio in MP3 format.",
+        "related_tools": "Related Tools",
+        "faq": "FAQ",
+        "copyright": "All rights reserved.",
+        "disclaimer": "This tool is not affiliated with Twitter or X. Please respect intellectual property rights."
+    },
+    
+    "error": {
+        "empty_url": "Please enter a Twitter video URL",
+        "invalid_url": "Please enter a valid Twitter URL",
+        "download_failed": "Failed to process video",
+        "network": "Network error. Please try again."
+    }
+}

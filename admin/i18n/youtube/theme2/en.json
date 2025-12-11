@@ -1,0 +1,155 @@
+{
+    "site_name": "MP3Juice",
+    "site_description": "{site_name} is a free MP3 Search Engine with a built-in downloader. Simply search and download your favorite music as MP3 or MP4 files with {site_name}.",
+    "nav": {
+        "home": "Home",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "youtube_downloader": "YouTube Downloader",
+        "youtube_to_mp4": "YouTube to MP4 Converter",
+        "youtube_to_mp3": "YouTube to MP3 Converter",
+        "language": "English"
+    },
+    "home": {
+        "title": "MP3Juice - Free MP3 Downloader - MP3 Juice",
+        "h1": "MP3Juice",
+        "placeholder": "Search or paste link here...",
+        "start_btn": "Search",
+        "terms_text": "By pressing \"Search\" you confirm your consent to our",
+        "terms_link": "Terms of Use"
+    },
+    "content": {
+        "title": "MP3Juice",
+        "description_1": "{site_name} is a free MP3 search engine with a built-in downloader. Simply search for your favorite music on several sources and download the music as MP3 (audio) or MP4 (video) files for free. {site_name} will work on your desktop, tablet and mobile devices, so you do not need to install any additional apps. The usage of {site_name} is free and safe!",
+        "description_2": "Also Our {site_name} provides a search engine that allows you to search your Mp3 audio files and download it in different MP3 bit rates including 64kbps, 128kbps, 192kbps, 256kbps and 320kbps. We use the latest technology to provide our users with the best and fast experience. {site_name} is a reliable, user-friendly and completely free online MP3 downloader tool that makes it easy to convert and download music in MP3 and MP4 formats."
+    },
+    "instruction": {
+        "title": "How to use {site_name}:",
+        "step_1": "1. Simply enter your search query above. As soon as you type in your search query, a list of suggestions will pop up. Feel free to choose a suggestion or ignore them. Then click on the \"Search\" button.",
+        "step_2": "2. {site_name} will search for any matching results for your search query. As soon as the search is completed you will get a list of results. If you would like to search on more sources for your search query simply click on the \"Enable\" button at the end of the results list.",
+        "step_3": "3. Now you are able to listen to the results or to download them by clicking on one of the download buttons. Kindly note: some results need to be converted to the chosen format before you are able to download them. This might take a short while.",
+        "alternative": "Alternatively you can also use {site_name} as a video downloader. Just enter the video URL above and click on the \"Search\" button. After that choose your preferred download format. The video will be converted, and after a short time you will be able to download the converted video."
+    },
+    "advantages": {
+        "title": "{site_name} Advantage",
+        "item_1": "Convert and Download Absolutely free and Unlimited use As many as you want",
+        "item_2": "We use Latest Technology so you can",
+        "item_3": "No Need to register and login required",
+        "item_4": "We support All video and audio formats conversion",
+        "item_5": "You will not need to install third-party applications and software"
+    },
+    "features": {
+        "unlimited": {
+            "title": "Free Unlimited conversion",
+            "description": "Download music for free using {site_name} and users can download unlimited MP3 files. Enjoy the freedom to download as many songs as you want."
+        },
+        "easy": {
+            "title": "Easy and User-Friendly Interface",
+            "description": "{site_name} features an attractive and easy-to-use interface that simplifies the process of downloading music. Simply search for your favorite songs or paste a URL to begin your download."
+        },
+        "quality": {
+            "title": "High-Quality Downloads",
+            "description": "Our {site_name} platform supports multiple high-quality downloads, ensuring that users receive the best audio quality. You can download MP3 files in various bitrates including 320kbps."
+        },
+        "speed": {
+            "title": "Very Fast Download",
+            "description": "{site_name} is the fastest downloader that quickly converts and downloads music, so you don't have to wait long for your MP3 download and without sacrificing quality."
+        },
+        "no_software": {
+            "title": "No Software Installation",
+            "description": "{site_name} operates entirely online, allowing you to use the service directly in your web browser without the need to install any software. Enjoy the convenience of downloading music without the hassle of registration or log-ins."
+        },
+        "compatible": {
+            "title": "Compatible with all device",
+            "description": "{site_name} is a web-based MP3 downloader that works seamlessly on all devices, including smartphones, computers, and tablets. It also works seamlessly with all popular browsers such as Chrome, Firefox, Safari, Microsoft Edge, and Opera."
+        }
+    },
+    "faq": {
+        "title": "FAQs",
+        "q1": "What is {site_name}?",
+        "a1": "{site_name} is the leading MP3 search engine that allows you to quickly search and download music from various sources free of cost. Also, users can easily convert videos to MP3 files in the highest quality.",
+        "q2": "Is {site_name} Free to use?",
+        "a2": "Yes, It's a completely free MP3 downloader. You are not required to pay to download music files.",
+        "q3": "What is the maximum number of MP3 files that I can download?",
+        "a3": "With {site_name}, you can download unlimited MP3 files. There are no restrictions on how many songs you can download.",
+        "q4": "{site_name} supports which audio/video formats?",
+        "a4": "Our MP3 downloader offers different audio quality options like 64kbps, 128kbps, 192kbps, 256kbps, and 320kbps for MP3 format. We also support MP4 video downloads.",
+        "q5": "Is MP3 Downloader supported with all devices?",
+        "a5": "We support multiple devices such as Android, iOS, iPhone, Windows, macOS, and more. As well as You can open this tool in multiple browsers like Chrome, Safari, Microsoft Edge, Opera, Firefox, Vivaldi, Brave, and more!",
+        "q6": "Is it safe to use {site_name} for downloading MP3 files?",
+        "a6": "It is safe and secure to download music files with {site_name}. If users download content, they should always take precautions and comply with copyright laws.",
+        "q7": "Can I Download MP3 files without installing applications using {site_name}?",
+        "a7": "Yes, {site_name} can be used to download MP3 files without installing apps. All you have to do is visit our official website and start using the tool in a browser."
+    },
+    "footer": {
+        "contact": "Contact",
+        "copyright": "Copyright Claims",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "copyright_text": "{site_name}",
+        "terms_text": "With the usage of {site_name} you are accepting our",
+        "thank_you": "Thank you for using {site_name}."
+    },
+    "static_pages": {
+        "contact": {
+            "title": "Contact Us",
+            "content": "",
+            "meta_description": "Get in touch with our support team"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "meta_description": "Our privacy policy and data protection practices",
+            "content": ""
+        },
+        "terms": {
+            "title": "Terms of Service",
+            "meta_description": "Terms and conditions for using our service",
+            "content": ""
+        },
+        "dmca": {
+            "title": "DMCA Policy",
+            "meta_description": "DMCA takedown policy and copyright protection",
+            "content": ""
+        },
+        "about": {
+            "title": "About Us",
+            "meta_description": "Learn more about our service",
+            "content": ""
+        },
+        "faq": {
+            "title": "FAQ - Frequently Asked Questions",
+            "meta_description": "Frequently asked questions about our MP3 downloader service",
+            "content": ""
+        },
+        "youtube-to-mp4": {
+            "title": "YouTube to MP4 Converter",
+            "meta_description": "Convert and download YouTube videos to MP4 format in high quality",
+            "content": ""
+        },
+        "youtube-to-mp3": {
+            "title": "YouTube to MP3 Converter",
+            "meta_description": "Convert and download YouTube videos to MP3 audio format",
+            "content": ""
+        }
+    },
+    "error": {
+        "empty_url": "Please enter a video URL or search term",
+        "invalid_url": "Please enter a valid URL",
+        "download_failed": "Failed to process video",
+        "network": "Network error. Please try again."
+    },
+    "processing": "Processing...",
+    "download_button": "Download",
+    "video": "Video",
+    "audio": "Audio",
+    "quality": "Quality",
+    "format": "Format",
+    "download": "Download",
+    "download_video": "Download Video",
+    "download_audio": "Download Audio",
+    "mp4": "MP4",
+    "mp3": "MP3",
+    "search_results": "Search Results",
+    "related_searches": "Related Searches"
+}

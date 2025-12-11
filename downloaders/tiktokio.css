@@ -1,0 +1,621 @@
+/* TikTokio.com Exact Replica CSS */
+
+/* Import Lato Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles - TikTokio */
+.tiktokio-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.tiktokio-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tiktokio-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.tiktokio-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.tiktokio-menu a {
+    text-decoration: none;
+    color: #446084;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.tiktokio-menu a:hover {
+    color: #d26e4b;
+}
+
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #446084;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #446084;
+    cursor: pointer;
+}
+
+.language-selector {
+    position: relative;
+}
+
+.lang-btn {
+    background: #446084;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    min-width: 120px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.lang-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: block;
+    padding: 8px 15px;
+    color: #446084;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.lang-option:hover,
+.lang-option.active {
+    background: #f8f9fa;
+    color: #d26e4b;
+}
+
+/* Main Content Area */
+.tiktokio-main {
+    background: linear-gradient(135deg, #446084 0%, #5a7ba6 100%);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.tiktokio-hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tiktokio-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.tiktokio-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Download Form */
+.download-form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.download-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tiktok-url-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.tiktok-url-input:focus {
+    border-color: #446084;
+}
+
+.tiktok-url-input::placeholder {
+    color: #adb5bd;
+}
+
+.paste-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.paste-btn:hover {
+    background: #5a6268;
+}
+
+.download-btn {
+    background: #d26e4b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #c85a38;
+}
+
+.download-btn:disabled {
+    background: #adb5bd;
+    cursor: not-allowed;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.features-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #446084;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #446084, #d26e4b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 36px;
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #446084;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Steps Section */
+.steps-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.steps-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #446084;
+    margin-bottom: 50px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.step-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #d26e4b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #446084;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.tiktokio-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d26e4b;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #34495e;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 10px;
+    line-height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background: #d26e4b;
+    color: white;
+}
+
+.footer-copyright {
+    color: #bdc3c7;
+    font-size: 14px;
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .tiktokio-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        padding: 20px;
+        gap: 15px;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .tiktokio-menu.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .tiktokio-title {
+        font-size: 32px;
+    }
+    
+    .download-form {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #d26e4b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-top: 20px;
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #446084, #d26e4b);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #446084;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Results Container */
+.results-container {
+    margin-top: 30px;
+    display: none;
+}
+
+.result-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.result-video {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-thumbnail {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.result-info h4 {
+    color: #446084;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.result-info p {
+    color: #6c757d;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.download-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.download-option {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-option:hover {
+    border-color: #446084;
+    background: #f8f9fa;
+}
+
+.option-format {
+    font-weight: 600;
+    color: #446084;
+    margin-bottom: 5px;
+}
+
+.option-quality {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.option-size {
+    background: #d26e4b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
