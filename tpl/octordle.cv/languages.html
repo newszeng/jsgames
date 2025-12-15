@@ -1,0 +1,15 @@
+<!-- Languages Section -->
+<section class="mb-8 sm:mb-10 lg:mb-12">
+    <div class="text-center mb-6 sm:mb-8">
+        <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">{{ __('languages.section_title')|default('Play Wordle in Different Languages') }}</h2>
+        <p class="text-gray-600 text-sm sm:text-base">{{ __('languages.section_description')|default('Guess the hidden words in different languages! It will be helpful for learning new words and improving foreign language skills.') }}</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        {% for lang in __('languages.list') %}
+        <a href="#" class="flex items-center gap-3 bg-white rounded-xl sm:rounded-2xl shadow-lg px-4 py-3 sm:px-5 sm:py-4 border border-transparent octordle-border-hover text-gray-800 octordle-text-hover transition-all duration-300 hover:shadow-xl">
+            <span class="fi fi-{% if lang.code == 'en' %}us{% elseif lang.code == 'uk' %}gb{% elseif lang.code == 'ua' %}ua{% elseif lang.code == 'ie' %}ie{% elseif lang.code == 'cs' %}cz{% elseif lang.code == 'el' %}gr{% elseif lang.code == 'ph' %}ph{% else %}{{ lang.code }}{% endif %} text-xl rounded-sm"></span>
+            <span class="text-sm sm:text-base transition-colors duration-300">{{ lang.name }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>

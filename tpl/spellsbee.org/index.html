@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default(__('site.title')) }}</title>
+
+    <meta name="description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="keywords" content="{{ page_keywords|default(__('site.keywords')) }}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page_title|default(__('site.title')) }}">
+    <meta property="og:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta property="og:image" content="/static/{{ domain }}/images/preview.jpg">
+    <meta property="og:url" content="https://{{ domain }}{{ current_path|default('/') }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title|default(__('site.title')) }}">
+    <meta name="twitter:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="twitter:image" content="/static/{{ domain }}/images/preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/{{ domain }}/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/{{ domain }}/images/apple-touch-icon.png">
+
+    <link href="{{ get_static_url('css/main.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_static_url('css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ get_static_url('css/flag-icons.min.css') }}">
+
+    {% if analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ analytics_id }}');
+    </script>
+    {% endif %}
+
+    {% if adsense_id %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_id }}"
+        crossorigin="anonymous"></script>
+    {% endif %}
+
+    <script>
+        window.translations = {
+            wait_targets: "{{ __('game.loading')|default('Loading...') }}"
+        };
+        window.params = {
+            dictionary_code: "{{ current_lang|default('en') }}",
+            custom_word_length: 0,
+            auto_show_generator: false,
+            enable_reward_ad: false,
+            assets_version: '45.12',
+            ads: 'none'
+        };
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "{{ site_name|default('Wordle Game') }}",
+        "description": "{{ __('site.description')|default('') }}",
+        "genre": "Word Puzzle",
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "operatingSystem": "All",
+        "url": "https://{{ domain }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site_name|default('Wordle Game') }}"
+        }
+    }
+    </script>
+</head>
+
+<body class="bg-amber-50 min-h-screen">
+    <!-- Header navigation - Full width amber gradient -->
+    <header class="bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo area -->
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <div class="bg-white/90 backdrop-blur rounded-xl p-2 shadow-md">
+                        <a href="/index.php?domain={{ domain }}&lang={{ current_lang }}" class="block"
+                            title="{{ site_name|default('Wordle') }}">
+                            <img src="{{ get_static_url('images/wordly.png') }}" alt="{{ site_name|default('Wordle') }}"
+                                class="h-8 sm:h-10 w-auto" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-amber-900 font-bold text-lg tracking-tight">{{ site_name|default('Spelling Bee') }}</span>
+                        <p class="text-amber-800/70 text-xs">Word Puzzle Game</p>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex items-center gap-2 sm:gap-3">
+                    <!-- Language selector -->
+                    <div class="relative">
+                        <button id="languageButton"
+                            class="flex items-center gap-2 bg-white/80 hover:bg-white text-amber-800 rounded-full px-3 py-2 sm:px-4 sm:py-2.5 transition-all shadow-sm hover:shadow-md">
+                            <i class="fa-solid fa-globe text-base sm:text-lg"></i>
+                            <span id="currentLanguage" class="text-sm font-medium hidden sm:inline">{{
+                                current_lang_name|default('English') }}</span>
+                            <i class="fa-solid fa-chevron-down text-xs hidden sm:inline"></i>
+                        </button>
+                        <div id="languageDropdown" class="language-dropdown hidden">
+                            {% for lang_code, lang_name in available_languages %}
+                            <a href="{{ get_language_url(lang_code) }}"
+                                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-amber-100 hover:text-amber-800 transition-colors{% if lang_code == current_lang %} bg-amber-50 text-amber-700 font-medium{% endif %}">
+                                <span class="w-6 text-center mr-2">{{ lang_code|upper }}</span>
+                                <span>{{ lang_name }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Help button -->
+                    <button id="helpButton" class="bg-white/80 hover:bg-white text-amber-800 rounded-full w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center transition-all shadow-sm hover:shadow-md" title="How to play">
+                        <i class="fa-solid fa-circle-question text-base sm:text-lg"></i>
+                    </button>
+
+                    <!-- Settings button -->
+                    <button id="settingsButton" class="bg-white/80 hover:bg-white text-amber-800 rounded-full w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center transition-all shadow-sm hover:shadow-md" title="Settings">
+                        <i class="fa-solid fa-gear text-base sm:text-lg"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+
+        <!-- Game Area - Hexagon inspired card -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="relative bg-gradient-to-br from-amber-100 via-white to-yellow-50 rounded-3xl shadow-xl p-1">
+                <div class="bg-white rounded-[22px] p-4 sm:p-6 lg:p-8">
+                    <noscript>
+                        <div class="supports_error">
+                            <div class="rounded-xl border-2 border-amber-300 bg-amber-50 text-amber-900 px-4 py-4 text-sm sm:text-base text-center">
+                                <div class="font-semibold text-lg sm:text-xl">JavaScript is disabled</div>
+                                <div class="mt-2">Your browser is outdated, we recommend updating it to the latest version or using another more modern one.</div>
+                            </div>
+                        </div>
+                    </noscript>
+                    <iframe id="gameFrame" src="/static/{{ domain }}/game/" style="width: 100%; border: none; display: block; overflow: hidden;" title="Spelling Bee Game"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Games -->
+        {% include 'otherGames.html' %}
+
+        <!-- Wordle Variants Section -->
+        {% include 'wordLength.html' %}
+
+        <!-- Languages Section -->
+        {% include 'languages.html' %}
+
+        <!-- Introduction Section - Side accent design -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="relative overflow-hidden bg-white rounded-3xl shadow-xl">
+                <div class="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-amber-400 to-yellow-500"></div>
+                <div class="p-6 sm:p-8 lg:p-10 pl-8 sm:pl-10 lg:pl-12">
+                    <div class="flex items-center gap-4 mb-5">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-200">
+                            <i class="fa-solid fa-star text-white text-lg"></i>
+                        </div>
+                        <h2 class="text-xl sm:text-2xl font-bold text-amber-900">{{
+                            __('intro.title')|default(site_name ~ ': Spelling Bee Game') }}</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg">
+                        {{ __('intro.description')|default('Game rules: Create the maximum number of words using 7 letters
+                        from the hive. Words must contain at least 4 letters and include the center letter. Four-letter
+                        words are worth 1 point each. Longer words earn 1 point per letter. How many words can you make with
+                        7 letters?') }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play Section - Horizontal timeline style -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="text-center mb-8 sm:mb-10">
+                <span class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg shadow-amber-200 mb-4">
+                    <i class="fa-solid fa-book-open"></i>
+                    Tutorial
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-amber-900">{{
+                    __('how_to_play.title')|default('How to play Spelling Bee game?') }}</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for step in __('how_to_play.steps') %}
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 to-yellow-500"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                                <span class="text-white font-bold text-xl">{{ loop.index }}</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">{{ step.title }}</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed text-sm sm:text-base">{{ step.description|raw }}</p>
+                        {% if step.image %}
+                        <div class="mt-5 flex justify-center">
+                            <img src="{{ get_static_url(step.image) }}" alt="{{ step.title }}"
+                                class="w-auto max-w-48 sm:max-w-56 h-auto rounded-xl" loading="lazy">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- FAQ Section - Modern accordion -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl p-6 sm:p-8 lg:p-10">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl shadow-lg shadow-amber-200 mb-4">
+                        <i class="fa-solid fa-circle-question text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-amber-900">{{
+                        __('faq.title')|default('Frequently Asked Questions') }}</h2>
+                </div>
+
+                <div class="max-w-3xl mx-auto space-y-4">
+                    {% for item in __('faq.questions') %}
+                    <article class="faq-item bg-white rounded-2xl shadow-md overflow-hidden border-2 border-transparent hover:border-amber-200 transition-colors">
+                        <input type="checkbox" id="faq-{{ loop.index }}" class="faq-toggle" hidden>
+                        <label for="faq-{{ loop.index }}" class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-amber-50/50 transition-colors">
+                            <h3 class="faq-question font-semibold text-gray-800 text-base sm:text-lg pr-4">{{ item.q }}</h3>
+                            <span class="faq-icon flex-shrink-0" aria-hidden="true"></span>
+                        </label>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <div class="px-5 pb-5 pt-0">
+                                    <p class="text-gray-600 leading-7 text-sm sm:text-base">{{ item.a|raw }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section - Split layout with image -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="bg-gradient-to-br from-amber-500 via-amber-400 to-yellow-400 rounded-3xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-5 gap-0">
+                    <div class="lg:col-span-3 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-10 h-10 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-heart text-white text-lg"></i>
+                            </div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-white">{{ __('about.title')|default('About Spelling Bee') }}</h2>
+                        </div>
+                        <p class="text-white/95 leading-relaxed text-sm sm:text-base lg:text-lg">
+                            {{ __('about.description')|default('The game presents players with a grid of 7 letters
+                            arrayed in a honeycomb structure. Players must form four or more letter words using given
+                            letters and must always include the center letter. Each puzzle is guaranteed to have at
+                            least one pangram that, when found, gives the player the most points. To win the game you
+                            need to collect the maximum number of points for a given set of letters. Regular Spelling
+                            Bee games improve memory, mental clarity and slow down the aging of brain cells.') }}
+                        </p>
+                    </div>
+                    <div class="lg:col-span-2 flex items-center justify-center p-6 lg:p-0">
+                        <img src="{{ get_static_url('images/about-spelling-bee.png') }}"
+                            alt="{{ __('about.title')|default('About Spelling Bee') }}" loading="lazy"
+                            class="rounded-2xl lg:rounded-none lg:rounded-r-3xl max-w-xs lg:max-w-none w-full h-auto lg:h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer - Modern honeycomb inspired -->
+    <footer class="bg-gradient-to-b from-amber-50 to-amber-100 border-t-4 border-amber-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+            <!-- Top section -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <!-- Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <a href="/index.php?domain={{ domain }}&lang={{ current_lang }}"
+                        class="inline-flex items-center gap-3 mb-4" title="{{ site_name|default('Wordle') }}">
+                        <div class="bg-white rounded-xl p-2 shadow-md">
+                            <img src="{{ get_static_url('images/wordly.png') }}" alt="{{ site_name|default('Wordle') }}"
+                                class="h-8 w-auto" loading="lazy">
+                        </div>
+                        <span class="font-bold text-amber-900 text-lg">{{ site_name|default('Spelling Bee') }}</span>
+                    </a>
+                    <p class="text-amber-700/80 text-sm leading-relaxed">Challenge your vocabulary with our daily word puzzle game.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-amber-900 mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/privacy" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Privacy Policy</a></li>
+                        <li><a href="/terms" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Terms of Service</a></li>
+                        <li><a href="mailto:contact@{{ domain }}" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Games -->
+                <div>
+                    <h4 class="font-bold text-amber-900 mb-4">More Games</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Wordle</a></li>
+                        <li><a href="#" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Dordle</a></li>
+                        <li><a href="#" class="text-amber-700/80 hover:text-amber-600 transition text-sm">Quordle</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="font-bold text-amber-900 mb-4">Follow Us</h4>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-10 h-10 bg-white hover:bg-amber-400 text-amber-600 hover:text-white rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-all" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white hover:bg-amber-400 text-amber-600 hover:text-white rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-all" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white hover:bg-amber-400 text-amber-600 hover:text-white rounded-xl flex items-center justify-center shadow-sm hover:shadow-md transition-all" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="pt-6 border-t border-amber-200">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-amber-700/70 text-sm">
+                        © {{ 'now'|date('Y') }} {{ site_name|default('Spelling Bee') }}. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-amber-700/70 text-sm">Made with</span>
+                        <i class="fa-solid fa-heart text-amber-500"></i>
+                        <span class="text-amber-700/70 text-sm">for word lovers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ get_static_url('js/common.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <title>{{ __('site.title') }}</title>
+    <link rel="shortcut icon" href="{{ get_static_url('favicon.ico') }}" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="{{ __('site.description') }}">
+    <meta name="keywords" content="{{ __('site.keywords') }}">
+    <link href="{{ get_static_url('css/main.min.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/wordly.css') }}" rel="stylesheet">
+
+    <meta property="og:title" content="{{ __('site.title') }}">
+    <meta property="og:description" content="{{ __('site.description') }}">
+    <meta property="og:locale" content="{{ current_lang|default('en') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ current_url }}">
+    <meta property="og:site_name" content="{{ __('site.title') }}">
+    <meta property="og:width" content="1024">
+    <meta property="og:height" content="1024">
+    <meta property="og:image" content="{{ get_static_url('images/wordly.png') }}">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ __('site.title') }}" />
+    <meta name="twitter:description" content="{{ __('site.description') }}" />
+    <meta name="twitter:image" content="{{ get_static_url('images/wordly.png') }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_static_url('favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_static_url('favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_static_url('favicon.ico') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        window.translations = {
+            wait_targets: "{{ __('game.loading')|default('Loading...') }}"
+        };
+
+        // ads = google|numberle|none
+        window.params = {
+            dictionary_code: '{{ current_lang|default('en') }}',
+            custom_word_length: 0,
+            auto_show_generator: false,
+            enable_reward_ad: false,
+            assets_version: '45.12',
+            ads: 'none'
+        };
+    </script>
+</head>
+<body class=" ">
+<div class="page">
+    <div class="page__wrapper">
+        
+        <section class="section section--full section--main">
+            <div class="container no-pading">
+                <div class="wrap">
+                    <div class="main">
+                        <div id="root"></div>
+
+                        <div class="modal_info-wrapper">
+                            <div class="mini_modal" id="modal_info">
+                                <div class="top">{{ __('how_to_play.title') }}</div>
+
+                                <div class="data">
+                                    <div class="cont">
+                                        <div class="info">
+                                            <div class="text">
+                                                {{ __('home.subtitle') }}<br>
+                                            </div>
+
+                                            <div class="text">
+                                                {{ __('how_to_play.example_text')|default('To start the game, just enter any word, for example:') }}
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter">T</div>
+                                                <div class="letter yellow_letter">A</div>
+                                                <div class="letter">B</div>
+                                                <div class="letter yellow_letter">L</div>
+                                                <div class="letter green_letter">E</div>
+                                            </div>
+
+                                            <div class="text text-tiles">
+                                                <b class="grey_text">T</b> , <b class="grey_text">B</b> {{ __('game_rules.rule3') }}<br>
+                                                <b class="yellow_text">A</b> , <b class="yellow_text">L</b> {{ __('game_rules.rule2') }}<br>
+                                                <b class="green_text">E</b> {{ __('game_rules.rule1') }}<br>
+                                            </div>
+                                            
+                                            <div class="text">
+                                                {{ __('how_to_play.try_again')|default('Another try to find matching letters in the target word.') }}
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter green_letter">F</div>
+                                                <div class="letter green_letter">L</div>
+                                                <div class="letter green_letter">A</div>
+                                                <div class="letter">S</div>
+                                                <div class="letter">H</div>
+                                            </div>
+
+                                            <div class="text">
+                                                {{ __('how_to_play.close')|default('So close!') }}
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter green_letter">F</div>
+                                                <div class="letter green_letter">L</div>
+                                                <div class="letter green_letter">A</div>
+                                                <div class="letter green_letter">M</div>
+                                                <div class="letter green_letter">E</div>
+                                            </div>
+
+                                            <div class="text">
+                                                <b>{{ __('how_to_play.got_it')|default('Got it! 🏆') }}</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--app">
+            <div class="container">
+                <div class="wordle-text" style="text-align:center">
+                    <p class="info_text_p" style="margin-bottom:5px">{{ __('mobile_apps.title') }}</p>
+                    <a class="app-button" href="{{ __('mobile_apps.ios_url')|default('#') }}" target="_blank">
+                        <img style="height:40px;margin:0 5px" src="{{ get_static_url('images/apple.svg') }}">
+                    </a>
+                    <a class="app-button" href="{{ __('mobile_apps.android_url')|default('#') }}" target="_blank">
+                        <img style="height:40px;margin:0 5px" src="{{ get_static_url('images/android.svg') }}">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--grey">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('related_games.title') }}</h2>
+                </div>
+                <div class="games">
+                    {% for game in __('related_games.games') %}
+                    <a href="{{ game.url|default('#') }}" class="game-item" target="_blank">
+                        <div class="game-item__img">
+                            <img src="{{ game.image|default('/static/images/game-placeholder.png') }}" alt="{{ game.name }}">
+                        </div>
+                        <div class="game-item__info">
+                            <div class="game-item__title">{{ game.name }}</div>
+                            <div class="game-item__text">{{ game.description }}</div>
+                            <div class="game-item__bottom">
+                                <div class="game-item__play">{{ __('home.play_button') }}</div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--green">
+            <div class="container">
+                <div class="headline">
+                    <h1 class="headline__title">{{ __('home.main_heading') }}</h1>
+                    <h2 class="headline__text">{{ __('home.subtitle') }}</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('word_length.section_title')|default('Play Wordle with Various Number of Letters') }}</h2>
+                    <p class="info_text_p">{{ __('word_length.section_description')|default('Choose a word puzzle with the length of the hidden word from 4 to 11 letters.') }}</p>
+                </div>
+                <div class="links">
+                    {% for option in __('word_length.options') %}
+                    <a class="links__link letters" href="/{{ option.value }}-letter-words-wordle">{{ option.label }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--grey">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('languages.section_title')|default('Play Wordle in Different Languages') }}</h2>
+                    <p class="info_text_p">{{ __('languages.section_description')|default('Guess the hidden words in different languages! It will be helpful for learning new words and improving foreign language skills.') }}</p>
+                </div>
+
+                <div class="links">
+                    {% for lang in __('languages.list') %}
+                    <{% if lang.code == current_lang %}div class="links__link active"{% else %}a class="links__link" href="{{ get_language_url(lang.code) }}"{% endif %}>
+                        <svg class="icon">
+                            <use xlink:href="/assets/img/spritesvg.svg#{{ lang.code }}"></use>
+                        </svg>{{ lang.name }}
+                    {% if lang.code == current_lang %}</div>{% else %}</a>{% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('tools.solver_title')|default('Wordle Solver') }}</h2>
+                    <p class="info_text_p">{{ __('tools.solver_description')|default('This Wordle Solver will help you find the hidden word if you get stuck. Enter a set of correct, valid and wrong letters and find out all possible answers.') }}</p>
+                </div>
+                <div class="btn-center">
+                    <a class="btn generator" href="/wordle-solver">
+                        <svg class="icon">
+                            <use xlink:href="/assets/img/spritesvg.svg#ic_solver"></use>
+                        </svg>{{ __('tools.solver_button')|default('Find the Answer') }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--grey">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('tools.generator_title')|default('Wordly Generator') }}</h2>
+                    <p class="info_text_p">{{ __('tools.generator_description')|default('Generate your own Wordly puzzle with any word from 4 to 11 letters and challenge your friends! Can your friend guess the hidden word in 6 tries?') }}</p>
+                </div>
+                <div class="btn-center">
+                    <a class="btn" href="/wordle-generator">
+                        <svg class="icon">
+                            <use xlink:href="/assets/img/spritesvg.svg#ic_generator"></use>
+                        </svg>{{ __('tools.generator_button')|default('Create Puzzle') }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="info_text">{{ __('tools.kids_title')|default('Wordly for Kids') }}</h2>
+                    <p class="info_text_p">{{ __('tools.kids_description')|default('This edition of the Wordly for kids contains a dictionary of words for children up to 8th grade and has a word length starting from 3 letters. This game will be very useful for developing memory and logical thinking skills in children.') }}</p>
+                </div>
+                <div class="btn-center">
+                    <a class="btn kids" href="/wordle-for-kids">
+                        <svg class="icon">
+                            <use xlink:href="/assets/img/spritesvg.svg#kids"></use>
+                        </svg>{{ __('tools.kids_button')|default('Play Wordly for Kids') }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="wordle-text">
+                    <h2 class="h2--center">{{ __('how_to_play.title') }}</h2>
+                    <ol class="ol">
+                        {% for step in __('how_to_play.steps') %}
+                        <li>
+                            <h3>{{ step.title }}</h3>
+                            <span>{{ step.description }}</span>
+                            {% if step.image %}
+                            <img src="{{ step.image }}" alt="{{ step.title }}" title="{{ step.title }}">
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--grey">
+            <div class="container">
+                <div class="faq">
+                    <h2>{{ __('faq.title') }}</h2>
+                    <ol>
+                        {% for item in __('faq.questions') %}
+                        <li>
+                            <h3>{{ item.q }}</h3>
+                            <p>{{ item.a|raw }}</p>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--rate">
+            <div class="container">
+                <div class="rate">
+                    <div class="rate__title">{{ __('rating.title')|default('Rate Wordly:') }}</div>
+                    <div class="rate__stars">
+                        <fieldset class="starability-basic" data-section="index">
+                            <input class="input-no-rate" id="no-rate" type="radio" name="rating" value="0" checked="" aria-label="No rating" autocomplete="off" checked>
+                            <input id="first-rate1" type="radio" name="rating" value="1" autocomplete="off">
+                            <label class="hint" for="first-rate1" title="Awful"><span class="hint__hidden">Awful</span></label>
+                            <input id="first-rate2" type="radio" name="rating" value="2" autocomplete="off">
+                            <label class="hint" for="first-rate2" title="Poor"><span class="hint__hidden">Poor</span></label>
+                            <input id="first-rate3" type="radio" name="rating" value="3" autocomplete="off">
+                            <label class="hint" for="first-rate3" title="Average"><span class="hint__hidden">Average</span></label>
+                            <input id="first-rate4" type="radio" name="rating" value="4" autocomplete="off">
+                            <label class="hint" for="first-rate4" title="Good"><span class="hint__hidden">Good</span></label>
+                            <input id="first-rate5" type="radio" name="rating" value="5" autocomplete="off">
+                            <label class="hint" for="first-rate5" title="Excellent"><span class="hint__hidden">Excellent</span></label>
+                        </fieldset>
+                    </div>
+                    <div class="rate__numbers"><b>{{ __('rating.score')|default('4.8') }}</b> / 5</div>
+                    <div class="rate__votes"><span>{{ __('rating.votes')|default('2,847') }}</span> votes</div>
+                </div>  
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <div class="footer__copir">{{ site_name|default('Wordly') }} © 2025</div>
+                <ul class="footer__links">
+                    {% for key, label in __('footer.links') %}
+                    <li><a href="/{{ key }}">{{ label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<noscript>
+    <div class="supports_error">
+        Your browser is outdated, we recommend updating it to the latest version<br> or using another more modern one.
+    </div>
+</noscript>
+
+<script src="{{ get_static_url('js/libs.min.js') }}"></script>
+<script src="{{ get_static_url('js/wordly.js') }}"></script>
+
+</body>
+</html>

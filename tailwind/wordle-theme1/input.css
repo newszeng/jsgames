@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义组件样式 */
+@layer components {
+    /* 语言下拉菜单动画 */
+    .language-dropdown {
+        @apply absolute right-0 top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[200px] max-h-[300px] overflow-y-auto z-50;
+        @apply opacity-0 invisible translate-y-2 transition-all duration-200;
+    }
+    
+    .language-dropdown.show {
+        @apply opacity-100 visible translate-y-0;
+    }
+    
+    /* 渐变文字效果 */
+    .gradient-text {
+        @apply bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent;
+    }
+}

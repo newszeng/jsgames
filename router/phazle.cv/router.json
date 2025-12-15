@@ -1,0 +1,40 @@
+{
+    "routes": {
+        "/": {
+            "type": "home",
+            "template": "home.php",
+            "title": ""
+        },
+        "/contact": {
+            "type": "static",
+            "template": "static.php",
+            "page": "contact",
+            "title": "Contact Us - Phazle"
+        },
+        "/privacy": {
+            "type": "static",
+            "template": "static.php",
+            "page": "privacy",
+            "title": "Privacy Policy - Phazle"
+        },
+        "/terms": {
+            "type": "static",
+            "template": "static.php",
+            "page": "terms",
+            "title": "Terms of Service - Phazle"
+        },
+        "/dmca": {
+            "type": "static",
+            "template": "static.php",
+            "page": "dmca",
+            "title": "DMCA Policy - Phazle"
+        }
+    },
+    "redirects": {},
+    "default_lang": "en",
+    "languages": ["en"],
+    "404_page": {
+        "template": "404.php",
+        "title": "Page Not Found - Phazle"
+    }
+}

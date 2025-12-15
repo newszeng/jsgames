@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default(site_name ~ ' - Daily Word Puzzle') }}</title>
+    
+    <meta name="description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="keywords" content="{{ page_keywords|default(__('site.keywords')) }}">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page_title|default(site_name) }}">
+    <meta property="og:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta property="og:image" content="/static/{{ domain }}/images/preview.jpg">
+    <meta property="og:url" content="https://{{ domain }}{{ current_path|default('/') }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title|default(site_name) }}">
+    <meta name="twitter:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="twitter:image" content="/static/{{ domain }}/images/preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/{{ domain }}/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/{{ domain }}/images/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/{{ domain }}/css/main.css">
+
+    
+    <!-- Analytics -->
+    {% if analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ analytics_id }}');
+    </script>
+    {% endif %}
+    
+    <!-- AdSense -->
+    {% if adsense_id %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_id }}" crossorigin="anonymous"></script>
+    {% endif %}
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "{{ site_name|default('Wordle Game') }}",
+        "description": "{{ __('site.description') }}",
+        "genre": "Word Puzzle",
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "operatingSystem": "All",
+        "url": "https://{{ domain }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site_name|default('Wordle Game') }}"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav">
+                <div class="nav-brand">
+                    <a href="{{ get_language_url() }}" class="brand-link">
+                        <h1>{{ site_name|default('WORDLE') }}</h1>
+                    </a>
+                </div>
+                
+                <div class="nav-links">
+                    <div class="language-switcher">
+                        {% for lang_code, lang_name in available_languages %}
+                            {% if lang_code != current_lang %}
+                                <a href="{{ get_language_url(lang_code) }}" class="lang-link">{{ lang_name }}</a>
+                            {% else %}
+                                <span class="lang-current">{{ lang_name }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-content">
+        {% block content %}{% endblock %}
+    </main>

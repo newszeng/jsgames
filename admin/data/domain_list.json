@@ -1,0 +1,78 @@
+[
+    {
+        "domain": "wordly-game.com",
+        "notes": "wordle",
+        "created_at": "2025-12-04 15:00:00",
+        "is_used": true,
+        "updated_at": "2025-12-04 15:00:00"
+    },
+    {
+        "domain": "tetris-classic.com",
+        "notes": "tetris",
+        "created_at": "2025-12-04 15:00:00",
+        "is_used": false,
+        "updated_at": "2025-12-04 15:00:00"
+    },
+    {
+        "domain": "snake-game.io",
+        "notes": "snake",
+        "created_at": "2025-12-04 15:00:00",
+        "is_used": false,
+        "updated_at": "2025-12-04 15:00:00"
+    },
+    {
+        "domain": "puzzle2048.net",
+        "notes": "2048",
+        "created_at": "2025-12-04 15:00:00",
+        "is_used": false,
+        "updated_at": "2025-12-04 15:00:00"
+    },
+    {
+        "domain": "spellsbee.cv",
+        "notes": "",
+        "created_at": "2025-12-11 19:26:34",
+        "is_used": false
+    },
+    {
+        "domain": "squares.cv",
+        "notes": "",
+        "created_at": "2025-12-13 20:27:46",
+        "is_used": false
+    },
+    {
+        "domain": "combinations.cv",
+        "notes": "",
+        "created_at": "2025-12-13 20:57:12",
+        "is_used": false
+    },
+    {
+        "domain": "phazle.cv",
+        "notes": "",
+        "created_at": "2025-12-14 16:55:26",
+        "is_used": false
+    },
+    {
+        "domain": "dordle.cv",
+        "notes": "",
+        "created_at": "2025-12-14 17:06:59",
+        "is_used": false
+    },
+    {
+        "domain": "quordle.cv",
+        "notes": "",
+        "created_at": "2025-12-14 18:54:09",
+        "is_used": false
+    },
+    {
+        "domain": "octordle.cv",
+        "notes": "",
+        "created_at": "2025-12-14 19:11:15",
+        "is_used": false
+    },
+    {
+        "domain": "sedecordle.cv",
+        "notes": "",
+        "created_at": "2025-12-14 19:54:37",
+        "is_used": false
+    }
+]

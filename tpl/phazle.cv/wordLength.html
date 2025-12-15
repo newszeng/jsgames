@@ -1,0 +1,14 @@
+<!-- Wordle Variants Section -->
+<section class="mb-8 sm:mb-10 lg:mb-12">
+    <div class="text-center mb-6 sm:mb-8">
+        <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800 mb-2 sm:mb-3">{{ __('word_length.title')|default('Play Wordle with Various Number of Letters') }}</h2>
+        <p class="text-gray-600 text-sm sm:text-base">{{ __('word_length.description')|default('Choose a word puzzle with the length of the hidden word from 4 to 11 letters.') }}</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        {% for item in __('word_length.items') %}
+        <a href="{{ item.url }}" class="block bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-5 text-center border border-transparent phazle-border-hover text-gray-800 phazle-text-hover transition-all duration-300 hover:shadow-xl">
+            <span class="font-semibold text-sm sm:text-base transition-colors duration-300">{{ item.name }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</section>

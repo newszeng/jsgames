@@ -1,0 +1,161 @@
+/* 
+ * Site-specific stylesheet
+ * Overrides main.css styles for site customization
+ * 
+ * FAQ accordion animation using pure CSS
+ * Semantic brand classes with site-specific colors
+ */
+
+.faq-item {
+    --faq-border-color: #F2C9A0;
+    --faq-bg-color: #ffffff;
+    --faq-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --faq-radius: 0.75rem;
+    --faq-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    background: var(--faq-bg-color);
+    border: 1px solid var(--faq-border-color);
+    border-radius: var(--faq-radius);
+    box-shadow: var(--faq-shadow);
+    overflow: hidden;
+    transition: var(--faq-transition);
+}
+
+.faq-item:hover {
+    border-color: var(--faq-border-color);
+    transform: translateY(-1px);
+}
+
+.faq-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.faq-icon {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: var(--faq-border-color);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.faq-icon::before {
+    width: 0.75rem;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 0.75rem;
+    transform: translate(-50%, -50%);
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-inner {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease-out 0.1s, transform 0.2s ease-out 0.1s;
+}
+
+.faq-toggle:checked + .faq-header + .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+.faq-toggle:checked + .faq-header + .accordion-content .accordion-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-toggle:checked + .faq-header .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@media (min-width: 640px) {
+    .faq-item {
+        --faq-radius: 1rem;
+    }
+    
+    .faq-header {
+        padding: 1.5rem;
+    }
+    
+    .faq-question {
+        font-size: 1.125rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1.5rem 1rem;
+    }
+}
+
+.dordle-bg {
+    background-color: #FFECDC;
+}
+
+.dordle-bg-light {
+    background-color: #FFF7ED;
+}
+
+.dordle-text {
+    color: #8B5A2B;
+}
+
+.dordle-border {
+    border-color: #F2C9A0;
+}
+
+.dordle-text-hover:hover {
+    color: #7A4A1E;
+}
+
+.dordle-bg-hover:hover {
+    background-color: #F7D8B8;
+}
+
+.dordle-border-hover:hover {
+    border-color: #E8B98A;
+}
+
+.other-games-card:hover .other-games-play {
+    background-color: #F7D8B8;
+    border-color: #E8B98A;
+    color: #ffffff;
+}

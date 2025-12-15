@@ -1,0 +1,17 @@
+{
+  "name": "games-test",
+  "version": "1.0.0",
+  "description": "Wordle games website with Tailwind CSS",
+  "scripts": {
+    "build:wordle-theme1": "tailwindcss -i ./tailwind/wordle-theme1/input.css -o ./admin/static/wordle/theme1/css/main.css --minify",
+    "watch:wordle-theme1": "tailwindcss -i ./tailwind/wordle-theme1/input.css -o ./admin/static/wordle/theme1/css/main.css --watch",
+    "build:spellsbee.org": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme1/input.css -o ./static/spellsbee.org/css/main.css --minify",
+    "watch:spellsbee.org": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme1/input.css -o ./static/spellsbee.org/css/main.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "flag-icons": "^7.5.0"
+  }
+}

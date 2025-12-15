@@ -1,0 +1,113 @@
+/* 
+ * Site-specific stylesheet for spellsbee.org - Honey Bee Theme
+ * Modern layout with Tailwind-first approach
+ * Theme: Warm amber/golden honey color scheme
+ */
+
+/* FAQ Accordion - Pure CSS Animation */
+.faq-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faq-icon {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.faq-icon::before {
+    width: 0.75rem;
+    height: 2px;
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 0.75rem;
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-inner {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease-out 0.1s, transform 0.2s ease-out 0.1s;
+}
+
+.faq-toggle:checked + .faq-header + .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+.faq-toggle:checked + .faq-header + .accordion-content .accordion-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-toggle:checked + .faq-header .faq-icon::after {
+    transform: rotate(90deg);
+}
+
+.faq-toggle:checked + .faq-header {
+    background-color: rgba(254, 243, 199, 0.5);
+}
+
+/* Language dropdown */
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    min-width: 180px;
+    background: white;
+    border: 2px solid #FCD34D;
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(245, 158, 11, 0.2);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Smooth transitions */
+a, button {
+    transition: all 0.2s ease;
+}
+
+/* Other games card hover */
+.other-games-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.other-games-card:hover {
+    border-color: #FCD34D;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.15);
+}
+
+.other-games-card:hover .other-games-play {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    border-color: #F59E0B;
+    color: #ffffff;
+}

@@ -1,0 +1,226 @@
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="/privacy" class="footer-link">{{ __('footer.privacy') }}</a>
+                    <a href="/terms" class="footer-link">{{ __('footer.terms') }}</a>
+                    <a href="/contact" class="footer-link">{{ __('footer.contact') }}</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>{{ __('footer.copyright', '© ' ~ 'now'|date('Y') ~ ' ' ~ site_name ~ '. All rights reserved.') }}</p>
+                </div>
+                
+                <!-- Related Games -->
+                {% if related_sites %}
+                <div class="related-games">
+                    <h3>Play More Games</h3>
+                    <div class="related-grid">
+                        {% for site in related_sites %}
+                            <a href="https://{{ site.domain }}" class="related-game" target="_blank">
+                                <span class="game-icon">🎮</span>
+                                <span class="game-name">{{ site.site_name }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ad Slots -->
+    {% if adsense_id %}
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="{{ adsense_id }}"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    {% endif %}
+
+    <!-- JavaScript -->
+    <script src="/static/{{ domain }}/js/main.js"></script>
+    
+    <!-- Game Analytics -->
+    <script>
+        // Track game events
+        function trackGameEvent(event, data) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', event, {
+                    'event_category': 'Game',
+                    'event_label': '{{ game_type|default("wordle") }}',
+                    'custom_map': data
+                });
+            }
+        }
+        
+        // Listen for game events from iframe
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'gameEvent') {
+                trackGameEvent(event.data.eventType, event.data.data);
+            }
+        });
+    </script>
+
+    <style>
+    .site-header {
+        background: #fff;
+        border-bottom: 1px solid #d3d6da;
+        padding: 15px 0;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .site-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .brand-link h1 {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        margin: 0;
+        color: #1a1a1b;
+    }
+    
+    .language-switcher {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .lang-link {
+        text-decoration: none;
+        color: #787c7e;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+    
+    .lang-link:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .lang-current {
+        color: #1a1a1b;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .site-content {
+        min-height: calc(100vh - 200px);
+    }
+    
+    .site-footer {
+        background: #f8f9fa;
+        border-top: 1px solid #d3d6da;
+        padding: 40px 0 20px;
+        margin-top: 50px;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin-bottom: 20px;
+    }
+    
+    .footer-link {
+        text-decoration: none;
+        color: #787c7e;
+        margin: 0 15px;
+        font-size: 14px;
+    }
+    
+    .footer-link:hover {
+        color: #1a1a1b;
+    }
+    
+    .footer-copyright p {
+        color: #787c7e;
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    .related-games {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .related-games h3 {
+        margin-bottom: 15px;
+        color: #1a1a1b;
+        font-size: 16px;
+    }
+    
+    .related-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .related-game {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #787c7e;
+        font-size: 14px;
+        padding: 8px 12px;
+        border: 1px solid #d3d6da;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+    
+    .related-game:hover {
+        border-color: #6aaa64;
+        color: #6aaa64;
+    }
+    
+    .ad-container {
+        text-align: center;
+        margin: 30px 0;
+        padding: 20px;
+    }
+    
+    @media (max-width: 768px) {
+        .site-nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .related-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    </style>
+</body>
+</html>

@@ -1,0 +1,163 @@
+{
+    "site_name": "Y2mate",
+    "site_description": "{site_name} is a Popular free YouTube video Downloader that allows users to easily convert and download videos from YouTube in High quality quickly and easily.",
+    "nav": {
+        "youtube_downloader": "YouTube Downloader",
+        "youtube_to_mp4": "YouTube to MP4 Converter",
+        "youtube_to_mp3": "YouTube to MP3 Converter",
+        "language": "English"
+    },
+    "home": {
+        "title": "Youtube Downloader",
+        "h1": "Youtube Downloader",
+        "placeholder": "Search or paste link here...",
+        "start_btn": "Start",
+        "terms_text": "By using our service you are accepting our",
+        "terms_link": "Terms of Use"
+    },
+    "content": {
+        "title": "Download Video and Audio from YouTube",
+        "description_1": "{site_name} is a Popular free YouTube video Downloader that allows users to easily convert and download videos from YouTube, Facebook, TikTok, Instagram, Dailymotion, Youku, etc in High quality easily and safely. {site_name} offers various video and audio formats such as MP4, MP3, M4V FLV, AVI, 3GP, WEBM, WMV, etc. Also you can freely and easily save videos from YouTube videos in 360p, 720p, 1080p, and even 4K quality without installing software or applications. No registration required. {site_name} works seamlessly on all browsers and devices such your computer, mobile, Tablet, and other Device. It's a simple and Easy YouTube Downloader.",
+        "description_2": "Also Our {site_name} provides a search engine that allows you to search your Mp3 audio files and download it in different MP3 bit rates including 64kbps, 128kbps, 192kbps, 256kbps and 320kbps. We use the latest technology to provide our users with the best and fast experience. {site_name} is a reliable, user-friendly and completely free online YouTube Downloader tool that makes it easy to convert and download YouTube videos in MP3 and MP4 formats."
+    },
+    "instruction": {
+        "title": "How to Download YouTube Video using {site_name}",
+        "step_1": "Enter a keyword in the search box or paste the video link that you want to convert and download",
+        "step_2": "Press the \"Start\" button and converting process start",
+        "step_3": "Choose the Audio and Video format would you like to download then click on the Download button."
+    },
+    "advantages": {
+        "title": "{site_name} Advantage",
+        "item_1": "Convert and Download Absolutely free and Unlimited use As many as you want",
+        "item_2": "We use Latest Technology so you can",
+        "item_3": "No Need to register and login required",
+        "item_4": "We support All video and audio formats conversion",
+        "item_5": "You will not need to install third-party applications and software"
+    },
+    "features": {
+        "unlimited": {
+            "title": "Free Unlimited conversion",
+            "description": "Download YouTube videos for free using {site_name} and users can download unlimited YouTube videos. Enjoy the freedom to download as many videos as you want."
+        },
+        "easy": {
+            "title": "Easy and User-Friendly Interface",
+            "description": "{site_name} features an attractive and easy-to-use interface that simplifies the process of downloading videos from YouTube. Simply copy and paste the YouTube video URL into the designated field to begin your download."
+        },
+        "quality": {
+            "title": "High-Quality Downloads",
+            "description": "Our {site_name} platform supports multiple high-quality downloads, ensuring that users receive the same quality as YouTube. You can download YouTube videos in 720p, 1080p, and even up to 8K resolution."
+        },
+        "speed": {
+            "title": "Very Fast Download",
+            "description": "{site_name} is the fastest downloader that quickly converts and downloads videos, so you don't have to wait long for your video download and without sacrificing quality."
+        },
+        "no_software": {
+            "title": "No Software Installation",
+            "description": "{site_name} operates entirely online, allowing you to use the service directly in your web browser without the need to install any software. Enjoy the convenience of downloading videos without the hassle of registration or log-ins."
+        },
+        "compatible": {
+            "title": "Compatible with all device",
+            "description": "{site_name} is a web-based YouTube downloader that works seamlessly on all devices, including smartphones, computers, and tablets. It also works seamlessly with all popular browsers such as Chrome, Firefox, Safari, Microsoft Edge, and Opera."
+        }
+    },
+    "faq": {
+        "title": "FAQs",
+        "q1": "What is {site_name}?",
+        "a1": "{site_name} is the leading YouTube video downloader that allows you to quickly download audio and video from YouTube free of cost. Also, users can easily convert YouTube to MP4, and MP3 files in the highest quality. You can save YouTube videos in 1080p, 2K, 4K, and up to 8K quality.",
+        "q2": "Is {site_name} Free to use?",
+        "a2": "Yes, It's a completely free YouTube downloader. You are not required to pay to download videos and audio from YouTube.",
+        "q3": "What is the maximum number of videos and audio files that I can download?",
+        "a3": "With {site_name}, you can download unlimited videos and audio files. There are no restrictions on how many videos or audio tracks users can download.",
+        "q4": "{site_name} supports which video\/audio formats?",
+        "a4": "Our YouTube Video Downloader offers a different type of video quality such as 360p, 720p, 1080p, 2K, and up to 4k resolution. and audio quality like 64kbps, 128kbps, 192kbps, 256kbps, and 320kbps.",
+        "q5": "Is YouTube Downloader supported with all devices?",
+        "a5": "We support multiple devices such as Android, iOS, iPhone, Windows, macOS, and more. As well as You can open this tool in multiple browsers like Chrome, Safari, Microsoft Edge, Opera, Firefox, Vivaldi, Brave, and more!",
+        "q6": "Is it safe to use {site_name} for downloading YouTube Videos?",
+        "a6": "It is safe and secure to download videos and audio files with {site_name}. If users download content, they should always take precautions and comply with copyright laws.",
+        "q7": "Can I Download YouTube Videos without installing applications using {site_name}?",
+        "a7": "Yes, {site_name} can be used to download YouTube videos without installing apps. All you have to do is visit our official website and start using the tool in a browser."
+    },
+    "footer": {
+        "extension_title": "Free Y2Mate Extension",
+        "extension_description": "One Click For Download Video & Mp3.",
+        "extension_chrome": "Add to Chrome",
+        "extension_edge": "Add to Edge",
+        "quick_links": "Quick Links",
+        "about": "About",
+        "faq": "FAQ",
+        "youtube_downloader": "YouTube Downloader",
+        "youtube_to_mp3": "YouTube to MP3",
+        "youtube_to_mp4": "YouTube to MP4",
+        "facebook_downloader": "Facebook Downloader",
+        "instagram_downloader": "Instagram Downloader",
+        "tiktok_downloader": "TikTok Downloader",
+        "twitter_downloader": "Twitter Downloader",
+        "support": "Support",
+        "contact": "Contact Us",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "disclaimer": "This service is not affiliated with YouTube. Always respect content creators' rights and copyright laws."
+    },
+    "static_pages": {
+        "contact": {
+            "title": "Contact Us",
+            "content": "",
+            "meta_description": "Get in touch with our support team"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "meta_description": "Our privacy policy and data protection practices",
+            "content": ""
+        },
+        "terms": {
+            "title": "Terms of Service",
+            "meta_description": "Terms and conditions for using our service",
+            "content": ""
+        },
+        "dmca": {
+            "title": "DMCA Policy",
+            "meta_description": "DMCA takedown policy and copyright protection",
+            "content": ""
+        },
+        "about": {
+            "title": "About Us",
+            "meta_description": "Learn more about our service",
+            "content": ""
+        },
+        "faq": {
+            "title": "FAQ - Frequently Asked Questions",
+            "meta_description": "Frequently asked questions about our YouTube downloader service",
+            "content": ""
+        },
+        "youtube-to-mp4": {
+            "title": "YouTube to MP4 Converter",
+            "meta_description": "Convert and download YouTube videos to MP4 format in high quality",
+            "content": ""
+        },
+        "youtube-to-mp3": {
+            "title": "YouTube to MP3 Converter",
+            "meta_description": "Convert and download YouTube videos to MP3 audio format",
+            "content": ""
+        }
+    },
+    "error": {
+        "empty_url": "Please enter a video URL",
+        "invalid_url": "Please enter a valid URL",
+        "download_failed": "Failed to process video",
+        "network": "Network error. Please try again."
+    },
+    "processing": "Processing...",
+    "download_button": "Download",
+    "video": "Video",
+    "audio": "Audio",
+    "quality": "Quality",
+    "format": "Format",
+    "download": "Download",
+    "download_video": "Download Video",
+    "download_audio": "Download Audio",
+    "mp4": "MP4",
+    "mp3": "MP3",
+    "search_results": "Search Results",
+    "related_searches": "Related Searches"
+}

@@ -1,0 +1,14 @@
+{
+    "default_lang": "en",
+    "languages": ["en", "es", "fr", "de", "it", "pt"],
+    "routes": {
+        "/": {
+            "template": "index.html",
+            "type": "home"
+        }
+    },
+    "redirects": {},
+    "404_page": {
+        "template": "404.html"
+    }
+}

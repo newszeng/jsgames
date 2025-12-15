@@ -1,0 +1,176 @@
+{
+    "site_name": "FB Downloader",
+    "site_description": "{site_name} is the best free Facebook video downloader online. Download Facebook videos in HD quality, including Reels, Stories, and Live videos. Fast, easy, and no registration required.",
+    "meta_description": "Download Facebook videos online for free. Save Facebook videos, Reels, Stories in HD quality. The fastest Facebook downloader with no watermark. Works on all devices.",
+    
+    "nav": {
+        "home": "Home",
+        "features": "Features",
+        "how_to": "How to Use",
+        "contact": "Contact",
+        "about": "About"
+    },
+    
+    "home": {
+        "title": "Facebook Video Downloader",
+        "h1": "Facebook Video Downloader",
+        "placeholder": "Paste Facebook video link here",
+        "start_btn": "Download",
+        "terms_text": "By using our service you accept our",
+        "terms_link": "Terms of Service"
+    },
+    
+    "hero_title": "Facebook Video Downloader",
+    "hero_subtitle": "Download Facebook videos, Reels, and Stories in HD quality",
+    "input_placeholder": "Paste Facebook video link here",
+    "download_button": "Download",
+    "processing_text": "Processing your Facebook video...",
+    "terms_text": "By using our service you accept our",
+    "privacy_text": "and",
+    
+    "download": {
+        "paste_url": "Paste Facebook Video URL",
+        "choose_quality": "Choose Download Quality",
+        "audio_only": "Audio Only"
+    },
+    
+    "descriptions": {
+        "title": "Download Facebook videos online for free",
+        "main_desc": "{site_name} is a powerful Facebook video downloader that allows you to save Facebook videos, Reels, Stories, and Live videos in HD quality. Whether you want to download private Facebook videos or public content, our tool makes it simple and fast. No software installation required - just paste the URL and download instantly.",
+        "how_to_title": "How to download Facebook videos?",
+        "how_to_subtitle": "Follow these simple steps to download any Facebook video.",
+        "step1_title": "Step 1: Copy Video Link",
+        "step1_desc": "Go to Facebook and find the video you want to download. Click on the three dots menu and select 'Copy link'.",
+        "step2_title": "Step 2: Paste the Link",
+        "step2_desc": "Come back to {site_name} and paste the Facebook video URL into the input field above.",
+        "step3_title": "Step 3: Download Video",
+        "step3_desc": "Click the Download button and choose your preferred quality. The video will be saved to your device.",
+        "note": "<b>Note:</b> {site_name} respects Facebook's terms of service and content creators' rights. Please download videos only for personal use and always credit the original creators."
+    },
+    
+    "features_section": {
+        "title": "Why choose {site_name} Facebook Downloader?",
+        "hd_quality": {
+            "title": "HD Quality Downloads",
+            "desc": "Download Facebook videos in original quality up to 1080p HD resolution."
+        },
+        "all_content": {
+            "title": "All Facebook Content",
+            "desc": "Support for regular videos, Reels, Stories, Live videos, and Watch videos."
+        },
+        "fast_download": {
+            "title": "Lightning Fast",
+            "desc": "Our servers ensure the fastest download speeds for Facebook videos."
+        },
+        "no_login": {
+            "title": "No Login Required",
+            "desc": "Download Facebook videos without logging in or providing personal information."
+        },
+        "free": {
+            "title": "100% Free",
+            "desc": "{site_name} is completely free with unlimited downloads and no hidden fees."
+        },
+        "secure": {
+            "title": "Safe & Secure",
+            "desc": "SSL encrypted connection ensures your downloads are private and secure."
+        }
+    },
+    
+    "faq_section": {
+        "title": "Frequently Asked Questions",
+        "q1": "Can I download private Facebook videos?",
+        "a1": "You can only download videos that you have access to view. For private videos, you must be logged into Facebook and have permission to view them.",
+        "q2": "What video formats are supported?",
+        "a2": "We support MP4 video format which works on all devices. You can also extract audio in MP3 format.",
+        "q3": "Is there a limit on downloads?",
+        "a3": "No, there are no limits. You can download unlimited Facebook videos for free.",
+        "q4": "Can I download Facebook Live videos?",
+        "a4": "Yes, you can download Facebook Live videos after they have finished streaming.",
+        "q5": "Why can't I download some videos?",
+        "a5": "Some videos may be restricted by privacy settings or geographical limitations set by the uploader."
+    },
+    
+    "features": {
+        "title": "Facebook Video Downloader Features",
+        "subtitle": "The most powerful tool to download Facebook videos",
+        "reels": {
+            "title": "Download Reels",
+            "desc": "Save Facebook Reels videos in high quality"
+        },
+        "stories": {
+            "title": "Save Stories",
+            "desc": "Download Facebook Stories before they disappear"
+        },
+        "live": {
+            "title": "Live Videos",
+            "desc": "Save Facebook Live streams after broadcast"
+        }
+    },
+    
+    "how_to": {
+        "title": "How to Download Facebook Videos",
+        "subtitle": "3 simple steps to save any Facebook video",
+        "step1": {
+            "title": "Find & Copy URL",
+            "desc": "Locate the Facebook video and copy its URL from the address bar or share menu"
+        },
+        "step2": {
+            "title": "Paste Link Here",
+            "desc": "Paste the copied URL into our Facebook downloader input field"
+        },
+        "step3": {
+            "title": "Download HD Video",
+            "desc": "Click download and save the Facebook video in your preferred quality"
+        }
+    },
+    
+    "tips": {
+        "title": "Pro Tips for Facebook Downloads",
+        "tip1": {
+            "title": "Download Facebook Reels",
+            "desc": "Save trending Reels videos before they're gone. Perfect for content creators."
+        },
+        "tip2": {
+            "title": "Save Live Streams",
+            "desc": "Download Facebook Live videos after the broadcast ends to never miss important moments."
+        },
+        "tip3": {
+            "title": "Extract Audio",
+            "desc": "Convert Facebook videos to MP3 for podcasts or music content."
+        }
+    },
+    
+    "faq": {
+        "title": "Facebook Downloader FAQ",
+        "q1": "Is this Facebook downloader free?",
+        "a1": "Yes, our Facebook video downloader is 100% free with unlimited downloads and no registration required.",
+        "q2": "Can I download HD Facebook videos?",
+        "a2": "Yes, you can download Facebook videos in HD quality (up to 1080p) when available.",
+        "q3": "Does it work with Facebook Reels?",
+        "a3": "Yes, our downloader supports Facebook Reels, Stories, regular videos, and Live streams.",
+        "q4": "Is it safe to use?",
+        "a4": "Absolutely! We use SSL encryption and don't store any of your personal data or downloaded videos."
+    },
+    
+    "footer": {
+        "about_text": "The best Facebook video downloader online. Download FB videos, Reels, and Stories in HD quality. Fast, free, and easy to use.",
+        "quick_links": "Quick Links",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "dmca": "DMCA",
+        "download_formats": "Supported Formats",
+        "formats_text": "Download Facebook videos in MP4 and extract audio in MP3 format.",
+        "related_tools": "Related Tools",
+        "faq": "FAQ",
+        "copyright": "All rights reserved.",
+        "disclaimer": "This tool is not affiliated with Facebook. Please respect intellectual property rights."
+    },
+    
+    "error": {
+        "empty_url": "Please enter a Facebook video URL",
+        "invalid_url": "Please enter a valid Facebook URL",
+        "download_failed": "Failed to process video",
+        "network": "Network error. Please try again."
+    }
+}

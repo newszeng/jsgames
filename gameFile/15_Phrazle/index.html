@@ -1,0 +1,352 @@
+﻿	<!--[if lt IE 10]> <html  lang="en-US" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Phrazle Wordle - Play Phrazle Game Online</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta content="Play Phrazle game online and free. Phrazle, as the name implies, is a game where you have to guess the whole phrase using Wordle principles." name="description">
+	<link href="static/css/style.css" id="theme-opt" rel="stylesheet" type="text/css">
+	<script src="static/js/jquery-2.2.4.min.js">
+	</script>
+</head>
+<body>
+	<script>
+	   var consoleErrors = [];
+
+	   function logError(e) {
+	       try {
+	           consoleErrors.push([e.error.stack, e.lineno, e.timeStamp]);
+	       } catch (e) {}
+	   }
+	   window.addEventListener("error", logError);
+	   let game_path = "/";
+	</script>
+	<link href="static/css/bootstrap.4.4.1.min.css" media="screen" rel="stylesheet">
+	<link href="static/css/style1.css" rel="stylesheet">
+	<script src="static/js/gsap.3.7.1.min.js">
+	</script>
+	<link href="static/css/phrazle.css" rel="stylesheet" type="text/css">
+	<script src="static/js/jquery.3.4.1.min.js">
+	</script> 
+	<script src="static/js/popper.1.16.0.min.js">
+	</script> 
+	<script src="static/js/bootstrap.4.4.1.min.js">
+	</script>
+	<nav class="navbar navbar-light navbar-expand-md bg-light" id="site-header"></nav>
+	<div class="container-fluid" id="gameContainer">
+		<div class="row mt-2 align-items-center justify-content-center" id="wordgame-nav" style="color: var(--text-color);">
+			<div class="col-auto px-0">
+				<ul class="nav nav-pills small">
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="statsIcon" title="Statistics">Statistics <svg class="pb-1 mx-1" height="24" style="display: inline-block;" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 20v-6M6 20V10M18 20V4" fill="var(--icon-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="helpIcon" title="How to play">How to?</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row" id="wordhunt-container">
+			<div class="col p-1">
+				<div id="wordhunt-guess-container"></div>
+			</div>
+		</div>
+		<div class="row justify-content-center p-2" id="keyboard-container">
+			<div class="col-12">
+				<p class="luckiest-guy pt-2" id="notification"></p>
+				<div class="mb-1" id="keyboard"></div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="howToplay" class="modal fade" data-backdrop="static" data-keyboard="false" id="wordhuntHowToPlay" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header pb-0">
+					<div class="row w-100">
+						<div class="col-1"></div>
+						<div class="col">
+							<h3 class="modal-title w-100 luckiest-guy text-success text-center">How to play</h3>
+						</div>
+						<div class="col-1 mr-0">
+							<button aria-label="Close" class="pr-0 close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<p>Phrazle is a puzzle game where you have to guess a phrase made up of several words. You have only six attempts to correctly guess the phrase. Each guess must include only words that are legitimate and use all spaces. Each time you guess, you'll get color-coded clues about the placement of letters in individual words and in the entire phrase</p>
+					<p>Green: The letter is in the first word and in the correct position.</p>
+					<p>Yellow: Although it is in the first word, the letter is in the incorrect location.</p>
+					<p>Purple: The letter is in the phrase but not in the second word.</p>
+					<p>Gray: Letters are not in the phrase.</p>
+					<p><strong>Examples</strong></p>
+					<div class="p">
+						The letter <strong>U</strong> is in the first word and in the correct spot
+					</div>
+					<div class="wordhunt-row justify-content-center" style="margin: 2px 0 10px 0;">
+						<div class="row_block instructions">
+							P
+						</div>
+						<div class="row_block instructions blockGreen">
+							U
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+						<div class="row_block instructions blockSpace"></div>
+						<div class="row_block instructions">
+							F
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+					</div>
+					<div class="p">
+						The letter <strong>T</strong> is in the first word but in the wrong spot
+					</div>
+					<div class="wordhunt-row justify-content-center" style="margin: 2px 0 10px 0;">
+						<div class="row_block instructions">
+							P
+						</div>
+						<div class="row_block instructions">
+							U
+						</div>
+						<div class="row_block instructions blockGold">
+							T
+						</div>
+						<div class="row_block instructions blockSpace"></div>
+						<div class="row_block instructions">
+							F
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+					</div>
+					<div class="p">
+						The letter <strong>O</strong> is in the phrase but not in the second word
+					</div>
+					<div class="wordhunt-row justify-content-center" style="margin: 2px 0 10px 0;">
+						<div class="row_block instructions">
+							P
+						</div>
+						<div class="row_block instructions">
+							U
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+						<div class="row_block instructions blockSpace"></div>
+						<div class="row_block instructions">
+							F
+						</div>
+						<div class="row_block instructions blockPurple">
+							O
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+					</div>
+					<div class="p">
+						The letter <strong>O</strong> is not in the phrase
+					</div>
+					<div class="wordhunt-row justify-content-center" style="margin: 2px 0 10px 0;">
+						<div class="row_block instructions">
+							P
+						</div>
+						<div class="row_block instructions">
+							U
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+						<div class="row_block instructions blockSpace"></div>
+						<div class="row_block instructions">
+							F
+						</div>
+						<div class="row_block instructions">
+							O
+						</div>
+						<div class="row_block instructions blockGrey">
+							O
+						</div>
+						<div class="row_block instructions">
+							T
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="hint-modal">
+		<div class="modal-dialog modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header pb-0">
+					<div class="row w-100">
+						<div class="col-1"></div>
+						<div class="col">
+							<h3 class="modal-title w-100 text-success text-center">Hints</h3>
+						</div>
+						<div class="col-1 mr-0">
+							<button aria-label="Close" class="pr-0 close" data-dismiss="modal" id="optionsClose" type="button"><span aria-hidden="true">&times;</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="btn btn-success" id="reveal-button">
+						Hint 3 letters
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="gameover" class="modal fade" data-backdrop="static" data-keyboard="false" id="wordhuntGameOver" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header pb-0">
+					<div class="row w-100">
+						<div class="col-1"></div>
+						<div class="col">
+							<h3 class="modal-title w-100 luckiest-guy text-success text-center">You Won</h3>
+						</div>
+						<div class="col-1 mr-0">
+							<button aria-label="Close" class="pr-0 close" data-dismiss="modal" id="yahtzeeMultiplayerChallengeClose" type="button"><span aria-hidden="true">&times;</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="row justify-content-center text-center practice-text">
+						<div class="col">
+							<h5>Practice Statistics</h5>
+						</div>
+					</div>
+					<div class="row justify-content-center text-center">
+						<div class="col">
+							<h5 class="m-0" id="wordhuntPlayed">1</h5>
+							<p class="stat-label">Games Played</p>
+						</div>
+						<div class="col">
+							<h5 class="m-0" id="wordhuntWinPercentage">1</h5>
+							<p class="stat-label">Win %</p>
+						</div>
+						<div class="col">
+							<h5 class="m-0" id="wordhuntCurrentStreak">1</h5>
+							<p class="stat-label">Current Streak</p>
+						</div>
+						<div class="col">
+							<h5 class="m-0" id="wordhuntMaxStreak">1</h5>
+							<p class="stat-label">Max Streak</p>
+						</div>
+					</div>
+					<div class="row justify-content-left">
+						<div class="col-auto">
+							<h5 class="text-success">Guess Distribution <span class="practice-text">(Practice)</span></h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							1
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist1" style="width: 25%;">2</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							2
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist2" style="width: 25%;">2</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							3
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist3" style="width: 25%;">2</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							4
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist4" style="width: 5%;">2</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							5
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist5" style="width: 5%;">2</span>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-1">
+							6
+						</div>
+						<div class="col pl-0">
+							<span class="histogram-bar" id="wordhuntHist6" style="width: 15%;">2</span>
+						</div>
+					</div>
+					<div class="modal-footer text-center">
+						<div id="countdowntimer">
+							<h5>Next Phrazle Game in: <span id="countdownClock"></span></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	   var GLOBAL = {
+	       LOGIN_NO_RELOAD: true,
+	   };
+	</script> 
+	<script src="static/js/phrazle.js">
+	</script>
+	<div aria-hidden="true" aria-labelledby="statsModalLabel" class="modal fade" id="statsModal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="statsModalLabel">Trophy Case &amp; Stats</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="container mt-4"></div>
+					<script>
+					               $("#statsModal").on("shown.bs.modal", function(e) {
+					                   $.post("/high-scores/stats-personal", {}, function(resp) {
+					                       $("#statsModal .container").html(resp);
+					                   });
+					               });
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-5" style="display: none;">
+		<noscript>You need to enable javascript to run this app</noscript>
+	</div>
+	<script defer src="static/js/main.js">
+	</script>
+</body>
+</html>
