@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7071a3db-9be2-4866-899a-cd7e35c09a76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsgames.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsgames.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data/backlinks.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data/backlinks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data/domain_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data/domain_list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data/prompts.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data/prompts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/data/websites.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/data/websites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/get_themes.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/get_themes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/i18n/tiktok/theme2/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/i18n/tiktok/theme2/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/i18n/youtube/theme1/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/i18n/youtube/theme1/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/i18n/youtube/theme3/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/i18n/youtube/theme3/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/i18n/youtube/theme4/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/i18n/youtube/theme4/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/google_serp_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/google_serp_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/translate.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/translate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/lib/translate_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/lib/translate_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/prompt.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/prompt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/router/tpl.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/router/tpl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tagpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tagpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/facebook/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/facebook/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/facebook/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/facebook/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/instagram/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/instagram/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/instagram/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/instagram/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/pinterest/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/pinterest/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/pinterest/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/pinterest/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/tiktok/theme2/static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/twitter/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/twitter/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/twitter/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/twitter/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme1/static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme1/static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme2/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme2/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme2/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme2/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme2/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme2/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme2/static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme2/static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/contet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/contet.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme3/static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme3/static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/content.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/content.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/tpl/youtube/theme4/static.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/tpl/youtube/theme4/static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/traffic.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/traffic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vhost/tpl.conf" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vhost/tpl.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/website.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/website.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/website_pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/website_pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/get_themes.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/get_themes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/homepage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/lib/google_serp_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/lib/google_serp_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/lib/translate.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/lib/translate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/lib/translate_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/lib/translate_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/prompt.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/prompt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/tagpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/tagpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/traffic.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/traffic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/vhost/tpl.conf" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/vhost/tpl.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/website.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/website.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/admin/website_pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/admin/website_pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/4c16bd253e65cdbeb5a714d07b9dfb0c.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/4c16bd253e65cdbeb5a714d07b9dfb0c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/68cfe899915fa683b7da72ba45c11ad8.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/68cfe899915fa683b7da72ba45c11ad8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/997e178dc565d3ca2e05d4de030cfb52.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/997e178dc565d3ca2e05d4de030cfb52.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/d9727984f2c7fe1dc732b1aee608af11.json" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/analytics/ytdownloader.io/202510/sessions/d9727984f2c7fe1dc732b1aee608af11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/api/csrf.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/api/csrf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/api/downloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/api/downloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/api/savetube.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/api/savetube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/api/tiktok.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/api/tiktok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/api/track.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/api/track.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/assets/images/y2mate-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/assets/images/y2mate-min.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/assets/images/ytmp3-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/assets/images/ytmp3-min.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/common.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/common.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/create_github_repo.sh" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/create_github_repo.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/error.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/error.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/fontawesome-custom.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/fontawesome-custom.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/job/pingback.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/job/pingback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/job/smart_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/job/smart_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/job/trackback.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/job/trackback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/job/vhost_monitor.sh" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/job/vhost_monitor.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/job/wordpress_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/job/wordpress_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/pinterest.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/pinterest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/test/demo.php" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/test/demo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/test/install-and-test-tv.sh" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/test/install-and-test-tv.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/test/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/test/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/test/node_modules/acorn/bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/test/node_modules/acorn/bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/tiktok.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/tiktok.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/vhosts/ytdownloader.io.conf" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/vhosts/ytdownloader.io.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/youtube.webp" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/youtube.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/youtubejs/install.txt" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/youtubejs/install.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/youtubejs/savetube.me.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/youtubejs/savetube.me.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/youtubejs/ssyoutube.js" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/youtubejs/ssyoutube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/ytdownloader.io-key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/ytdownloader.io-key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/ytdownloader.io.pem" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/ytdownloader.io.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloaders/ytmp3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/downloaders/ytmp3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamesystem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gamesystem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translate_gemini.php" beforeDir="false" afterPath="$PROJECT_DIR$/translate_gemini.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="39459130">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="htaccess" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="htaccess" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tpl/wordly-game.com/footer.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/i18n/wordly-game.com/en.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3917" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-680" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/downloaders/test/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/@bufbuild/protobuf/dist/cjs/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/@bufbuild/protobuf/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/acorn/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/jintr/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/undici/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/youtubei.js/dist/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/node_modules/youtubei.js/package.json" />
+      <path value="$PROJECT_DIR$/downloaders/test/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="width" value="2527" />
+    <option name="height" value="1551" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jsgames" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsgames" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsgames" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsgames" type="462c0819:PsiDirectoryNode" />
+              <item name="tpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7071a3db-9be2-4866-899a-cd7e35c09a76" name="Default Changelist" comment="" />
+      <created>1765444451581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765444451581</updated>
+      <workItem from="1765444452727" duration="658000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="658000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1477" height="880" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24982406" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tpl/wordly-game.com/footer.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i18n/wordly-game.com/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3917" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680" />
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -74,5 +74,11 @@
         "notes": "",
         "created_at": "2025-12-14 19:54:37",
         "is_used": false
+    },
+    {
+        "domain": "lewdle.cv",
+        "notes": "",
+        "created_at": "2025-12-15 10:06:29",
+        "is_used": false
     }
 ]
