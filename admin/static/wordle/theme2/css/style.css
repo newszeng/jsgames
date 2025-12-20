@@ -1,0 +1,47 @@
+.spellbee-page-bg {
+    background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 55%, #ffffff 100%);
+}
+
+.spellbee-bg {
+    background-color: #f59e0b;
+}
+
+.spellbee-border-light {
+    border-color: #fef3c7;
+}
+
+.spellbee-text-hover:hover {
+    color: #b45309;
+}
+
+.spellbee-icon-hover:hover {
+    color: #f59e0b;
+}
+
+.spellbee-glow {
+    background-color: rgba(251, 191, 36, 0.35);
+}
+
+.spellbee-bg-gradient {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.spellbee-focus:focus {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+.spellbee-card:hover {
+    border-color: #fde68a;
+}
+
+.spellbee-btn {
+    background-color: #ffffff;
+    color: #d97706;
+    border-color: #f59e0b;
+}
+
+.spellbee-card:hover .spellbee-btn {
+    background-color: #f59e0b;
+    color: #ffffff;
+}

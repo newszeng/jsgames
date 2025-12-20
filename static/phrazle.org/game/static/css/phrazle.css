@@ -1,0 +1,299 @@
+﻿:root {
+	--background-color: white;
+	--keyboard-background-color: white;
+	--keyboard-text-color: #6c757d;
+	--text-color: black;
+	--icon-color: #007bff;
+	--active-key-color: #333333;
+	--inverted-text-color: white;
+	--toast-background-color: black;
+	--background-absent: rgb(120, 124, 126);
+	--color-correct: rgb(15, 153, 221);
+	--color-present: rgb(201, 180, 88)
+}
+.night-mode {
+	--background-color: black;
+	--text-color: white;
+	--inverted-text-color: black;
+	--keyboard-background-color: rgb(129, 131, 132);
+	--keyboard-text-color: white;
+	--toast-background-color: white;
+	--background-absent: #3a3a3c;
+	--active-key-color: #dddddd
+}
+body {
+	font-family: nunito, sans-serif
+}
+#settingsIcon:hover, #statsIcon:hover, #helpIcon:hover, #homeIcon {
+	text-decoration: none
+}
+#ot-sdk-btn-floating.ot-floating-button {
+	display: none
+}
+.color-blind {
+	--color-correct: #f5793a;
+	--color-present: #85c0f9
+}
+#wordgame-nav .nav-link {
+	padding: .25rem .5rem
+}
+footer {
+	display: none
+}
+#gameContainer {
+	background-color: #fff;
+	max-height: calc(100vh - 100px);
+	flex-direction: column
+}
+#hint-button {
+	color: #fff;
+	background-color: #28a745
+}
+#hint-button.hint-disabled {
+	color: #fff;
+	background-color: var(--background-absent)
+}
+@keyframes explode {
+	from {
+		z-index: 1000;
+		transform: scale(1)
+	}
+	50% {
+		transform: scale(2)
+	}
+	to {
+		transform: scale(1)
+	}
+}
+.explode {
+	animation: explode .5s ease
+}
+#countdownClock {
+	font-variant-numeric: tabular-nums
+}
+#wordhurdlechallenge {
+	border-top: 1px solid #dee2e6;
+	margin-left: -12px;
+	margin-right: -12px
+}
+.stat-label {
+	font-size: .8rem
+}
+.histogram-bar {
+	display: inline-block;
+	background-color: #6c757d;
+	color: #fff;
+	font-size: .8rem;
+	font-weight: 600;
+	padding-right: 5px;
+	text-align: right;
+	min-width: 18px
+}
+.histogram-bar.won {
+	background-color: #28a745
+}
+#wordhuntGameOver .modal-footer {
+	display: block
+}
+#wordhunt-container {
+	flex-grow: 1;
+	overflow: auto;
+	padding-bottom: 40px
+}
+.wordBreak {
+	margin-top: 10px
+}
+#container {
+	width: 100%;
+	max-width: 1200px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 0;
+	border-radius: 1.5em;
+	height: 100%;
+	display: flex;
+	flex-direction: column
+}
+.gotd {
+	display: inline-block;
+	position: relative;
+	top: -3px
+}
+.nav_bar {
+	text-align: center;
+	height: 33px;
+	margin-top: 11px
+}
+.game_area {
+	margin-top: 5px;
+	flex-grow: 1;
+	overflow-y: auto
+}
+.wordhunt-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	transition: background-color .5s ease;
+	padding-left: 5px;
+	padding-right: 5px
+}
+.wordhunt-row:last-of-type {
+	border-bottom: none
+}
+.wordhunt-row.current-row {
+	background-color: #5e99ff33;
+	transition: background-color .5s ease;
+	border-radius: 55px;
+}
+.row_block {
+	display: inline-block;
+	margin: 1px;
+	text-align: center;
+	font-size: 27px;
+	vertical-align: top;
+	font-weight: 600;
+	line-height: 1.5;
+	border: 2px solid;
+	border-radius: 4px;
+	width: 44px;
+	height: 44px;
+	z-index: 0
+}
+.row_block.instructions {
+	margin: 0 2px
+}
+#notification {
+	text-align: center;
+	letter-spacing: 1px;
+	height: 30px
+}
+#keyboard-container {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: 5px;
+	width: 100vw;
+	background-color: #fff;
+	border-top: 1px solid #eee;
+	z-index: 1
+}
+#keyboard {
+	text-align: center;
+	margin-top: 5px
+}
+#topKeys, #midKeys, #botKeys {
+	display: flex;
+	justify-content: center
+}
+.keyboardKey_s, .keyboardKey_m, .keyboardKey_l {
+	margin: 1px;
+	padding-right: 6px;
+	padding-left: 6px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	color: #6c757d;
+	border: 1px solid #6c757d;
+	border-radius: .25rem;
+	font-size: 1rem;
+	line-height: 2.8;
+	height: 58px;
+	padding: .375rem .5rem;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent
+}
+.keyboardKey:active {
+	background-color: #ddd;
+	transition: background-color .5s ease;
+	transform: scale(.98)
+}
+.keyboardKey:hover {
+	background-color: #fff3e2;
+}
+.keyboardKey_s {
+	width: 52px
+}
+.keyboardKey_m {
+	width: 52px
+}
+.keyboardKey_l {
+	width: 81px
+}
+.blockGreen, .blockGrey, .blockGold, .blockPurple {
+	color: #fff
+}
+.blockPurple {
+	background-color: purple;
+	border-color: purple
+}
+.blockGreen {
+	background-color: #05864d;
+	border-color: #05864d
+}
+.row_block.blockSpace {
+	background-color: transparent;
+	border-color: transparent;
+	width: 14px
+}
+.blockGrey {
+	background-color: #737373;
+	border-color: #737373
+}
+.blockGold {
+	background-color: #d5923b;
+	border-color: #d5923b
+}
+#gameName {
+	line-height: 1em;
+	font-size: 22px
+}
+@media only screen and (max-width:800px) {
+	#site-header {
+		display: none
+	}
+	#m1-container {
+		min-height: 50px
+	}
+	.game_area {
+		margin-top: 1px
+	}
+	.row_block {
+		width: 26px;
+		height: 26px;
+		font-size: 18px
+	}
+	.wordhunt-row.current-row {
+	border-radius: 20px;
+    }
+	#wordhunt-container {
+		padding-right: 3px;
+		padding-left: 3px
+	}
+	#notification, .nav_bar {
+		margin-top: 0;
+		margin-bottom: 0
+	}
+}
+@media only screen and (max-width:575px) {
+	#gameName {
+		line-height: 1.5em;
+		font-size: 20px
+	}
+}
+@media only screen and (max-width:350px) {
+	#game-icons {
+		font-size: 14px
+	}
+	#button-4-letter, #button-5-letter, #button-6-letter, #button-phrazle, #button-all-games {
+		font-size: 3vw
+	}
+	.keyboardKey_m {
+		width: 42px
+	}
+}

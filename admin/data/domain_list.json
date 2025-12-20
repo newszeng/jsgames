@@ -76,9 +76,57 @@
         "is_used": false
     },
     {
-        "domain": "lewdle.cv",
+        "domain": "squares.org",
         "notes": "",
-        "created_at": "2025-12-15 10:06:29",
+        "created_at": "2025-12-19 16:39:26",
+        "is_used": false
+    },
+    {
+        "domain": "combinations.org",
+        "notes": "",
+        "created_at": "2025-12-19 16:49:33",
+        "is_used": false
+    },
+    {
+        "domain": "phrazle.org",
+        "notes": "",
+        "created_at": "2025-12-19 17:14:19",
+        "is_used": false
+    },
+    {
+        "domain": "dordle.org",
+        "notes": "",
+        "created_at": "2025-12-19 17:25:32",
+        "is_used": false
+    },
+    {
+        "domain": "octordle.org",
+        "notes": "",
+        "created_at": "2025-12-19 17:37:38",
+        "is_used": false
+    },
+    {
+        "domain": "sedecordle.org",
+        "notes": "",
+        "created_at": "2025-12-19 17:54:30",
+        "is_used": false
+    },
+    {
+        "domain": "spellsbee.net",
+        "notes": "",
+        "created_at": "2025-12-19 18:21:34",
+        "is_used": false
+    },
+    {
+        "domain": "spellsbee.co",
+        "notes": "",
+        "created_at": "2025-12-19 18:48:38",
+        "is_used": false
+    },
+    {
+        "domain": "spellsbee.vip",
+        "notes": "",
+        "created_at": "2025-12-19 18:57:37",
         "is_used": false
     }
 ]

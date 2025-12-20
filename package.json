@@ -5,6 +5,14 @@
   "scripts": {
     "build:wordle-theme1": "tailwindcss -i ./tailwind/wordle-theme1/input.css -o ./admin/static/wordle/theme1/css/main.css --minify",
     "watch:wordle-theme1": "tailwindcss -i ./tailwind/wordle-theme1/input.css -o ./admin/static/wordle/theme1/css/main.css --watch",
+    "build:wordle-theme2": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme2/input.css -o ./admin/static/wordle/theme2/css/main.css --minify",
+    "watch:wordle-theme2": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme2/input.css -o ./admin/static/wordle/theme2/css/main.css --watch",
+    "build:wordle-theme3": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme3/input.css -o ./admin/static/wordle/theme3/css/main.css --minify",
+    "watch:wordle-theme3": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme3/input.css -o ./admin/static/wordle/theme3/css/main.css --watch",
+    "build:wordle-theme4": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme4/input.css -o ./admin/static/wordle/theme4/css/main.css --minify",
+    "watch:wordle-theme4": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme4/input.css -o ./admin/static/wordle/theme4/css/main.css --watch",
+    "build:wordle-theme5": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme5/input.css -o ./admin/static/wordle/theme5/css/main.css --minify",
+    "watch:wordle-theme5": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme5/input.css -o ./admin/static/wordle/theme5/css/main.css --watch",
     "build:spellsbee.org": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme1/input.css -o ./static/spellsbee.org/css/main.css --minify",
     "watch:spellsbee.org": "tailwindcss -c ./tailwind.config.cjs -i ./tailwind/wordle-theme1/input.css -o ./static/spellsbee.org/css/main.css --watch"
   },

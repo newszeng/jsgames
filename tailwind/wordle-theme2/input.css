@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .spellbee-page-bg {
+        @apply bg-gradient-to-br from-amber-50 via-orange-50 to-white;
+    }
+
+    .spellbee-border-light {
+        @apply border-amber-100;
+    }
+}

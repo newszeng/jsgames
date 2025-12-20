@@ -8,8 +8,14 @@ $template = $_GET['template'] ?? null;
 $refresh = isset($_GET['refresh']) ? (int)$_GET['refresh'] : 0;
 $source = $_GET['source'] ?? 'site';
 
+$theme = $_GET['theme'] ?? 'theme1';
+
 function isValidDomainSegment(string $value): bool {
     return (bool)preg_match('/^[a-zA-Z0-9.-]+$/', $value);
+}
+
+function isValidMasterTheme(string $value): bool {
+    return in_array($value, ['theme1', 'theme2'], true);
 }
 
 function h(string $value): string {
@@ -20,7 +26,8 @@ $root = __DIR__;
 $tplRoot = $root . DIRECTORY_SEPARATOR . 'tpl';
 
 $isMasterPreview = is_string($source) && strtolower($source) === 'master';
-$masterTplDir = $root . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'tpl' . DIRECTORY_SEPARATOR . 'wordle' . DIRECTORY_SEPARATOR . 'theme1';
+$masterTheme = is_string($theme) && isValidMasterTheme($theme) ? $theme : 'theme1';
+$masterTplDir = $root . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'tpl' . DIRECTORY_SEPARATOR . 'wordle' . DIRECTORY_SEPARATOR . $masterTheme;
 
 $availableDomains = [];
 if ($isMasterPreview) {
@@ -126,10 +133,10 @@ if (is_file($langFile)) {
 $langDataSource = is_file($langFile) ? ('i18n/' . $domain . '/' . $lang . '.json') : '';
 
 if ($isMasterPreview && !$langDataSource) {
-    $masterLangFile = $root . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'i18n' . DIRECTORY_SEPARATOR . 'wordle' . DIRECTORY_SEPARATOR . 'theme1' . DIRECTORY_SEPARATOR . $lang . '.json';
+    $masterLangFile = $root . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR . 'i18n' . DIRECTORY_SEPARATOR . 'wordle' . DIRECTORY_SEPARATOR . $masterTheme . DIRECTORY_SEPARATOR . $lang . '.json';
     if (is_file($masterLangFile)) {
         $langData = json_decode((string)file_get_contents($masterLangFile), true) ?: [];
-        $langDataSource = 'admin/i18n/wordle/theme1/' . $lang . '.json';
+        $langDataSource = 'admin/i18n/wordle/' . $masterTheme . '/' . $lang . '.json';
     }
 }
 
@@ -138,6 +145,7 @@ $GLOBALS['site_lang'] = $lang;
 $GLOBALS['default_lang'] = $defaultLang;
 $GLOBALS['lang_data'] = $langData;
 $GLOBALS['is_master_preview'] = $isMasterPreview;
+$GLOBALS['master_theme'] = $masterTheme;
 
 if (!function_exists('__')) {
     function __(string $key, string $default = '') {
@@ -160,7 +168,7 @@ if (!function_exists('get_static_url')) {
     function get_static_url(string $path): string {
         $isMasterPreview = (bool)($GLOBALS['is_master_preview'] ?? false);
         if ($isMasterPreview) {
-            return '/admin/static/wordle/theme1/' . ltrim($path, '/');
+            return '/admin/static/wordle/' . ($GLOBALS['master_theme'] ?? 'theme1') . '/' . ltrim($path, '/');
         }
 
         return '/static/' . ($GLOBALS['site_domain'] ?? '') . '/' . ltrim($path, '/');
@@ -209,10 +217,10 @@ $templateVars = [
     'available_languages' => [],
     'lang_data' => $langData,
     'lang_data_source' => $langDataSource,
-    'current_path' => '/?preview_theme=1&source=' . rawurlencode((string)$source) . '&domain=' . rawurlencode($domain) . '&lang=' . rawurlencode($lang) . '&template=' . rawurlencode($template),
+    'current_path' => '/?preview_theme=1&source=' . rawurlencode((string)$source) . '&theme=' . rawurlencode($masterTheme) . '&domain=' . rawurlencode($domain) . '&lang=' . rawurlencode($lang) . '&template=' . rawurlencode($template),
     'site_name' => $domain,
     'tagline' => '',
-    'theme' => 'theme1',
+    'theme' => $masterTheme,
     'page_title' => 'Preview - ' . $domain,
     'page_description' => '',
     'page_keywords' => '',
@@ -294,6 +302,10 @@ $toolbar = '<div style="position:fixed;left:0;right:0;bottom:0;z-index:99999;bac
     . '<form method="get" style="margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;">'
     . '<input type="hidden" name="preview_theme" value="1">'
     . '<input type="hidden" name="source" value="' . h((string)$source) . '">'
+    . ($isMasterPreview ? '<label>theme <select name="theme" onchange="this.form.submit()">'
+        . '<option value="theme1"' . ($masterTheme === 'theme1' ? ' selected' : '') . '>theme1</option>'
+        . '<option value="theme2"' . ($masterTheme === 'theme2' ? ' selected' : '') . '>theme2</option>'
+        . '</select></label>' : '')
     . '<label>domain <select name="domain" onchange="this.form.submit()">';
 
 foreach ($availableDomains as $d) {
@@ -311,7 +323,7 @@ $toolbar .= '</select></label>'
     . '<label>lang <input name="lang" value="' . h($lang) . '" style="width:64px"></label>'
     . '<label>refresh <input name="refresh" value="' . ($refresh > 0 ? (int)$refresh : '') . '" placeholder="sec" style="width:64px"></label>'
     . '<button type="submit" style="padding:4px 10px;cursor:pointer;">Apply</button>'
-    . '<span style="opacity:.85">Source: ' . ($isMasterPreview ? 'master' : 'site') . ' | Editing: ' . ($isMasterPreview ? 'admin/tpl/wordle/theme1/' : ('tpl/' . h($domain) . '/')) . '</span>'
+    . '<span style="opacity:.85">Source: ' . ($isMasterPreview ? 'master' : 'site') . ' | Editing: ' . ($isMasterPreview ? ('admin/tpl/wordle/' . h($masterTheme) . '/') : ('tpl/' . h($domain) . '/')) . '</span>'
     . '</form>'
     . '</div>';
 

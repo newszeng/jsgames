@@ -19,6 +19,9 @@ function getThemes($type) {
             $themes = [
                 ['name' => 'theme1', 'description' => '<p>经典 Wordle 样式，简洁清爽</p>'],
                 ['name' => 'theme2', 'description' => '<p>深色主题，护眼模式</p>'],
+                ['name' => 'theme3', 'description' => '<p>theme3主题</p>'],
+                ['name' => 'theme4', 'description' => '<p>theme4主题</p>'],
+                ['name' => 'theme5', 'description' => '<p>theme5主题</p>'],
             ];
             break;
         case 'tetris':

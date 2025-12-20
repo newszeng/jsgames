@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ __('site.title')|default(site_name|default('SpellBee')) }}</title>
+    <meta name="description" content="{{ __('site.description')|default('') }}">
+    <meta name="keywords" content="{{ __('site.keywords')|default('') }}">
+
+    <link href="{{ get_static_url('css/main.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/flag-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/theme.css') }}" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffbeb;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b spellbee-border-light sticky top-0 z-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="flex items-center justify-between py-4">
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-xl font-bold spellbee-text-dark">{{ site_name|default('SpellBee') }}</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#game" class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors">Home</a>
+                    <a href="#games" class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors">Games</a>
+                    <a href="#how-to-play" class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors">How to Play</a>
+                    <a href="#faq" class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors">FAQ</a>
+                </nav>
+                <button id="menuBtn" class="md:hidden text-gray-600 hover:spellbee-text-dark">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <nav id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-3">
+                    <a href="#game"
+                        class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors py-2 border-b border-gray-100">Home</a>
+                    <a href="#games"
+                        class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors py-2 border-b border-gray-100">Games</a>
+                    <a href="#how-to-play"
+                        class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors py-2 border-b border-gray-100">How to Play</a>
+                    <a href="#faq" class="text-lg text-gray-600 hover:spellbee-text-dark transition-colors py-2">FAQ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Game Placeholder (User Provided) -->
+        <section class="bg-white rounded-xl sm:rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10 lg:mb-12 border spellbee-border-light">
+            <div id="root" class="game-container"></div>
+            <noscript>
+                <div class="supports_error">
+                    <div
+                        class="rounded-xl border spellbee-border-light spellbee-bg-lighter spellbee-text-dark px-4 py-4 text-sm sm:text-base text-center">
+                        <div class="font-semibold text-lg sm:text-xl">JavaScript is disabled</div>
+                        <div class="mt-2">Your browser is outdated, we recommend updating it to the latest version or using
+                            another more modern one.</div>
+                    </div>
+                </div>
+            </noscript>
+        </section>
+
+        <!-- Game Info -->
+        <section class="mb-10 bg-white rounded-2xl p-6 md:p-8 border spellbee-border-light shadow-sm">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+                {{ __('intro.title')|default('Spelling Bee Game') }}
+            </h2>
+            <p class="text-base text-gray-600 leading-relaxed">{{ __('intro.description')|default('') }}</p>
+        </section>
+
+        <!-- Play Other Games -->
+        <section id="games" class="mb-12 bg-white rounded-2xl p-6 md:p-8 border spellbee-border-light shadow-sm">
+            <h2 class="text-xl md:text-2xl font-bold mb-6 text-gray-800"><i
+                    class="fa-solid fa-gamepad spellbee-text mr-2"></i>{{ __('related_games.title')|default('Play Other Games') }}</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+                {% for game in __('related_games.games') %}
+                <a href="{{ game.url|default('#') }}" target="_blank" rel="noopener"
+                    class="group block spellbee-bg-lighter rounded-xl hover:spellbee-bg-light transition-all duration-300 overflow-hidden border-2 border-transparent hover:spellbee-border">
+                    <div class="w-full h-32 sm:h-36 lg:h-40 overflow-hidden rounded-t-lg">
+                        {% if game.image %}
+                        <img src="{{ get_static_url(game.image) }}" alt="{{ game.name }}"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                        {% endif %}
+                    </div>
+                    <div class="p-2 sm:p-4 text-center">
+                        <h3 class="font-bold text-lg text-gray-900 group-hover:spellbee-text-dark transition-colors">{{ game.name }}</h3>
+                        <p class="text-base text-gray-500 mt-1">{{ game.description }}</p>
+                        <span
+                            class="inline-block mt-3 px-10 py-2 spellbee-bg hover:spellbee-bg-dark text-white text-sm font-semibold rounded-full transition-colors">{{ __('related_games.play_button')|default('Play') }}</span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Number of letters -->
+            <section class="md:col-span-1 bg-white p-6 rounded-xl shadow-sm border spellbee-border-light">
+                <h2 class="text-lg md:text-xl font-bold mb-4 text-gray-800"><i
+                        class="fa-solid fa-font spellbee-text mr-2"></i>{{ __('word_length.title')|default('Number of letters') }}</h2>
+                <p class="text-base text-gray-500 mb-4">{{ __('word_length.description')|default('') }}</p>
+                <div class="grid grid-cols-2 gap-2">
+                    {% for item in __('word_length.items') %}
+                    <a href="{{ item.url|default('#') }}"
+                        class="block spellbee-card-link px-3 py-2 rounded-lg transition-colors text-center">{{ item.name }}</a>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Play Wordle in Different Languages -->
+            <section class="md:col-span-2 bg-white p-6 rounded-xl shadow-sm border spellbee-border-light">
+                <h2 class="text-lg md:text-xl font-bold mb-4 text-gray-800"><i
+                        class="fa-solid fa-globe spellbee-text mr-2"></i>{{ __('languages.section_title')|default('Play Wordle in Different Languages') }}</h2>
+                <p class="text-base text-gray-500 mb-6">{{ __('languages.section_description')|default('') }}</p>
+
+                {% set flag_map = {
+                    'en': 'us',
+                    'uk': 'gb',
+                    'el': 'gr',
+                    'cs': 'cz'
+                } %}
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {% for item in __('languages.list') %}
+                    {% set fi_code = flag_map[item.code]|default(item.code) %}
+                    <a href="{{ get_language_url(item.code) }}"
+                        class="flex items-center gap-2 spellbee-card-link px-3 py-2 rounded-lg transition-colors"><span
+                            class="fi fi-{{ fi_code }}"></span><span>{{ item.name }}</span></a>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+
+        <!-- How to play Spelling Bee game? -->
+        <section id="how-to-play" class="mb-12 bg-white rounded-2xl p-6 md:p-10 shadow-sm border spellbee-border-light">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 text-gray-800 text-center"><i
+                    class="fa-solid fa-circle-question spellbee-text mr-2"></i>{{ __('how_to_play.title')|default('How to play Spelling Bee game?') }}</h2>
+
+            {% for step in __('how_to_play.steps') %}
+            <div class="flex flex-col md:flex-row items-center gap-8 {{ loop.last ? '' : 'mb-12' }}">
+                {% if loop.index is even %}
+                <div class="md:w-1/2">
+                    {% if step.image %}
+                    <img src="{{ get_static_url(step.image) }}" alt="{{ step.title }}"
+                        class="rounded-xl shadow-lg w-full max-w-sm mx-auto object-cover" loading="lazy">
+                    {% endif %}
+                </div>
+                <div class="md:w-1/2">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full spellbee-bg text-white flex items-center justify-center font-bold text-xl shadow-md">{{ loop.index }}</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">{{ step.title }}</h3>
+                            <p class="text-base text-gray-600 leading-relaxed">{{ step.description|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full spellbee-bg text-white flex items-center justify-center font-bold text-xl shadow-md">{{ loop.index }}</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">{{ step.title }}</h3>
+                            <p class="text-base text-gray-600 leading-relaxed">{{ step.description|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    {% if step.image %}
+                    <img src="{{ get_static_url(step.image) }}" alt="{{ step.title }}"
+                        class="rounded-xl shadow-lg w-full max-w-sm mx-auto object-cover" loading="lazy">
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Frequently Asked Questions -->
+        <section id="faq" class="mb-12 bg-white rounded-2xl p-6 md:p-10 shadow-sm border spellbee-border-light">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 text-gray-800 text-center">{{ __('faq.title')|default('Frequently Asked Questions') }}</h2>
+            <div class="space-y-6">
+                {% for item in __('faq.questions') %}
+                <div class="{{ loop.first ? '' : 'border-t border-gray-100 pt-6' }}">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">{{ item.q }}</h3>
+                    <div class="text-base text-gray-600 space-y-2">{{ item.a|raw }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- About Spelling Bee -->
+        <section class="mb-12 bg-white rounded-2xl p-6 md:p-10 shadow-sm border spellbee-border-light">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 text-gray-800 text-center">{{ __('about.title')|default('About Spelling Bee') }}</h2>
+            <div class="flex flex-col md:flex-row items-start gap-8">
+                <div class="md:w-1/2">
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">{{ __('about.description')|default('') }}</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="{{ get_static_url('images/about-spelling-bee.png') }}" alt="{{ __('about.title')|default('About Spelling Bee') }}"
+                        class="rounded-xl shadow-lg w-full max-w-sm mx-auto object-cover" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 max-w-7xl py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <span class="text-xl font-bold spellbee-text">{{ site_name|default('SpellBee') }}</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Challenge your vocabulary with our fun word puzzle games. Create words, score points, and become a spelling genius!</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#game" class="hover:spellbee-text transition-colors">Home</a></li>
+                        <li><a href="#games" class="hover:spellbee-text transition-colors">Play Games</a></li>
+                        <li><a href="#how-to-play" class="hover:spellbee-text transition-colors">How to Play</a></li>
+                        <li><a href="#faq" class="hover:spellbee-text transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Games -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Popular Games</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:spellbee-text transition-colors">Spelling Bee</a></li>
+                        <li><a href="#" class="hover:spellbee-text transition-colors">Wordly</a></li>
+                        <li><a href="#" class="hover:spellbee-text transition-colors">Squares</a></li>
+                        <li><a href="#" class="hover:spellbee-text transition-colors">Combinations</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Connect</h3>
+                    <div class="flex gap-4 text-gray-400">
+                        <a href="#" class="hover:spellbee-text transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:spellbee-text transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:spellbee-text transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:spellbee-text transition-colors"><i class="fa-brands fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700">
+            <div class="container mx-auto px-4 max-w-7xl py-6">
+                <p class="text-center text-gray-400 text-sm">&copy; {{ 'now'|date('Y') }} {{ site_name|default('SpellBee') }}. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

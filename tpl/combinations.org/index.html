@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default(__('site.title')) }}</title>
+
+    <meta name="description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="keywords" content="{{ page_keywords|default(__('site.keywords')) }}">
+
+    <link href="{{ get_static_url('css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_static_url('css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ get_static_url('css/style.css') }}">
+
+    {% if analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ analytics_id }}');
+    </script>
+    {% endif %}
+
+    {% if adsense_id %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_id }}"
+        crossorigin="anonymous"></script>
+    {% endif %}
+</head>
+
+<body class="min-h-screen text-slate-800 spellbee-page-bg">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b spellbee-border-light bg-white/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div
+                    class="w-10 h-10 sm:w-12 sm:h-12 spellbee-bg-gradient rounded-xl flex items-center justify-center shadow-sm">
+                    <i class="fa-solid fa-quote-left text-white text-lg sm:text-xl"></i>
+                </div>
+                <h1 class="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">{{ site_name|default('Wordle')
+                    }}</h1>
+            </div>
+            <nav class="flex items-center gap-2 sm:gap-3">
+                <button
+                    class="w-10 h-10 rounded-xl bg-white/70 text-slate-600 spellbee-icon-hover transition-all duration-300 flex items-center justify-center"
+                    aria-label="help">
+                    <i class="fa-solid fa-circle-question text-lg"></i>
+                </button>
+                <button
+                    class="w-10 h-10 rounded-xl bg-white/70 text-slate-600 spellbee-icon-hover transition-all duration-300 flex items-center justify-center"
+                    aria-label="settings">
+                    <i class="fa-solid fa-gear text-lg"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
+
+        <!-- Game Area Placeholder -->
+        <section class="mb-12 sm:mb-16 lg:mb-20 p-4 sm:p-6 lg:p-8 rounded-3xl border spellbee-border-light bg-white/70">
+                <iframe id="gameFrame" src="/static/combinations.org/game/" style="width: 100%; border: none; display: block; overflow: hidden;" title="Combinations Game"></iframe>
+                <noscript>
+                    <div class="supports_error">
+                        <div
+                            class="rounded-xl border border-amber-200 bg-amber-50 text-amber-900 px-4 py-4 text-sm sm:text-base text-center">
+                            <div class="font-semibold text-lg sm:text-xl">JavaScript is disabled</div>
+                            <div class="mt-2">Your browser is outdated, we recommend updating it to the latest version
+                                or using another more modern one.</div>
+                        </div>
+                    </div>
+                </noscript>
+        </section>
+        <section class="mb-12 sm:mb-16 lg:mb-20">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-10 text-slate-900 tracking-tight text-center">{{
+                __('related_games.title')|default('Play Other Games') }}</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+                {% for game in __('related_games.games') %}
+                <a href="{{ game.url }}" target="_blank" rel="noopener"
+                    class="spellbee-card spellbee-focus group h-full rounded-2xl overflow-hidden border spellbee-border-light bg-white/70 backdrop-blur shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-white/90 flex flex-col">
+                    <div class="w-full h-32 sm:h-36 lg:h-40 overflow-hidden">
+                        {% if game.image %}
+                        <img src="{{ get_static_url(game.image) }}" alt="{{ game.name }}"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy" />
+                        {% endif %}
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-end items-center text-center">
+                        <div class="font-bold text-slate-900 text-lg">{{ game.name }}</div>
+                        <div class="text-sm text-slate-500 mt-1">{{ game.description }}</div>
+                        <span
+                            class="spellbee-btn inline-flex items-center justify-center mt-4 px-5 py-2.5 rounded-xl border text-sm font-semibold transition-colors duration-300">{{
+                            __('related_games.play_button')|default('Play') }}</span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="mb-12 sm:mb-16 lg:mb-20">
+            <div
+                class="relative overflow-hidden rounded-3xl border spellbee-border-light bg-white/75 backdrop-blur shadow-sm">
+                <div
+                    class="spellbee-glow pointer-events-none absolute -top-16 -right-20 h-56 w-56 rounded-full blur-3xl">
+                </div>
+
+                <div class="relative p-10 sm:p-12 lg:p-16">
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">{{
+                        __('intro.title')|default('SpellBee: Spelling Bee Game') }}</h1>
+                    <p class="mt-5 text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
+                        {{ __('intro.description')|default('Game rules: Create the maximum number of words using 7
+                        letters from the hive. Words must contain at least 4 letters and include the center letter.
+                        Four-letter words are worth 1 point each. Longer words earn 1 point per letter. How many words
+                        can you make with 7 letters?') }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Instructions -->
+        <section class="mb-12 sm:mb-16 lg:mb-20">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-10 text-slate-900 tracking-tight">{{
+                __('how_to_play.title')|default('How to play Spelling Bee game?') }}</h2>
+
+            <div class="rounded-3xl border spellbee-border-light bg-white/70 p-6 sm:p-8 lg:p-10">
+                <div class="relative">
+                    <div class="absolute left-5 top-8 bottom-8 w-1 rounded-full spellbee-bg"></div>
+
+                    <div class="space-y-10">
+                        {% for step in __('how_to_play.steps') %}
+                        <div class="flex items-start gap-6 relative">
+                            <div
+                                class="w-10 h-10 spellbee-bg-gradient text-white rounded-xl flex items-center justify-center font-bold shrink-0 z-10">
+                                {{ loop.index }}</div>
+                            <div class="flex-1 pt-1">
+                                <p class="text-base sm:text-lg lg:text-xl text-gray-800 font-bold leading-relaxed">
+                                    {{ step.title }}
+                                </p>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mt-3">
+                                    {{ step.description|raw }}
+                                </p>
+                                {% if step.image %}
+                                <img src="{{ get_static_url(step.image) }}" alt="{{ step.title }}"
+                                    class="mt-5 w-full max-w-sm mx-auto block rounded-xl shadow-lg" loading="lazy" />
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 sm:mb-16 lg:mb-20">
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-10 text-slate-900 tracking-tight">{{
+                __('faq.title')|default('Frequently Asked Questions') }}</h2>
+
+            <div class="space-y-4">
+                {% for item in __('faq.questions') %}
+                <div class="bg-white/70 p-5 sm:p-7 rounded-2xl border spellbee-border-light">
+                    <h3 class="font-bold text-slate-900 text-lg">{{ item.q }}</h3>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed mt-4">{{ item.a|raw }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="mb-12 sm:mb-16 lg:mb-20">
+            <div
+                class="rounded-3xl border spellbee-border-light bg-white/70 backdrop-blur p-6 sm:p-8 lg:p-10 shadow-sm">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-slate-900 tracking-tight">{{
+                    __('about.title')|default('About Spelling Bee') }}</h2>
+                <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mt-6">
+                    {{ __('about.description')|default('The game presents players with a grid of 7 letters arrayed in a
+                    honeycomb structure. Players must form four or more letter words using given letters and must always
+                    include the center letter. Each puzzle is guaranteed to have at least one pangram that, when found,
+                    gives the player the most points. To win the game you need to collect the maximum number of points
+                    for a given set of letters. Regular Spelling Bee games improve memory, mental clarity and slow down
+                    the aging of brain cells.') }}
+                </p>
+                <img src="{{ get_static_url('images/about-spelling-bee.png') }}" alt="About"
+                    class="mt-8 w-full max-w-sm mx-auto block rounded-2xl border spellbee-border-light shadow-sm" />
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur border-t spellbee-border-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 spellbee-bg-gradient rounded-xl flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-quote-left text-white text-sm"></i>
+                    </div>
+                    <span class="font-bold text-slate-900 text-base">{{ site_name|default('Wordle') }}</span>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-gray-500 text-sm">
+                    <a href="/privacy" class="spellbee-text-hover transition-colors duration-300">Privacy Policy</a>
+                    <a href="/terms" class="spellbee-text-hover transition-colors duration-300">Terms of Service</a>
+                    <a href="mailto:contact@{{ domain }}"
+                        class="spellbee-text-hover transition-colors duration-300">Contact</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="#"
+                        class="w-10 h-10 rounded-xl bg-slate-100 text-gray-400 spellbee-icon-hover transition-all duration-300 flex items-center justify-center"
+                        aria-label="twitter">
+                        <i class="fa-brands fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-xl bg-slate-100 text-gray-400 spellbee-icon-hover transition-all duration-300 flex items-center justify-center"
+                        aria-label="facebook">
+                        <i class="fa-brands fa-facebook text-lg"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-xl bg-slate-100 text-gray-400 spellbee-icon-hover transition-all duration-300 flex items-center justify-center"
+                        aria-label="instagram">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-sm mt-6 sm:mt-8">
+                © {{ 'now'|date('Y') }} {{ site_name|default('Wordle') }}. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="/static/combinations.org/js/common.js"></script>
+</body>
+
+</html>
