@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Byrdle - the choral word guessing game</title>
+
+    <link href='static/css/css.css' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/global.css">
+    <link rel="stylesheet" href="static/css/bundle.css">
+
+    <script>
+        (function () {
+            function sanitizeStorage(storage) {
+                if (!storage) return;
+
+                for (var j = storage.length - 1; j >= 0; j--) {
+                    var anyKey = storage.key(j);
+                    if (!anyKey) continue;
+                    try {
+                        var anyVal = storage.getItem(anyKey);
+                        if (anyVal === "[object Object]") storage.removeItem(anyKey);
+                    } catch (e0) {
+                    }
+                }
+
+                var keys = [
+                    "mode",
+                    "gameState",
+                    "histState",
+                    "statistics",
+                    "darkTheme",
+                    "colorBlindTheme",
+                    "fancyFont",
+                    "hardMode",
+                    "noRed",
+                    "showHistMode",
+                    "seenPopUp",
+                    "noticeNum"
+                ];
+
+                for (var i = 0; i < keys.length; i++) {
+                    var k = keys[i];
+                    try {
+                        var v = storage.getItem(k);
+                        if (v == null) continue;
+                        if (v === "[object Object]") {
+                            storage.removeItem(k);
+                            continue;
+                        }
+                        var parsed = JSON.parse(v);
+                        if (k === "statistics") {
+                            if (!parsed || typeof parsed !== "object") {
+                                storage.removeItem(k);
+                                continue;
+                            }
+                            if (!parsed.guesses || typeof parsed.guesses !== "object") {
+                                storage.removeItem(k);
+                                continue;
+                            }
+                        }
+                        if (k === "gameState" || k === "histState") {
+                            if (!parsed || typeof parsed !== "object") {
+                                storage.removeItem(k);
+                                continue;
+                            }
+                            if (!Array.isArray(parsed.evaluations) || !Array.isArray(parsed.boardState)) {
+                                storage.removeItem(k);
+                                continue;
+                            }
+                        }
+                    } catch (e) {
+                        try { storage.removeItem(k); } catch (e2) { }
+                    }
+                }
+            }
+
+            sanitizeStorage(window.localStorage);
+            sanitizeStorage(window.sessionStorage);
+        })();
+    </script>
+
+    <script defer src="static/js/bundle.js?v=1"></script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

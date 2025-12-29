@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="en" dark="true">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!--NOT SURE IF viewport-fit=cover IS NEEDED (added it for iphone homebar thing)-->
+
+    <title>Pokle - A daily poker puzzle</title>
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/toastr.min.css">
+    <link rel="stylesheet" href="static/css/animatePokle.css">
+
+    <!--APP only------------------------------------------------------------------------------------------------------------>
+    <!--<meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <script src="cordova.js"></script>-->
+    <!--END APP only------------------------------------------------------------------------------------------------------------>
+
+</head>
+
+<body>
+    <!--<link rel="preload" as="image" href="help1.svg">
+    <link rel="preload" as="image" href="help2.svg">
+    <link rel="preload" as="image" href="help3.svg"> doesn't seem to work'-->
+    <header>
+        <div class="menu-left">
+            <button id="stats-button"></button>
+        </div>
+        <h1 id="title"> Pokle </h1>
+        <div class="menu-right">
+            <button id="settings-button"></button>
+            <button id="help-button">?</button>
+        </div>
+    </header>
+    <div class="generic-button-cont">
+        <button id="new-game-button-main" class="new-game-button generic-button">New Game</button>
+    </div>
+
+    <div id="intro-modal" class="generic-modal front-modal opaque-modal" data-nosnippet>
+        <div class="generic-modal-content">
+            <h1>Welcome</h1>
+            <ul class="help-list">
+                <li>Pokle has a simple concept but some important nuances</li>
+                <li>We recommend reading the help once now and once before your second game</li>
+                <li>A new puzzle is available daily at midnight</li>
+
+            </ul>
+            <div class="generic-button-cont">
+                <button id="intro-end-button" class="generic-button">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="generic-modal" data-nosnippet>
+        <div class="generic-modal-content">
+            <span id="settings-close" class="generic-close">&times;</span>
+            <h1>Settings</h1>
+            <div style="display: flex;">
+                <p style="font-size: 1.5rem;">Colorblind Mode</p>
+                <label class="switch" style="margin: auto 30px auto auto;">
+                    <input id="colorblind-switch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorial-modal" class="generic-modal opaque-modal" data-nosnippet>
+        <div class="generic-modal-content">
+            <span id="tutorial-close" class="generic-close">&times;</span>
+            <h1 style="margin-top: 0px">Rules</h1>
+            <ul class="help-list">
+                <li>3 player Texas Holdem - <a
+                        href="https://www.cardplayer.com/rules-of-poker/how-to-play-poker/games/texas-holdem"
+                        target=”_blank”> Rules</a></li>
+                <li><b>Goal:</b> Guess the 5 board cards - <u>order within the flop does not matter!</u></li>
+                <li><b>Clues:</b> You are shown all the players' hands and the Ranking Table <span
+                        style="font-size: 0.7rem; color: grey"> - The Ranking Table shows the player ranks (<img
+                            class="mini-trophy-pic" src='static/picture/gold.svg'> <img class="mini-trophy-pic"
+                            src='static/picture/silver.svg'> <img class="mini-trophy-pic"
+                            src='static/picture/bronze.svg'>) by hand value at the Flop, Turn and River</span></li>
+                <li>A <span style="color: limegreen">green</span> background means the guess is correct, a <span
+                        style="color: gold">yellow</span> background means the suit <u>OR</u> the rank is correct</li>
+                <li>
+                    There is only <u>ONE</u> correct solution <span style="font-size: 0.7rem; color: grey">- You need to
+                        guess a specific set of 5 cards even though many sets fit the ranking table.</span>
+                    <br>
+                </li>
+            </ul>
+            <div class="generic-button-cont">
+                <button id="tut-more-button-1" class="generic-button">Got it!</button>
+            </div>
+            <div id="tut-section-2" class="tutorial-section">
+                <hr class="solid">
+                <p>Examples - Please follow carefully </p>
+                <img class="help-pic" src='static/picture/help1.svg'>
+                <br>
+                <br>
+                <img class="help-pic" src='static/picture/help2.svg'>
+                <br>
+                <br>
+                <img class="help-pic" src='static/picture/help3.svg'>
+                <p style="font-size: 0.9rem"><i><u>IMPORTANT:</u> Here, the King of Hearts is <u>not</u> <span
+                            style="color: gold">yellow</span> because the King of Spades has been guessed correctly</i>
+                </p>
+                <div class="generic-button-cont">
+                    <button id="tut-more-button-2" class="generic-button">Got it!</button>
+                </div>
+            </div>
+            <div id="tut-section-3" class="tutorial-section">
+                <hr class="solid">
+                <ul class="help-list">
+                    <li>
+                        <b>No kickers on the board</b> - The <u>rank</u> of each board card will alway be a part of at
+                        least one player's hand in at least one phase.
+                        <br>
+                        <span style="font-size: 0.7rem; color: grey">Note: "part of a hand" means the significant
+                            card(s) in: Pair, Two Pair, Three of a Kind or Four of a Kind (not kickers)</span>
+                        <br>
+                        <p><i><b>TLDR:</b> You may have to guess a card's <u>suit</u> with no clues, but not it's
+                                <u>rank</u></i></p>
+                    </li>
+                    <li><b>Autocorrect</b> - If you guess the correct solution <u>except</u> for the <u>suit</u> of the
+                        Turn and/or River, the suit(s) will be autocorrected and you will win. This mechanic exists to
+                        reduce the amount of blind guesswork in the game.</li>
+                    <li>Tap guess cards to select them</li>
+                    <li>Correct guesses (<span style="color: limegreen">green</span>) are autoguessed on the next row
+                        but <u>can</u> be changed</li>
+                </ul>
+                <div class="generic-button-cont">
+                    <button id="tut-end-button" class="generic-button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="help-modal" class="generic-modal" data-nosnippet>
+        <div id="help-modal-content" class="generic-modal-content">
+            <span id="help-close" class="generic-close">&times;</span>
+            <h1 style="margin-top: 0px">Rules</h1>
+            <ul class="help-list">
+                <li>3 player Texas Holdem - <a
+                        href="https://www.cardplayer.com/rules-of-poker/how-to-play-poker/games/texas-holdem"
+                        target=”_blank”> Rules</a></li>
+                <li><b>Goal:</b> Guess the 5 board cards - <u>order within the flop does not matter!</u></li>
+                <li><b>Clues:</b> You are shown all the players' hands and the Ranking Table <span
+                        style="font-size: 0.7rem; color: grey"> - The Ranking Table shows the player ranks (<img
+                            class="mini-trophy-pic" src='static/picture/gold.svg'> <img class="mini-trophy-pic"
+                            src='static/picture/silver.svg'> <img class="mini-trophy-pic"
+                            src='static/picture/bronze.svg'>) by hand value at the Flop, Turn and River</span></li>
+                <li>A <span style="color: limegreen">green</span> background means the guess is correct, a <span
+                        style="color: gold">yellow</span> background means the suit <u>OR</u> the rank is correct</li>
+                <li>
+                    There is only <u>ONE</u> correct solution <span style="font-size: 0.7rem; color: grey">- You need to
+                        guess a specific set of 5 cards even though many sets fit the ranking table.</span>
+                    <br>
+                </li>
+            </ul>
+            <p>Examples - Please follow carefully </p>
+            <img class="help-pic" src='static/picture/help1.svg'>
+            <br>
+            <br>
+            <img class="help-pic" src='static/picture/help2.svg'>
+            <br>
+            <br>
+            <img class="help-pic" src='static/picture/help3.svg'>
+            <p style="font-size: 0.9rem"><i><u>IMPORTANT:</u> Here, the King of Hearts is <u>not</u> <span
+                        style="color: gold">yellow</span> because the King of Spades has been guessed correctly</i></p>
+            <div style="display: flex; justify-content: center;"><button id="more-help-button"
+                    class="generic-button">More</button></div>
+            <div id="more-help">
+                <hr class="solid" style="width: 90%;">
+                <ul class="help-list">
+                    <li>
+                        <b>No kickers on the board</b> - The <u>rank</u> of each board card will alway be a part of at
+                        least one player's hand in at least one phase.
+                        <br>
+                        <span style="font-size: 0.7rem; color: grey">Note: "part of a hand" means the significant
+                            card(s) in: Pair, Two Pair, Three of a Kind or Four of a Kind (not kickers)</span>
+                        <br>
+                        <p><i><b>TLDR:</b> You may have to guess a card's <u>suit</u> with no clues, but not it's
+                                <u>rank</u></i></p>
+                    </li>
+                    <li><b>Autocorrect</b> - If you guess the correct solution <u>except</u> for the <u>suit</u> of the
+                        Turn and/or River, the suit(s) will be autocorrected and you will win. This mechanic exists to
+                        reduce the amount of blind guesswork in the game.</li>
+                    <li>Tap guess cards to select them</li>
+                    <li>Correct guesses (<span style="color: limegreen">green</span>) are autoguessed on the next row
+                        but <u>can</u> be changed</li>
+                </ul>
+                <div class="generic-button-cont">
+                    <button id="example-link-button-help" class="example-link-button"><u>Confused? Checkout these
+                            examples</u></button>
+                </div>
+                <br>
+                <b style="margin-bottom: 0px;">Hand Rankings and Abbreviations</b>
+                <ul>
+                    <li>Straight Flush (SF)</li>
+                    <li>Four of a Kind (4K)</li>
+                    <li>Full House (FH)</li>
+                    <li>Flush (Fl)</li>
+                    <li>Straight (St)</li>
+                    <li>Three of a Kind (3K)</li>
+                    <li>Two Pair (2P)</li>
+                    <li>Pair (P)</li>
+                    <li>High Card (HC)</li>
+                </ul>
+                <p id="copyright"> © Pokle Limited 2022<br> All rights expressly reserved and asserted under the
+                    Copyright Designs and Patents Act 1988. </p>
+                <div class="generic-button-cont">
+                    <button id="help-end-button" class="generic-button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="auto-correct-modal" class="generic-modal" data-nosnippet>
+        <div id="auto-correct-modal-content" class="small-modal-content">
+            <span id="auto-correct-close" class="generic-close">&times;</span>
+            <h1 style="margin-top: 0px">Autocorrect</h1>
+            <div style="text-align:center;">The <u>suit</u> of this card was autocorrected.</div>
+            <div style="text-align:center;">See help for details.</div>
+            <div id="auto-correct-modal-cont">
+                <button id="pre-auto-select-card-pic" class="card-pic-auto-correct">K</button>
+                <img src='static/picture/arrow.svg' style="width: 50px;">
+                <button id="post-auto-select-card-pic" class="card-pic-auto-correct">K</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-modal" class="generic-modal front-modal" data-nosnippet>
+        <div id="example-modal-content" class="generic-modal-content">
+            <span id="example-close" class="generic-close">&times;</span>
+            <h1 style="margin-top: 0px">Examples</h1>
+            <p>Most of the confusion in Pokle is about whether a guess card is marked <span
+                    style="color: gold">yellow</span> or <span style="color: grey">grey</span> and is caused by a
+                combination of some or all of the following rules</p>
+            <ul class="help-list">
+                <li>Order Within the flop does not matter</li>
+                <li><span style="color: gold">Yellow</span> guess cards means the suit <u>OR</u> the rank is correct
+                </li>
+                <li>
+                    <div style="display: flex; flex-direction: row">
+                        <p><span style="color: gold">Yellow</span> clues do not apply to correctly guessed (<span
+                                style="color: limegreen">green</span>) cards (this is only relevent within the Flop)</p>
+                        <img class="help-pic" src='static/picture/conf1.svg' style="width: 30%; margin-left: 20px">
+                    </div>
+                </li>
+            </ul>
+            <p style="margin-top: 25px;">Look through the following examples and see if you can understand why the <span
+                    style="color: gold">yellow</span> cards are <span style="color: gold">yellow</span></p>
+            <img class="help-pic" src='static/picture/conf2.svg'>
+            <hr class="solid" style="width: 100%">
+            <p style="margin-top: 25px;">A fresh game</p>
+            <img class="help-pic" src='static/picture/fresh.svg'>
+            <hr class="solid" style="width: 100%">
+            <p style="margin-top: 25px;">A completed game</p>
+            <img class="help-pic" src='static/picture/complete.svg'>
+            <hr class="solid" style="width: 100%">
+            <br>
+            <div class="generic-button-cont">
+                <button id="example-end-button" class="generic-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats-modal" class="generic-modal">
+        <div class="generic-modal-content">
+            <span id="stats-close" class="generic-close">&times;</span>
+            <h1>Stats</h1>
+            <div id="stats-cont">
+                <div class="stat-div">
+                    <div id="stat-games-played" class="stat-value">X</div>
+                    <div class="stat-label">Played</div>
+                </div>
+
+                <div class="stat-div">
+                    <div id="stat-win-percent" class="stat-value">X</div>
+                    <div class="stat-label">Win %</div>
+                </div>
+
+                <div class="stat-div">
+                    <div id="stat-current-streak" class="stat-value">X</div>
+                    <div class="stat-label">Current Streak</div>
+                </div>
+
+                <div class="stat-div">
+                    <div id="stat-max-streak" class="stat-value">X</div>
+                    <div class="stat-label">Max Streak</div>
+                </div>
+                <div class="stat-div">
+                    <div id="stat-av-guesses" class="stat-value">X</div>
+                    <div class="stat-label">Average guesses</div>
+                </div>
+            </div>
+            <table style="margin-top: 20px; border-spacing: 0;">
+                <tr>
+                    <td>
+                        <div class="stats-panel-heading" style="width: 159px">Guess Distribution</div>
+                    </td>
+                    <td>
+                        <div style="width: 10px"></div>
+                    </td>
+                    <td>
+                        <div class="stats-panel-heading" style="width: 159px">Today's Global Stats</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="guess-dist-panel" class="stats-graph-panel">
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">1</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">2</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">3</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">4</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">5</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">6</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar guess-dist-graph-bar" style="height: 1%">
+                                        <div class="guess-dist-total-label"></div>
+                                    </div>
+                                </div>
+                                <div class="graph-label">L</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div></div>
+                    </td>
+                    <td>
+                        <div id="global-stats-panel" class="stats-graph-panel">
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">1</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">2</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">3</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">4</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">5</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">6</div>
+                            </div>
+                            <div class="graph-cont">
+                                <div class="graph">
+                                    <div class="graph-bar global-stats-graph-bar" style="height: 1%"></div>
+                                </div>
+                                <div class="graph-label">L</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="stats-button-panel">
+                <div id="countdown">
+                    <p id="countdown-timer-label" style="margin: 10px 0 5px 0">Next Pokle</p>
+                    <div id="countdown-timer"></div>
+                    <button id="new-game-button-stats" class="new-game-button generic-button">New Game</button>
+                </div>
+                <div id="share">
+                    <button id="share-but">Share</button>
+                    <input type="text" id="game-string-box" readonly value="" style="display: none;">
+                </div>
+            </div>
+            <div id="stats-footer-normal" class="stats-footer">
+                <hr class="solid" style="width: 100%">
+                <div class="generic-button-cont">
+                    <button id="example-link-button-stats" class="example-link-button"><u>Confused? Checkout these
+                            examples</u></button>
+                </div>
+                <div class="kofi-div">
+                    <p style="margin: 0px;">Enjoy Pokle? Buy me a </p>
+                    <a href="https://ko-fi.com/pokle" target=”_blank”><img src='static/picture/kofi.svg'
+                            style="height: 28px; width: 43px; margin-left: 7px; margin-top: 4px;"></a>
+                </div>
+                <!--<p>App version</p>
+                <div style="display: flex; justify-content: space-evenly;">
+                    <a href="https://android.com" target=”_blank” style="width: 40%"><img src='app_play.svg' style="width: 100%" /></a>
+                    <a href="https://apple.com" target=”_blank” style="width: 40%"><img src='app_apple.svg' style="width: 100%" /></a>
+                </div>
+                <div style="margin-top: 6px;">
+                    <a href="mailto:pokle.feedback@gmail.com" style="margin-right: 6px;  font-size: 0.7rem;">Feedback</a>
+                    <a href="https://twitter.com/PokleGame" style="margin-left: 6px;  font-size: 0.7rem;" target=”_blank”>Twitter</a>
+                </div>-->
+                <p id="copyright-small"> © Pokle Limited 2022<br> All rights expressly reserved and asserted under the
+                    Copyright Designs and Patents Act 1988. </p>
+            </div>
+            <div id="stats-footer-pro" class="stats-footer" style="display: none;">
+                <hr class="solid" style="width: 100%">
+                <div class="generic-button-cont">
+                    <button id="example-link-button-stats" class="example-link-button"><u>Confused? Checkout these
+                            examples</u></button>
+                </div>
+                <div style="margin-top: 12px;">
+                    <a href="https://twitter.com/PokleGame" target="_blank"><img src='static/picture/twitter-logo.svg'
+                            style="height: 28px; width: 34px; margin-right: 20px; margin-left: 20px;"></a>
+                    <a href="https://ko-fi.com/pokle" target="_blank"><img src='static/picture/kofi.svg'
+                            style="height: 28px; width: 43px;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rating-modal" class="generic-modal" data-nosnippet>
+        <div id="rating-modal-content" class="small-modal-content">
+            <span id="rating-close" class="generic-close">&times;</span>
+            <h1 style="margin-top: 0px">Congradulations on 10 Wins!</h1>
+            <p>Would you like to rate of review Pokle?</p>
+            <a id="rating-link" href="https://android.com" target=”_blank” style="width: 40%"><img id="rating-link-img"
+                    src='static/picture/app_play.svg' style="width: 100%"></a>
+        </div>
+    </div>
+
+    <div id="board-table">
+        <table id="board">
+            <tr>
+                <td></td>
+                <td class="name-tag">Ron</td>
+                <td class="name-tag">Don</td>
+                <td class="name-tag">Lon</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="p1card1" class="card-pic">K</button></td>
+                <td><button id="p2card1" class="card-pic">K</button></td>
+                <td><button id="p3card1" class="card-pic">K</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="p1card2" class="card-pic">K</button></td>
+                <td><button id="p2card2" class="card-pic">K</button></td>
+                <td><button id="p3card2" class="card-pic">K</button></td>
+            </tr>
+            <tr>
+                <td class="stage-tag">Flop</td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="stage-tag">Turn</td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="stage-tag">River</td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+                <td>
+                    <div class="trophy-pic"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="guess-div">
+        <table id="flop-table">
+            <tr>
+                <td class="phase-title" colspan="3">Flop</td>
+            </tr>
+        </table>
+        <table id="turn-table">
+            <tr>
+                <td class="phase-title">Turn</td>
+            </tr>
+        </table>
+        <table id="river-table">
+            <tr>
+                <td class="phase-title">River</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="auto-correct-div">
+        <div class="auto-correct-cont"></div>
+        <div class="auto-correct-cont"></div>
+        <div class="auto-correct-cont"></div>
+        <div class="auto-correct-cont">
+            <div id="auto-correct-turn" class="auto-correct-button">
+                <div class="auto-correct-button-graphic">?</div>
+            </div>
+        </div>
+        <div class="auto-correct-cont">
+            <div id="auto-correct-river" class="auto-correct-button">
+                <div class="auto-correct-button-graphic">?</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="answer-div">
+        <table id="answer-table">
+            <tr>
+                <td id="answer-title" colspan="5">Correct Answer</td>
+            </tr>
+            <tr>
+                <td><button class="answer-button">?</button></td>
+                <td><button class="answer-button">?</button></td>
+                <td><button class="answer-button">?</button></td>
+                <td><button class="answer-button">?</button></td>
+                <td><button class="answer-button">?</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="victory-div">
+        <div id="victory-title">You Won in 4 Guesses!</div>
+    </div>
+
+    <div id="keyboard-gap"></div>
+
+    <div id="keyboard-cont">
+        <div id="label-and-submit-button">
+            <div class="spacer">
+                <button id="guess-label">1 / 6</button>
+            </div>
+            <button id="submit-button">Submit</button>
+            <div class="spacer"></div>
+        </div>
+        <table id="keyboard-table">
+            <tr>
+                <td class="key-cell"><button class="rank-button">2</button></td>
+                <td class="key-cell"><button class="rank-button">3</button></td>
+                <td class="key-cell"><button class="rank-button">4</button></td>
+                <td class="key-cell"><button class="rank-button">5</button></td>
+                <td class="key-cell"><button class="rank-button">6</button></td>
+                <td class="key-cell"><button class="rank-button">7</button></td>
+                <td class="key-cell"><button class="rank-button">8</button></td>
+                <td class="key-cell"><button id="hearts-kb-button" class="suit-button"
+                        style="background-image: url('static/image/hearts.svg')">h</button></td>
+                <td class="key-cell"><button id="diamonds-kb-button" class="suit-button"
+                        style="background-image: url('static/image/diamonds.svg')">d</button></td>
+            </tr>
+            <tr>
+                <td class="key-cell"><button id="clear-guess-button" class="rank-button">?</button></td>
+                <td class="key-cell"><button class="rank-button">9</button></td>
+                <td class="key-cell"><button class="rank-button">10</button></td>
+                <td class="key-cell"><button class="rank-button">j</button></td>
+                <td class="key-cell"><button class="rank-button">q</button></td>
+                <td class="key-cell"><button class="rank-button">k</button></td>
+                <td class="key-cell"><button class="rank-button">a</button></td>
+                <td class="key-cell"><button class="suit-button"
+                        style="background-image: url('static/image/spades.svg')">s</button></td>
+                <td class="key-cell"><button class="suit-button"
+                        style="background-image: url('static/image/clubs.svg')">c</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/toastr.min.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/script.js" type="module"></script>
+</body>
+
+</html>

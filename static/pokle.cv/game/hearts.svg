@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 512" width="406" height="512">
+	<title>hearts-svg</title>
+	<style>
+		.s0 { fill: #ff0000 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m405.3 166.1c0 145.5-202.3 292.7-202.3 292.7 0 0-202.3-147.2-202.3-292.7 0-82.5 63.7-112.9 97.2-112.9 70.1 0 105.1 59.3 105.1 59.3 0 0 35-59.3 105.1-59.3 33.5 0 97.2 30.4 97.2 112.9z"/>
+	</g>
+</svg>

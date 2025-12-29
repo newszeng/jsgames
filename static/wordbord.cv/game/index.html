@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="static/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous">
+
+  <title>Word Bord</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <script src="static/js/p5.sound.min.js"></script>
+  <script src="static/js/sketch.js"></script>
+  <script src="static/js/tile.js"></script>
+  <script src="static/js/fadingText.js"></script>
+  <script src="static/js/popup.js"></script>
+  <script src="static/js/slidingButton.js"></script>
+  <script src="static/js/button.js"></script>
+
+  <style>
+    h1 {
+      color: white;
+    }
+
+    .center {
+      /* margin: auto; */
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      height: 40%;
+      /* border: 4px solid #000000; */
+      padding: 10px;
+    }
+
+    .center p {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      font-size: 50px;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+  </style>
+  <h1>Word Bord is a fun word puzzle. With movement inspired by a Rubik's cube, spin rows and columns to create words.
+    Choose between a 4x4 or 5x5 bord and create as my unique words a possible in the limited number of moves. Every day
+    has a unique bord.
+  </h1>
+
+
+  <div class="center">
+    <p>Loading...</p>
+  </div>
+
+</body>
+
+</html>

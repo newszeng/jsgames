@@ -1,0 +1,40 @@
+{
+    "routes": {
+        "/": {
+            "type": "home",
+            "template": "home.php",
+            "title": ""
+        },
+        "/contact": {
+            "type": "static",
+            "template": "static.php",
+            "page": "contact",
+            "title": "Contact Us - WordRumble"
+        },
+        "/privacy": {
+            "type": "static",
+            "template": "static.php",
+            "page": "privacy",
+            "title": "Privacy Policy - WordRumble"
+        },
+        "/terms": {
+            "type": "static",
+            "template": "static.php",
+            "page": "terms",
+            "title": "Terms of Service - WordRumble"
+        },
+        "/dmca": {
+            "type": "static",
+            "template": "static.php",
+            "page": "dmca",
+            "title": "DMCA Policy - WordRumble"
+        }
+    },
+    "redirects": {},
+    "default_lang": "en",
+    "languages": ["en"],
+    "404_page": {
+        "template": "404.php",
+        "title": "Page Not Found - WordRumble"
+    }
+}

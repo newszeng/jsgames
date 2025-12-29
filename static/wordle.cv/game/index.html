@@ -1,0 +1,1175 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Wørdle - gæt dagens ord</title>
+    <style>
+        @keyframes flip-in {
+            0% {
+                transform: rotateY(0)
+            }
+
+            100% {
+                transform: rotateY(90deg)
+            }
+        }
+
+        @keyframes flip-out {
+            0% {
+                transform: rotateY(90deg)
+            }
+
+            100% {
+                transform: rotateY(0)
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-6px)
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(6px)
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade-out {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        @keyframes fade-up {
+            0% {
+                transform: translateY(20px);
+                opacity: 0
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes fade-down {
+            0% {
+                transform: translateY(0);
+                opacity: 1
+            }
+
+            100% {
+                transform: translateY(20px);
+                opacity: 0
+            }
+        }
+
+        @keyframes dance {
+
+            0%,
+            20% {
+                transform: translateY(0)
+            }
+
+            40% {
+                transform: translateY(-30px)
+            }
+
+            50% {
+                transform: translateY(5px)
+            }
+
+            60% {
+                transform: translateY(-15px)
+            }
+
+            80% {
+                transform: translateY(2px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 0 solid
+        }
+
+        button {
+            -webkit-appearance: none;
+            background-color: transparent;
+            background-image: none;
+            cursor: pointer;
+            color: inherit
+        }
+
+        .gm-toggle-btn svg g {
+            stroke: currentColor
+        }
+
+        .dm .gm-toggle-btn:hover {
+            background: #333
+        }
+
+        .gm-container {
+            top: 3rem !important;
+            height: calc(100% - 3rem) !important;
+            color: #000
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: #019e01
+        }
+
+        a:hover {
+            text-decoration: none
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background: #f8f8f8
+        }
+
+        body.menu-open {
+            overflow: hidden
+        }
+
+        .dm header,
+        body.dm {
+            background: #111112;
+            color: #fff
+        }
+
+        header {
+            height: 3rem;
+            display: flex;
+            flex: none;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 1px solid #ddd;
+            background: #fff
+        }
+
+        .dm header {
+            border-color: #444
+        }
+
+        header .logo {
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0 auto;
+            letter-spacing: 1px
+        }
+
+        .header-btn {
+            color: #777;
+            position: relative;
+            width: 2.75rem;
+            height: 3rem
+        }
+
+        .header-btn+.header-btn {
+            margin-left: -.5rem
+        }
+
+        .header-btn:hover {
+            color: #444
+        }
+
+        .header-btn svg {
+            width: 22px;
+            height: 22px
+        }
+
+        #game,
+        body,
+        html {
+            height: 100%
+        }
+
+        #game {
+            display: flex;
+            flex-direction: column
+        }
+
+        #board {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden
+        }
+
+        .rows {
+            max-width: 340px;
+            margin: 0;
+            width: 100%
+        }
+
+        .row {
+            display: flex;
+            margin: 0 -4px
+        }
+
+        .tile {
+            user-select: none;
+            text-transform: uppercase;
+            width: 100%;
+            border: 2px solid #ddd;
+            margin: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 22px;
+            color: #333;
+            border-radius: 16%;
+            transition: transform .2s ease, border-color .1s, box-shadow .05s;
+            background-color: #fff
+        }
+
+        .dm .tile {
+            background-color: #111112;
+            border-color: #3c3c3c;
+            color: #ddd
+        }
+
+        .dm .tile.filled {
+            border-color: #595959
+        }
+
+        .dm .tile.active {
+            border-color: #888;
+            box-shadow: none
+        }
+
+        .tile.highlight {
+            border-color: #999;
+            box-shadow: 0 0 10px #bbb;
+            transform: scale(1.1);
+            transition: transform .2s ease
+        }
+
+        .tile.match.highlight {
+            border-color: #007800;
+            box-shadow: 0 0 10px #016b01
+        }
+
+        .tile.present.highlight {
+            border-color: #b45506;
+            box-shadow: 0 0 10px #eb6f0a
+        }
+
+        .hc .tile.present.highlight {
+            background-color: #4a90e2;
+            box-shadow: 0 0 10px #4a90e2;
+            border-color: #32649f
+        }
+
+        .tile.absent.highlight {
+            border-color: #404040;
+            box-shadow: 0 0 10px #555
+        }
+
+        .tile:before {
+            content: ' ';
+            display: inline-block;
+            padding-bottom: 100%
+        }
+
+        .shake {
+            animation: shake .6s ease-in-out
+        }
+
+        .tile.reveal-in {
+            animation: flip-in .3s ease-in-out
+        }
+
+        .tile.reveal-out {
+            animation: flip-out .3s ease-in-out
+        }
+
+        .tile.dance {
+            animation: dance 1s cubic-bezier(.455, .030, .515, .955) both
+        }
+
+        .tile.filled {
+            border-color: silver
+        }
+
+        .tile.active {
+            border-color: grey;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, .1)
+        }
+
+        .tile.present {
+            background: #eb6f0a;
+            border-color: #eb6f0a;
+            color: #fff
+        }
+
+        .hc .tile.present {
+            background: #4a90e2;
+            border-color: #4a90e2
+        }
+
+        .tile.match {
+            background: #019e01;
+            border-color: #019e01;
+            color: #fff
+        }
+
+        .tile.absent {
+            color: #fff;
+            background: #555;
+            border-color: #555
+        }
+
+        #keyboard {
+            flex: none;
+            margin: .25rem auto;
+            width: 100%;
+            max-width: 500px;
+            user-select: none;
+            touch-action: manipulation
+        }
+
+        .keyboard-row {
+            touch-action: manipulation;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .keyboard-row>button {
+            text-transform: uppercase;
+            user-select: none;
+            width: calc((100%/11) - 2px);
+            height: 60px;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 2px;
+            font-size: 14px;
+            background-color: #eee;
+            color: #000;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, .5)
+        }
+
+        .dm .keyboard-row>button.absent,
+        .keyboard-row>button.match {
+            transition: background-color .3s ease, color .3s ease
+        }
+
+        .dm .keyboard-row>button {
+            background-color: #333;
+            color: #fff
+        }
+
+        .dm .keyboard-row>button.absent {
+            background-color: #666
+        }
+
+        .keyboard-row>button:focus {
+            outline: 0
+        }
+
+        .keyboard-row>button.match {
+            background-color: #019e01;
+            color: #fff
+        }
+
+        .keyboard-row>button.present {
+            background-color: #eb6f0a;
+            color: #fff
+        }
+
+        .hc .keyboard-row>button.present {
+            background-color: #4a90e2
+        }
+
+        .keyboard-row>button.absent {
+            background-color: #999;
+            color: #fff
+        }
+
+        .keyboard-row button.return {
+            width: 23%
+        }
+
+        .keyboard-row button.backspace {
+            width: 13.3636%
+        }
+
+        .keyboard-row>button span+svg {
+            margin-left: 8px
+        }
+
+        .keyboard-row>button svg {
+            width: 24px;
+            height: 24px;
+            color: #888
+        }
+
+        .help-modal {
+            font-size: 15px
+        }
+
+        .help-modal h2 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.25rem
+        }
+
+        .help-modal .credits {
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: .65
+        }
+
+        .examples {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            margin: .75rem 0;
+            font-size: 15px
+        }
+
+        .dm .examples {
+            border-color: #444
+        }
+
+        .examples h3 {
+            font-weight: 700;
+            margin: 1rem 0 -.75rem;
+            text-transform: uppercase
+        }
+
+        .example {
+            margin: 1.5rem 0
+        }
+
+        .example .row {
+            margin: 0 auto .5rem;
+            justify-content: center
+        }
+
+        .example .tile {
+            width: 46px;
+            border-radius: 6px;
+            font-size: 17px
+        }
+
+        .toasts {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .toast {
+            background-color: #000;
+            background-color: rgba(0, 0, 0, .9);
+            color: #fff;
+            font-size: 1rem;
+            padding: .75rem;
+            font-weight: 600;
+            border-radius: .25rem;
+            transition: opacity .5s ease;
+            margin-bottom: 1rem;
+            animation: fade-in .5s ease
+        }
+
+        .toast.out {
+            opacity: 0
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .3);
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            overflow-y: auto
+        }
+
+        .dm .modal {
+            background: rgba(0, 0, 0, .8)
+        }
+
+        .modal.in {
+            display: flex;
+            animation: fade-in .35s ease
+        }
+
+        .modal.out {
+            display: flex;
+            animation: fade-out .35s ease
+        }
+
+        .modal.in .dialog {
+            animation: fade-up .35s ease
+        }
+
+        .modal.out .dialog {
+            animation: fade-down .35s ease
+        }
+
+        .flex {
+            display: flex
+        }
+
+        .items-center {
+            align-items: center
+        }
+
+        .mt4 {
+            margin-top: 1rem
+        }
+
+        .tc {
+            text-align: center
+        }
+
+        .fb {
+            font-weight: 700
+        }
+
+        .uc {
+            text-transform: uppercase
+        }
+
+        .dialog {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            border-radius: .5rem;
+            margin: auto;
+            padding: 1.25rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+            position: relative
+        }
+
+        .dm .dialog {
+            background: #111112
+        }
+
+        .dialog-header {
+            position: relative;
+            padding: 0 2rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.5rem;
+            margin-top: -.25rem
+        }
+
+        .dialog .dialog-header .close-button {
+            right: 0;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem
+        }
+
+        .dialog .close-button {
+            position: absolute;
+            right: 1rem;
+            top: 1rem
+        }
+
+        .word-panel #word {
+            font-weight: 700;
+            margin-top: .25rem;
+            font-size: 1.25rem
+        }
+
+        .word-panel {
+            margin-bottom: 1.5rem
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd
+        }
+
+        .dm .stats {
+            border-color: #444
+        }
+
+        .dm .stats .label {
+            opacity: .5
+        }
+
+        .stats>div {
+            padding: 1.5rem 1rem
+        }
+
+        .stats .value {
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            font-weight: 600
+        }
+
+        .stats .label {
+            font-size: .75rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: .8
+        }
+
+        .hidden {
+            display: none !important
+        }
+
+        button.btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            background: #019e01;
+            height: 3rem;
+            border-radius: .25rem;
+            padding: .75rem 1.5rem;
+            color: #fff;
+            margin: 0 auto
+        }
+
+        button.btn svg {
+            margin-left: 1rem
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-variant-numeric: tabular-nums;
+            margin-top: .25rem;
+            line-height: 2rem
+        }
+
+        .stats-modal .footer {
+            display: flex;
+            align-items: center
+        }
+
+        .stats-modal .footer .btn {
+            margin-left: 1.75rem;
+            width: 100%
+        }
+
+        .countdown {
+            width: 50%;
+            padding: 1rem;
+            border-right: 1px solid #ddd;
+            flex: none
+        }
+
+        .dm .countdown {
+            border-right-color: #444
+        }
+
+        .stats-modal .play-now {
+            height: 2rem;
+            margin-top: .25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-size: 1.5rem
+        }
+
+        .stats-modal .play-now svg {
+            margin-left: 1rem
+        }
+
+        .settings {
+            margin: .5rem 0 -1rem
+        }
+
+        .setting {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 1rem 0;
+            user-select: none
+        }
+
+        .setting+.setting {
+            border-top: 1px solid #ddd
+        }
+
+        .dm .setting+.setting {
+            border-color: #444
+        }
+
+        .checkbox {
+            flex: none;
+            position: relative;
+            margin-right: 1rem;
+            cursor: pointer
+        }
+
+        .checkbox input {
+            -webkit-appearance: none;
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer
+        }
+
+        .checkbox input:checked+span {
+            border-color: #019e01;
+            background-color: #019e01;
+            color: #fff
+        }
+
+        .checkbox svg {
+            width: 1rem;
+            height: 1rem;
+            display: none
+        }
+
+        .checkbox input:checked+span svg {
+            display: block
+        }
+
+        .checkbox span {
+            box-sizing: border-box;
+            padding: .0625rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            display: block;
+            border-radius: 4px;
+            border: 1px solid #ccc
+        }
+
+        .setting h3 {
+            font-weight: 600;
+            line-height: 1.125rem;
+            padding: 1px 0
+        }
+
+        .setting p {
+            font-size: .875rem;
+            opacity: .65;
+            line-height: 1.2;
+            margin-top: .25rem
+        }
+
+        @keyframes mgi {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .more-games a,
+        .more-games div,
+        .more-games p,
+        .more-games svg {
+            animation: mgi .5s .5s ease both
+        }
+
+        .dm .more-games {
+            background: #222;
+            border-top-color: #555
+        }
+
+        .more-games {
+            font-size: .875rem;
+            border-top: 1px solid #c5d2d4;
+            margin: 1.25rem -1.25rem -1.25rem;
+            padding: .75rem;
+            text-align: left;
+            position: relative;
+            background: #d9e6e8;
+            border-bottom-left-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: center
+        }
+
+        .more-games .right {
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .5
+        }
+
+        .more-games .logo {
+            width: 2.75rem;
+            height: 2.75rem;
+            margin: .125rem .75rem .125rem 0
+        }
+
+        .more-games a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2
+        }
+
+        @media screen and (max-height:500px) {
+            header {
+                height: 2.5rem
+            }
+
+            .gm-container {
+                height: calc(100vh - 2.5rem) !important;
+                top: 2.5rem !important
+            }
+
+            header .logo {
+                font-size: 20px
+            }
+
+            .example .tile {
+                width: 40px
+            }
+
+            .help-modal h2 {
+                font-size: 1rem
+            }
+
+            .header-btn {
+                width: 2.5rem;
+                height: 2.5rem
+            }
+
+            .header-btn svg {
+                width: 18px;
+                height: 18px
+            }
+
+            .keyboard-row>button {
+                height: 50px;
+                border-radius: 8px;
+                font-size: 13px
+            }
+
+            #board {
+                overflow: auto
+            }
+
+            .rows {
+                margin: auto 0
+            }
+
+            .tile {
+                margin: 2px;
+                font-size: 16px
+            }
+
+            .stats>div {
+                padding: .75rem .5rem
+            }
+
+            .stats .value {
+                font-size: 1.25rem
+            }
+
+            .stats .label {
+                font-size: .6875rem
+            }
+
+            .modal {
+                padding: .5rem
+            }
+
+            .dialog {
+                padding: .75rem
+            }
+
+            .more-games {
+                margin: .75rem -.75rem -.75rem;
+                font-size: .675rem
+            }
+
+            .more-games .logo {
+                width: 1.75rem;
+                height: 1.75rem
+            }
+
+            .dialog-header {
+                font-size: .8rem
+            }
+
+            .dialog .close-button {
+                right: .72rem;
+                top: .72rem
+            }
+
+            .countdown {
+                padding: .75rem .75rem .75rem 0
+            }
+
+            button.btn {
+                padding: .5rem 1rem;
+                font-size: 1rem
+            }
+
+            .stats-modal .footer .btn {
+                margin-left: 1rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game">
+        <header id="header"><button type="button" class="gm-toggle-btn"></button>
+            <div class="logo">Wørdle</div>
+            <div><button class="header-btn" data-action="showStats" aria-label="Vis statistik"><svg fill="none"
+                        stroke="currentColor" viewbox="0 0 24 24" width="24" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg></button> <button class="header-btn" data-action="showSettings"
+                    aria-label="Indstillinger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-settings">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg></button> <button class="header-btn" data-action="showHelp"
+                    aria-label="Hjælp til spillet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-help-circle">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg></button></div>
+        </header>
+        <div class="modal stats-modal">
+            <div class="dialog tc"><button data-action="closeStats" class="close-button" aria-label="Luk vinduet"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg></button>
+                <h2 class="fb uc mt4">Statistik</h2>
+                <div class="stats">
+                    <div data-type="played">
+                        <div class="value">2</div>
+                        <div class="label">Spil</div>
+                    </div>
+                    <div data-type="win">
+                        <div class="value">100%</div>
+                        <div class="label">Vundet</div>
+                    </div>
+                    <div data-type="currentStreak">
+                        <div class="value">1</div>
+                        <div class="label">Nuværende<br>streak</div>
+                    </div>
+                    <div data-type="maxStreak">
+                        <div class="value">3</div>
+                        <div class="label">Bedste<br>streak</div>
+                    </div>
+                </div>
+                <div class="word-panel hidden">Dagens ord er:<div id="word"></div>
+                </div>
+                <div class="footer"><button class="btn" data-action="share" aria-label="Del resultatet">Del <svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <polyline points="16 6 12 2 8 6"></polyline>
+                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                        </svg></button></div>
+                <div class="more-games hidden"><a href="https://immer.co/spil/tvaers" target="_blank"></a> <svg
+                        class="logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 44 44">
+                        <g fill="none" fill-rule="evenodd">
+                            <line x1="29" y1="42" x2="29" y2="2" stroke="#082C34" stroke-width="2"></line>
+                            <line x1="15" y1="42" x2="15" y2="2" stroke="#082C34" stroke-width="2"></line>
+                            <g transform="translate(2 2)">
+                                <rect fill="#FFF" width="12" height="12"></rect>
+                                <rect fill="#FFF" x="14" width="12" height="12"></rect>
+                                <rect fill="#4D727A" x="28" width="12" height="12"></rect>
+                                <rect fill="#4D727A" x="28" y="14" width="12" height="12"></rect>
+                                <rect fill="#4D727A" x="14" y="14" width="12" height="12"></rect>
+                                <rect fill="#4D727A" y="14" width="12" height="12"></rect>
+                                <rect fill="#FFF" y="28" width="12" height="12"></rect>
+                                <rect fill="#4D727A" x="14" y="28" width="12" height="12"></rect>
+                                <rect fill="#FFF" x="28" y="28" width="12" height="12"></rect>
+                            </g>
+                            <line x1="2" y1="14.999807" x2="42" y2="14.999807" stroke="#082C34" stroke-width="2"></line>
+                            <path d="M2 28.999807h40" stroke="#082C34" stroke-width="2"></path>
+                            <rect stroke="#082C34" stroke-width="2" x="1" y="1" width="42" height="42" rx="4"></rect>
+                        </g>
+                    </svg>
+                    <div>
+                        <p>Er du klar på en ny udfordring?</p>
+                        <p>Prøv vores nyeste spil <strong>Tværs</strong></p>
+                    </div><svg class="right" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="toasts"></div>
+        <div class="modal help-modal tc">
+            <div class="dialog"><button data-action="closeHelp" class="close-button" aria-label="Luk vinduet"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg></button>
+                <h2>Sådan spiller du WØRDLE</h2>
+                <p>Gæt dagens ord i 6 forsøg eller mindre.</p>
+                <div class="examples">
+                    <h3>Eksempler</h3>
+                    <div class="example">
+                        <div class="row">
+                            <div class="tile">F</div>
+                            <div class="tile">L</div>
+                            <div class="tile match">Æ</div>
+                            <div class="tile">S</div>
+                            <div class="tile">K</div>
+                        </div>Bogstavet <strong>Æ</strong> indgår i ordet på den korrekte plads.
+                    </div>
+                    <div class="example">
+                        <div class="row">
+                            <div class="tile present">S</div>
+                            <div class="tile">O</div>
+                            <div class="tile">V</div>
+                            <div class="tile">E</div>
+                            <div class="tile">R</div>
+                        </div>Bogstavet <strong>S</strong> indgår i ordet, men på den <em>forkerte</em> plads.
+                    </div>
+                    <div class="example">
+                        <div class="row">
+                            <div class="tile">K</div>
+                            <div class="tile">O</div>
+                            <div class="tile">N</div>
+                            <div class="tile absent">T</div>
+                            <div class="tile">O</div>
+                        </div>Bogstavet <strong>T</strong> indgår <em>ikke</em> ordet.
+                    </div>
+                </div>
+                <p class="credits">Wørdle er inspireret af den engelske udgave <a rel="noopener"
+                        href="https://www.powerlanguage.co.uk/wordle/" target="_blank">Wordle</a> og spillet <a
+                        rel="noopener" href="https://en.wikipedia.org/wiki/Jotto" target="_blank">Jotto</a> fra 50'erne
+                    — tak til de oprindelige udviklere.</p>
+            </div>
+        </div>
+        <div id="board"></div>
+        <div class="modal settings-modal">
+            <div class="dialog">
+                <div class="dialog-header">
+                    <h2>Indstillinger</h2><button data-action="closeSettings" class="close-button"
+                        aria-label="Luk vinduet"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg></button>
+                </div>
+                <div class="settings"><label class="setting">
+                        <div class="checkbox"><input type="checkbox" name="darkMode"> <span><svg fill="none"
+                                    stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg></span></div>
+                        <div>
+                            <h3>Mørk tilstand</h3>
+                            <p>God i lav belysning.</p>
+                        </div>
+                    </label> <label class="setting">
+                        <div class="checkbox"><input type="checkbox" name="highContrast"> <span><svg fill="none"
+                                    stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg></span></div>
+                        <div>
+                            <h3>Høj farvekontrast</h3>
+                            <p>Hvis du er farveblind, kan du bruge denne til bedre at skelne mellem farver.</p>
+                        </div>
+                    </label></div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/words.7b01c1202e.js"></script>
+    <script src="static/js/game.d93d8b7d7e.js"></script>
+    <script src="static/js/menu.js"></script>
+    <link rel="stylesheet" href="static/css/css2.css">
+    <script src="../js/iframe-height.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tridle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/tridle.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src='static/js/arrayfunctions.js'></script>
+    <script src='static/js/scrabblewords5letter.js'></script>
+    <script src='static/js/tridlewords.js'></script>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="mainstart" class="hide popup">
+        <b>TRIDLE - Triple Wordle</b>
+        <div>Try to guess all three words in 8 tries. Each guess is submitted by pressing the 'ENTER' key. Once the
+            guess is submitted, each correct letter in the correct position is shown in green <span id="green">G</span>,
+            each correct letter in the incorrect
+            position is shown in orange <span id="orange">O</span> and letters that are not in the word show up in black
+            <span id="black">B</span>.<br><br> The keys on the keyboard are split into thirds and colored indicate its
+            status for each of the
+            3 puzzles
+        </div>
+        <br>
+        <div>
+            <!-- Start game with 
+                    <select id="pickwordlength" name="select" >
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                        <option value="5" >5</option>
+                        <option value="6" selected>6</option>
+                        <option value="7" >7</option>
+                        <option value="rand" >random</option> 
+                         
+                </select>
+                -letter word and start guessing.<br><br> -->
+            <button class="startgame" onclick="startGame();">Start Game</button>
+            <br>
+            <!-- <button  id="challengegame" onclick="genChallenge();" >Generate Challenge Game</button> -->
+        </div>
+
+    </div>
+
+    <div id="iconcontainer">
+        <span><strong>Tridle</strong></span>
+        <div id="instructions" class="topicon"><i class="fa fa-info-circle"></i></div>
+        <div id="statsicon" class="topicon"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+    </div>
+    <div id="instructpop" class="hide popup">
+        <b>TRIDLE</b>
+        <div>Try to guess the three words in 8 tries.
+            <br>Each guess is submitted by pressing the 'ENTER' key. Once the guess is submitted, each correct letter in
+            the correct position is shown in green <span id="green">G</span>, each correct letter in the incorrect
+            position is shown in orange
+            <span id="orange">O</span> and letters that are not in the word show up in black <span id="black">B</span>.
+        </div>
+        <br>
+        <button id="close" onclick="$('#instructpop').hide();">X</button>
+
+    </div>
+
+    <div id="endgame" class="hide popup">
+        <b>TRIDLE</b>
+        <div>
+            <br><span id="resultsstring"></span>
+        </div>
+        <br>
+        <button id="share" onclick="share()">Share <span id="challengetxt"></span>Results</button>
+        <textarea id="sharearea"></textarea>
+
+        <button id="playagain" onclick="playAgainButton();">Play Again</button>
+        <button id="showstats" onclick="showStats(wordLength);">Show Stats</button>
+        <br>
+    </div>
+
+
+    <div id="stats" class="hide popup">
+        <b>TRIDLE</b>
+        <br>Statistics
+        <br>A "win" is recorded when you complete all three puzzles in the allotted number of guesses
+        <!-- <div id="numberbar">
+                <div class="numbertab" id="s_3">3</div>
+                <div class="numbertab" id="s_4">4</div>
+                <div class="numbertab" id="s_5">5</div>
+                <div class="numbertab" id="s_6">6</div>
+                <div class="numbertab" id="s_7">7</div>
+                <div class="numbertab" id="s_All">All</div>
+            </div> -->
+        <div id="statsmessage">
+            <div class="statblock"><span id="games" class="statnum"></span><br><span>games played</span></div>
+            <div class="statblock"><span id="wins" class="statnum"></span><br><span>wins</span></div>
+            <div class="statblock"><span id="winpct" class="statnum"></span><br><span>win rate</span></div>
+            <div class="statblock"><span id="streak" class="statnum"></span><br><span>current streak</span></div>
+            <div class="statblock"><span id="beststreak" class="statnum"></span><br><span>best streak</span></div>
+        </div>
+        <br>
+        <div id="guessdisplay">
+            Guess Distribution
+            <!-- <div class="guesscontainer">1<div class="guessbar" id="g_1">0</div></div>
+                <div class="guesscontainer">2<div class="guessbar" id="g_2">0</div></div> -->
+            <div class="guesscontainer">3
+                <div class="guessbar" id="g_3">0</div>
+            </div>
+            <div class="guesscontainer">4
+                <div class="guessbar" id="g_4">0</div>
+            </div>
+            <div class="guesscontainer">5
+                <div class="guessbar" id="g_5">0</div>
+            </div>
+            <div class="guesscontainer">6
+                <div class="guessbar" id="g_6">0</div>
+            </div>
+            <div class="guesscontainer">7
+                <div class="guessbar" id="g_7">0</div>
+            </div>
+            <div class="guesscontainer">8
+                <div class="guessbar" id="g_8">0</div>
+            </div>
+        </div>
+        <button id="closestat" onclick="$('#stats').hide();">X</button>
+    </div>
+
+
+    <div id="gamecontainer">
+        <div id="board1"></div>
+        <div id="board2"></div>
+        <div id="board3"></div>
+    </div>
+    <div id="keyboard">
+
+        <div id="keyboardrow3">
+            <div class="key" id="q" onclick="onKeyPress(this.id)">
+                <div class="klabel">Q</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="w" onclick="onKeyPress(this.id)">
+                <div class="klabel">W</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="e" onclick="onKeyPress(this.id)">
+                <div class="klabel">E</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="r" onclick="onKeyPress(this.id)">
+                <div class="klabel">R</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="t" onclick="onKeyPress(this.id)">
+                <div class="klabel">T</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="y" onclick="onKeyPress(this.id)">
+                <div class="klabel">Y</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="u" onclick="onKeyPress(this.id)">
+                <div class="klabel">U</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="i" onclick="onKeyPress(this.id)">
+                <div class="klabel">I</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="o" onclick="onKeyPress(this.id)">
+                <div class="klabel">O</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="p" onclick="onKeyPress(this.id)">
+                <div class="klabel">P</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+        </div>
+        <div id="keyboardrow2">
+            <div class="key" id="a" onclick="onKeyPress(this.id)">
+                <div class="klabel">A</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="s" onclick="onKeyPress(this.id)">
+                <div class="klabel">S</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="d" onclick="onKeyPress(this.id)">
+                <div class="klabel">D</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="f" onclick="onKeyPress(this.id)">
+                <div class="klabel">F</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="g" onclick="onKeyPress(this.id)">
+                <div class="klabel">G</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="h" onclick="onKeyPress(this.id)">
+                <div class="klabel">H</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="j" onclick="onKeyPress(this.id)">
+                <div class="klabel">J</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="k" onclick="onKeyPress(this.id)">
+                <div class="klabel">K</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="l" onclick="onKeyPress(this.id)">
+                <div class="klabel">L</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+        </div>
+        <div id="keyboardrow1">
+            <div class="key" id="z" onclick="onKeyPress(this.id)">
+                <div class="klabel">Z</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="x" onclick="onKeyPress(this.id)">
+                <div class="klabel">X</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="c" onclick="onKeyPress(this.id)">
+                <div class="klabel">C</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="v" onclick="onKeyPress(this.id)">
+                <div class="klabel">V</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="b" onclick="onKeyPress(this.id)">
+                <div class="klabel">B</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="n" onclick="onKeyPress(this.id)">
+                <div class="klabel">N</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+            <div class="key" id="m" onclick="onKeyPress(this.id)">
+                <div class="klabel">M</div>
+                <div class="k1 kthird"></div>
+                <div class="k2 kthird"></div>
+                <div class="k3 kthird"></div>
+            </div>
+        </div>
+        <div id="keyboardrow0">
+            <div class="keylong" id="Enter" onclick="onKeyPress(this.id)">Enter</div>
+            <div class="keylong" id="Backspace" onclick="onKeyPress(this.id)">Delete</div>
+        </div>
+    </div>
+    <div id="continue" hidden><button onclick="endGame()" id="continuebutton">Continue</button></div>
+
+    <script src='static/js/scripts.js'></script>
+</body>
+
+</html>

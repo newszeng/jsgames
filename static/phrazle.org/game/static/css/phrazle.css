@@ -169,7 +169,6 @@ footer {
 	height: 30px
 }
 #keyboard-container {
-	position: fixed;
 	bottom: 0;
 	padding-bottom: 5px;
 	width: 100vw;

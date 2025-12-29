@@ -1,0 +1,265 @@
+﻿*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: background-color 0.2s ease;
+}
+
+:root {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: var(--fs-regular);
+	user-select: none;
+	-webkit-user-select: none;
+
+	--fs-tiny: 12px;
+	--fs-small: 14px;
+	--fs-regular: 16px;
+	--fs-medium: 20px;
+	--fs-large: 36px;
+
+	--game-width: 500px;
+    --header-height: 51px;
+    --keyboard-height: 186px;
+    --keyboard-ad-height: 0px; /*50px;*/
+    --subtitle-ad-height: 90px;
+    --header-ad-height: 100px;
+    
+	--fg-primary: #d7dadc;
+	--fg-secondary: #818384;
+	--icon-color: #565758;
+	--border-primary: #3a3a3c;
+	--border-secondary: #272729;
+	--bg-secondary: #1a1a1b;
+	--bg-primary: #121213;
+	
+	--color-present: #b59f3b;
+	--color-correct: #538d4e;
+	--color-absent: var(--border-primary);
+	--evaluated-key-color: var(--fg-primary);
+	--key-bg: var(--fg-secondary);
+    --tile-font: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+html {
+    height: 100%;
+}
+body { 
+    height: 100%; 
+	background: var(--bg-primary);
+	color: var(--fg-primary);
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+.light {
+	--fg-primary: #1a1a1b;
+	--fg-secondary: #787c7e;
+	--icon-color: var(--fg-primary);
+	--border-primary: #d3d6da;
+	--border-secondary: var(--border-primary);
+	--bg-secondary: #e0e0e0;
+	--bg-primary: #ffffff;
+
+	--color-present: #d9b418;
+	--color-correct: #3a9934;
+    --color-absent: var(--fg-secondary);
+	--evaluated-key-color: var(--bg-primary);
+	--key-bg: var(--border-primary);
+}
+
+.colorblind {
+	--color-correct: #f5793a;
+	--color-present: #85c0f9;
+}
+
+.fancyfont {
+    --tile-font: 'Uncial Antiqua', 'Helvetica Neue', Arial, sans-serif;      
+}
+
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.headeradwrapper, .keyboardadwrapper, .subtitleadwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+}
+
+.headeradwrapper, .headerad {
+    height: var(--header-ad-height);
+    max-height: var(--header-ad-height);
+}
+.headerad {
+    width:  320px;
+    margin: 0px auto;
+}
+
+.keyboardadwrapper, .keyboardad {
+    display: none;
+    height: var(--keyboard-ad-height);
+    max-height: var(--keyboard-ad-height);
+}
+.keyboardad {
+    margin: 0px auto;
+}
+
+.subtitleadwrapper, .subtitlead {
+    max-height: var(--subtitle-ad-height);  
+    height: var(--subtitle-ad-height);  
+}
+.leftadwrapper {
+    float: left;
+}
+.rightadwrapper {
+    float: right;
+}
+.rightadwrapper, .leftadwrapper {
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 600px;
+    border: 1px;
+    height: 100%;
+    width: calc(50% - 250px);
+    margin: 60px 0px;
+}
+
+.sidead {
+    display: block;
+    min-width: 250px;
+    max-width: 300px;
+    height: 600px;
+}
+
+.videoadwrapper {
+    position: fixed;
+    width: calc(50% - 250px);
+    max-width: 350px;
+    bottom: 5px;
+    right: 5px;
+}
+/*
+@media (min-width:320px) {
+    .headerad {
+        width: 320px;
+        height: var(--header-ad-height);
+    }
+}
+@media (min-width:360px) {
+    .headerad {
+        width: 360px;
+        height: var(--header-ad-height);
+    }
+}
+@media (min-width:390px) {
+    .headerad {
+        width: 390px;
+        height: var(--header-ad-height);
+    }
+}
+@media (min-width:414px) {
+    .headerad {
+        width: 414px;
+        height: var(--header-ad-height);
+    }
+}
+@media (min-width:500px) {
+    .headerad {
+        width: 500px;
+        height: var(--header-ad-height);
+    }
+}
+*/
+@media (max-width:1023px) {
+    :root {
+        --subtitle-ad-height: 0px;
+    }
+    .rightadwrapper, .leftadwrapper, .sidead, .subtitleadwrapper, .subtitlead, .videoad {
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+    :root {
+        --header-ad-height: 0px;
+        --keyboard-ad-height: 0px;
+    }
+    .headeradwrapper, .headerad, .keyboardadwrapper, .keyboardad {
+        display: none;
+    }
+}
+.absent,
+.present,
+.correct {
+	color: var(--evaluated-key-color);
+}
+a:link,
+a:visited {
+	color: inherit;
+}
+ .ssbc-button {
+    border-radius: 13px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.notice, .tutorial {
+	--padding: 10px;
+	font-size: var(--fs-small);
+	text-transform: none;
+	letter-spacing: initial;
+    width: max-content;
+	max-width: min(var(--game-width), 95vw);
+	display: flex;
+	align-items: center;
+	padding: var(--padding);
+	border-radius: 4px;
+	color: var(--bg-primary);
+	background: var(--fg-primary);
+	z-index: 1;
+}
+.notice {
+  position: fixed;
+  top: var(--header-height);
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 50%);
+  font-weight: 500;
+}
+.notice div p {
+    margin: 5px 0px;
+}
+.tutorial {
+	position: absolute;
+	top: var(--header-height);
+	left: 8px;
+	--arrow-size: 10px;    
+	font-weight: 700;
+}
+.tutorial::before {
+	content: "";
+	position: absolute;
+	left: 40px;
+	transform: translate(-50%);
+	top: calc(-2 * var(--arrow-size));
+	border: var(--arrow-size) solid transparent;
+	border-bottom: var(--arrow-size) solid var(--fg-primary);
+}
+.ok {
+	padding: 10px;
+	margin-left: var(--padding);
+    margin-top: auto;
+	border-radius: 4px;
+	color: white;
+	background: var(--color-correct);
+	cursor: pointer;
+}
+@media (max-height: 600px) {
+    :root {
+        --keyboard-height: 126px;
+    }
+} 

@@ -1,0 +1,241 @@
+{
+    "site": {
+        "title": "Spelling Bee Game - 100% Free",
+        "description": "Play Spelling Bee game for free! Create words using letters from the hive and try to get the maximum score. How many words can you make with 7 letters?",
+        "keywords": "spellbee, spelling, bee, game, play, word, words, make, create, online, free, unlimited"
+    },
+    "intro": {
+        "title": "Spelling Bee Game",
+        "description": "Spelling Bee is a very popular word game in the US. The rules of the Spelling Bee are quite simple. Find as many words as possible in a set of 7 letters. Every day you are given new 7 letters - 6 simple and one mandatory. You need to click on the letters on the screen or keyboard to form words from them with a length of 4 letters. In this case, you can use any number of letters any number of times, but each word must contain a central letter. The more words, the more points you get. See below for more detailed rules."
+    },
+    "about": {
+        "title": "Do you like Spelling Bee?",
+        "description": "Spelling Bee is a word puzzle game that challenges players to form words using a set of seven letters. The objective is to create as many words as possible, with extra points awarded for using all seven letters in a word. The game features a daily puzzle, as well as unlimited random puzzles for players to enjoy. With a clean and intuitive interface, Spelling Bee is a fun and addictive game that is sure to test your vocabulary skills."
+    },
+    "game": {
+        "loading": "Loading..."
+    },
+    "how_to_play": {
+        "title": "How to play Spelling Bee game?",
+        "steps": [
+            {
+                "title": "Make the first word",
+                "description": "To start the game you need to find the first word using 7 letters from the hive. According to the rules of the game, each word found must be at least 4 letters and contain a central letter. Remember that you can use the same letter more than once.",
+                "image": "images\/wordle-how-to-1.png"
+            },
+            {
+                "title": "Create a word list",
+                "description": "Each found word counts towards your total score. Four letter words add 1 point. Longer words earn 1 point per letter. And if you find a pangram, you get 7 extra points! The goal of the game is to collect as many points as possible. Remember that if you get stuck, you can shuffle the letters.",
+                "image": "images\/wordle-how-to-2.png"
+            },
+            {
+                "title": "Find out your score",
+                "description": "Track your progress and try to get the maximum score. As you progress through the game, you will receive new levels. Once you reach the \"Genius\" level, you have won the game! Daily Spelling Bee Game is great to compete with your friends and have fun!",
+                "image": "images\/wordle-how-to-3.png"
+            }
+        ]
+    },
+    "word_length": {
+        "title": "Number of letters",
+        "description": "Choose a word puzzle with the length of the hidden word from 4 to 11 letters.",
+        "items": [
+            {
+                "name": "4 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "5 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "6 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "7 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "8 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "9 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "10 Letter Words",
+                "url": "#"
+            },
+            {
+                "name": "11 Letter Words",
+                "url": "#"
+            }
+        ]
+    },
+    "languages": {
+        "section_title": "Play Wordle in Different Languages",
+        "section_description": "Guess the hidden words in different languages! It will be helpful for learning new words and improving foreign language skills.",
+        "list": [
+            {
+                "code": "en",
+                "name": "English (US)"
+            },
+            {
+                "code": "uk",
+                "name": "English (UK)"
+            },
+            {
+                "code": "es",
+                "name": "Español"
+            },
+            {
+                "code": "fr",
+                "name": "Français"
+            },
+            {
+                "code": "de",
+                "name": "Deutsch"
+            },
+            {
+                "code": "pt",
+                "name": "Português"
+            },
+            {
+                "code": "it",
+                "name": "Italiano"
+            },
+            {
+                "code": "nl",
+                "name": "Nederlands"
+            },
+            {
+                "code": "ru",
+                "name": "Русский"
+            },
+            {
+                "code": "pl",
+                "name": "Polski"
+            },
+            {
+                "code": "ua",
+                "name": "Українська"
+            },
+            {
+                "code": "sv",
+                "name": "Svenska"
+            },
+            {
+                "code": "ie",
+                "name": "Gaeilge"
+            },
+            {
+                "code": "cs",
+                "name": "Čeština"
+            },
+            {
+                "code": "el",
+                "name": "Ελληνικά"
+            },
+            {
+                "code": "tr",
+                "name": "Türkçe"
+            },
+            {
+                "code": "id",
+                "name": "Indonesian"
+            },
+            {
+                "code": "ph",
+                "name": "Filipino"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "questions": [
+            {
+                "q": "What are the rules of the Spelling Bee game?",
+                "a": "The main objective of the game is to create words using the letters from the hive and try to get the maximum score.<br><b>Basic rules of the game:<\/b><br>● Words must have at least four letters.<br>● Words must include the center letter.<br>● Letters can be used more than once.<br>● Words with hyphens, proper nouns, vulgarities, and especially obscure words are not in the word list.<br><b>How points are distributed:<\/b><br>● 4-letter words are worth 1 point each.<br>● Longer words earn 1 point per letter.<br>● Each puzzle includes at least one “pangram” which uses every letter from the hive. These are worth 7 extra points!"
+            },
+            {
+                "q": "What are the best Spelling Bee practice tips?",
+                "a": "● Use the shuffle button. Shuffling the letters in the hive will help you see letter combinations and words that you might not see if they remain static.<br>● Remember that you can use letters in the same word more than once.<br>● Remember that you can use prefixes and suffixes as well as plurals for the same word.<br>● Read a lot of good books and expand your vocabulary. By reading books, you will learn more new words, as well as remember their spelling better."
+            },
+            {
+                "q": "Why isn’t the word accepted?",
+                "a": "This happens because the word isn’t found in our word database. To help us improve the game, you can <a href=\"\/word-submission\">submit a request<\/a> to add or remove a word from the game."
+            },
+            {
+                "q": "How can i see the answers of today's game?",
+                "a": "You can find out all the correct answers of today's game only the next day (the \"Yesterday's\" button in the upper left corner of the game interface)."
+            },
+            {
+                "q": "At what time are the honeycomb letters updated?",
+                "a": "The set of letters and words is updated every 24 hours at 12:00 am local time on your device."
+            },
+            {
+                "q": "Can i play Spelling Bee unlimited?",
+                "a": "If you need more practice, you can switch to <a href=\"\/unlimited\">unlimited mode<\/a> and play as many games as you like."
+            },
+            {
+                "q": "Can I play SpellBee with friends?",
+                "a": "Absolutely! To play together in the same game, switch to <a href=\"\/unlimited\">unlimited mode<\/a>, create a new game, and then share the link with your friend."
+            }
+        ]
+    },
+    "related_games": {
+        "title": "Play Other Games",
+        "play_button": "Play",
+        "games": [
+            {
+                "name": "Squares",
+                "description": "Find words in a 4x4 grid.",
+                "url": "https:\/\/squares.org\/",
+                "image": "images\/squares-play.gif"
+            },
+            {
+                "name": "Wordly",
+                "description": "Guess the hidden word",
+                "url": "https:\/\/wordly-game.com\/",
+                "image": "images\/wordly.png"
+            },
+            {
+                "name": "Combinations",
+                "description": "Combine letters and create words",
+                "url": "https:\/\/combinations.org\/",
+                "image": "images\/combinations-play.png"
+            },
+            {
+                "name": "Phrazle",
+                "description": "Guess the Phrase",
+                "url": "https:\/\/phrazle.gg\/",
+                "image": "images\/phrazle-play.png"
+            },
+            {
+                "name": "Dordle",
+                "description": "Solve 2 Wordles at once",
+                "url": "https:\/\/dordlegame.io\/",
+                "image": "images\/dordlewordle-play.png"
+            },
+            {
+                "name": "Quordle",
+                "description": "Solve 4 Wordles at once",
+                "url": "https:\/\/quordlewordle.org\/",
+                "image": "images\/quordlewordle-play.png"
+            },
+            {
+                "name": "Octordle",
+                "description": "Solve 8 Wordles at once",
+                "url": "https:\/\/octordlegame.io\/",
+                "image": "images\/octordlewordle-play.png"
+            },
+            {
+                "name": "Sedecordle",
+                "description": "Solve 16 Wordles at once",
+                "url": "https:\/\/sedecordlegame.org\/",
+                "image": "images\/sedecordle-play.png"
+            }
+        ]
+    }
+}

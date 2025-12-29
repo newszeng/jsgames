@@ -1,0 +1,726 @@
+﻿body {
+	overscroll-behavior-x: none
+}
+footer span, footer a {
+	margin-right: 2em;
+	color: #666
+}
+.ajaxlink {
+	cursor: pointer;
+	color: #007bff
+}
+#helpModal h4 {
+	font-size: 1em
+}
+.sgg-btn.ajaxlink, .sgg-btn.ajaxlink:hover {
+	color: #fff;
+	text-decoration: none
+}
+.ajaxlink:hover {
+	text-decoration: underline;
+	color: #0056b3
+}
+.converting {
+	padding: 10px;
+	background-color: #fff;
+	color: gray;
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	font-size: 2em;
+	z-index: 10000;
+	display: none
+}
+.luckiest-guy {
+	font-family: Nunito, sans-serif
+}
+.light-yellow {
+	background-color: #ffdc73
+}
+nav.navbar {
+	padding: .2em!important;
+	font-size: 14px!important
+}
+.navbar-brand {
+	font-weight: 300;
+	font-size: .85em;
+	margin-bottom: -1px;
+	padding: .1em
+}
+.navbar-brand img {
+	width: 9vw;
+	max-width: 140px;
+	margin-top: -4px
+}
+nav.navbar a, nav.navbar span, nav.navbar .nav-item.dropdown a.nav-link {
+	color: #1c7430
+}
+.nav-item.trophy-case .sgg-btn {
+	cursor: pointer
+}
+.nav.navbar-nav.solitaire a.solitaire-nav-link, .nav.navbar-nav.spider a.spider-nav-link, .nav.navbar-nav.freecell a.freecell-nav-link, .nav.navbar-nav.mahjong a.mahjong-nav-link, .nav.navbar-nav.hearts a.hearts-nav-link, .nav.navbar-nav.spades a.spades-nav-link, .nav.navbar-nav.yahtzee a.yahtzee-nav-link, .nav.navbar-nav.phrazle a.phrazle-nav-link, .nav.navbar-nav.crossword a.crossword-nav-link, .nav.navbar-nav.wordhunt a.wordhunt-nav-link {
+	font-weight: 700
+}
+span.sol {
+	display: none
+}
+h1.game-title {
+	color: #fff
+}
+#nav-title {
+	display: none
+}
+.nav-item.l-border {
+	border-left: 1px solid #ccc
+}
+.timer_container {
+	font-size: 12px
+}
+.timer_container .btn {
+	padding: .35em!important;
+	font-size: 13px!important
+}
+.edition .timer_container {
+	margin-top: -7px
+}
+.timer_container .row {
+	margin-left: 0;
+	margin-right: 0
+}
+.edition .timer_container #info-box {
+	left: initial;
+	right: 10px;
+	color: #fff
+}
+.game_container {
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none
+}
+#gameRow {
+	display: flex
+}
+#canvasContainer {
+	flex: 1
+}
+#canvas {
+	touch-action: none
+}
+#adSidebarContainer {
+	flex: 0 0 405px;
+	height: 120vh;
+	overflow-x: hidden;
+	margin-top: -30px
+}
+#rewarded-root {
+	padding-right: 10px;
+	margin-top: 30px
+}
+#rewarded-button {
+	display: none;
+	font-size: .9em;
+	padding-top: 0;
+	padding-bottom: 0
+}
+#adSidebarContainer #solitaired_desktop_right_rail_2 {}
+div#cardSpriteImages {
+	background-image: url(https://phrazle.org/images/card-sprites.png);
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -100px
+}
+.game-description {
+	height: 15vh;
+	overflow: auto
+}
+.timer_container.work_nav {
+	background-color: #fff;
+	border-bottom: 4px solid #fff
+}
+.timer_container.work_nav #turns, .timer_container.work_nav #turnCount {
+	color: #999
+}
+.dialog-content {
+	margin-top: 0
+}
+.menu-buttons .btn.btn-clear {
+	color: #efefef;
+	background-color: rgba(0, 0, 0, .2);
+	text-shadow: none;
+	box-shadow: none
+}
+.timer-icon {
+	background-color: rgba(0, 0, 0, .2);
+	padding: 0 2px;
+	border-radius: 5px;
+	min-width: 24px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer
+}
+.inner-btn {
+	font-size: .9em;
+	line-height: .9;
+	background-color: rgba(0, 0, 0, .2);
+	position: absolute;
+	top: 3px;
+	right: 4px;
+	padding: 4px 6px;
+	border-radius: 5px;
+	margin-left: 3px;
+	min-width: 30px
+}
+.audio-toggle {
+	vertical-align: text-bottom
+}
+#subscribeButton {
+	top: 1px
+}
+#info-box {
+	font-size: .85em;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	font-weight: 600;
+	display: inline-block;
+	position: absolute;
+	top: 97vh;
+	left: 10px
+}
+#stockCount {
+	width: 36px;
+	display: inline-block
+}
+img.sponsor {
+	display: none
+}
+#caption {
+	border-radius: 5px;
+	width: 0%;
+	opacity: 0;
+	padding: 5px
+}
+.row.menu-buttons {
+	color: #fff;
+	margin-left: -5px
+}
+.menu-buttons .btn, .sgg-btn, .gamenav-btn, .sgg-container .btn {
+	line-height: 1;
+	padding: 4px 8px;
+	position: relative;
+	font-size: .75em;
+	font-weight: 600;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, .2), 0 2px 1px rgba(255, 255, 255, .15)
+}
+span.edition-soli-link {
+	font-size: .8em
+}
+.menu-buttons .btn.edition-soli-link {
+	text-transform: capitalize
+}
+.menu-buttons .dropdown, .menu-buttons .dropdown-more {
+	display: inline-block
+}
+#moreMenuDropdown a.ajaxlink:active {
+	color: #fff
+}
+.right-hand-mode, .left-hand-mode {
+	display: none
+}
+.menu-buttons .btn, .sgg-btn, .gamenav-btn, .sgg-container .btn {
+	border-radius: 6px;
+	box-shadow: 2px -2px 2px rgba(0, 0, 0, .1), 0 1px 2px rgba(255, 255, 255, .1)
+}
+#all-games h5 {
+	margin-bottom: 0
+}
+#pauseTimer, #turns, #undo, #turnCount, #workMode {
+	cursor: pointer;
+	color: #fff
+}
+#turnCount {
+	min-width: 36px;
+	display: inline-block
+}
+#pauseTimer {
+	min-width: 47px;
+	display: inline-block
+}
+.timer-icon {}
+#turns {
+	cursor: default
+}
+#winner {
+	position: absolute
+}
+#leaderboardContainer {
+	display: none
+}
+#commentList, #leaderboard-list {
+	max-height: 365px;
+	overflow-y: scroll
+}
+#congrats .congrats-stats {
+	min-height: 120px
+}
+#congrats .congrats-bottom {
+	padding-top: 23px
+}
+#congrats .table-sm td {
+	padding: .3rem 0
+}
+#congrats .table-sm .bg-warning td:first-of-type {
+	padding-left: .4rem
+}
+#congrats .table-sm .bg-warning td:last-of-type {
+	padding-right: .4rem
+}
+#congrats .congrats-comment-input {
+	border-color: #80bdff;
+	box-shadow: 0 0 0 .2rem rgb(0 123 255/25%)
+}
+#congrats {
+	display: none;
+	position: absolute;
+	min-width: 40%;
+	z-index: 200;
+	top: 50%;
+	left: 50%;
+	transform: translate(-60%, -50%);
+	background: rgba(255, 255, 255, .95);
+	padding: 5vh 4vh 4vh;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 44px 5px rgba(0, 0, 0, .75);
+	-moz-box-shadow: 0 0 44px 5px rgba(0, 0, 0, .75);
+	box-shadow: 0 0 44px 5px rgba(0, 0, 0, .55);
+	text-align: center
+}
+#congrats .congrats_text {
+	color: #333;
+	text-shadow: none;
+	font-family: Nunito, sans-serif;
+	font-size: 5vh
+}
+#congrats .social_share {
+	font-family: Nunito, sans-serif;
+	font-size: 1.3em
+}
+#congrats .congrats-stats {
+	font-size: 1em
+}
+#congrats hr.dotted-border {
+	border-top: 1px dashed #ccc;
+	margin-top: .25rem;
+	margin-bottom: .25rem;
+	width: 90%
+}
+#shareScore.btn:hover, #shareScore.btn-outline-success:hover {
+	color: #28a745;
+	background-color: #fff
+}
+.trophyHeadlines {
+	font-family: Nunito, sans-serif
+}
+.trophy-month-streak-labels {
+	margin: 0 5px
+}
+.trophy-month-streak-labels .col {
+	padding: 0
+}
+#congrats .congrats-stats .jumbotron {
+	margin-bottom: 1rem
+}
+#congrats .highscore-body {
+	max-height: 150px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 0!important;
+	margin: 0!important;
+	text-transform: capitalize
+}
+#congrats .highscore-body .table {
+	margin-bottom: 0
+}
+.high-score-username {
+	word-break: break-all
+}
+.page-link {
+	font-size: 1.2em
+}
+.post img {
+	max-width: 100%
+}
+.complete_container {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	top: 50%;
+	width: 90%;
+	text-align: center
+}
+.version {
+	color: gray
+}
+.cc-window.cc-banner, .cc-window.cc-floating {
+	width: 40%;
+	margin-left: 30%;
+	font-size: .7em
+}
+#timerContainer h1, #timerContainer h2 {
+	font-size: 1.5em;
+	display: inline-block;
+	margin-bottom: 0;
+	position: relative;
+	font-weight: 500;
+	top: 2px;
+	margin-right: 10px
+}
+.btn-gotd {
+	cursor: text
+}
+.btn-gotd:hover, .btn-gotd:focus, .btn-gotd:active {
+	background-color: #17a2b8!important;
+	border-color: #17a2b8!important
+}
+.btn-gotd .badge {
+	top: 0;
+	display: inline;
+	text-shadow: none;
+	font-size: .7em
+}
+#gotd {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	background-color: rgba(0, 0, 0, .2);
+	display: inline;
+	border-radius: 5px;
+	color: #fff
+}
+#gotd {
+	font-family: Nunito, sans-serif
+}
+#gameStatusMessage {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+	display: inline-block;
+	border: none;
+	font-size: .8rem;
+	display: flex;
+	height: 100px;
+	z-index: 1000
+}
+#gameStatusMessage .alert {
+	padding: 4px 17px;
+	border-radius: 20px;
+	align-self: flex-end
+}
+#gameStatusMessage .alert-success {
+	color: rgba(255, 255, 255, .9);
+	background-color: #577345;
+	border: none
+}
+#gameStatusMessage .alert .ajaxlink, #gameStatusMessage .alert a {
+	color: #fff;
+	text-decoration: underline
+}
+.freda {
+	background-image: url(https://phrazle.org/images/freda.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	width: 120px;
+	height: 100px;
+	display: block;
+	align-self: flex-end
+}
+.custom-card-back img, .custom-card-deck {
+	border: 2px solid #fff
+}
+.custom-card-deck img {
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 5px;
+	margin: 2px
+}
+.custom-card-back img {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	margin: 2px
+}
+.custom-card-back .cardBackSelected, .custom-card-deck.cardBackSelected {
+	border: 2px solid #666
+}
+.custom-card-deck {
+	text-align: center;
+	font-size: .7em;
+	cursor: pointer
+}
+#colorPicker {
+	width: 60px;
+	height: 60px
+}
+#ot-sdk-btn.ot-sdk-show-settings, #ot-sdk-btn.optanon-show-settings {
+	font-size: 1em!important
+}
+.report-bug {
+	cursor: pointer
+}
+.report-bug:hover {
+	text-decoration: underline
+}
+#lngtd-video-player {
+	z-index: 0!important
+}
+#solitaired_M_A {
+	display: none
+}
+@media(max-width:1018px) {
+	#adSidebarContainer {
+		flex: 0 0 300px
+	}
+	#adSidebarContainer #solitaired_desktop_right_rail_2 {}
+	#solitaired_desktop_right_rail_2_container {
+		display: none
+	}
+	#congrats {
+		width: 70%;
+		top: 5%;
+		left: 15%;
+		height: 90%;
+		transform: initial;
+		z-index: 1000;
+		overflow-y: scroll
+	}
+}
+@media(max-width:919px) {
+	#info-box {
+		font-size: .7em
+	}
+	#adSidebarContainer {
+		flex: 0 0 160px
+	}
+	#adSidebarContainer #solitaired_desktop_right_rail_2 {}
+	.leaderboard-nav-btn, #subscribeButton {
+		display: none
+	}
+}
+@media(max-width:770px) {
+	#subscribeButton {
+		display: none
+	}
+	#adSidebarContainer {
+		display: none
+	}
+	#adSidebarContainer ins {
+		display: none
+	}
+}
+@media(max-width:769px) {
+	#adSidebarContainer {
+		display: none
+	}
+	#adSidebarContainer ins {
+		display: none
+	}
+}
+@media only screen and (max-width:767px) {
+	.navbar-brand {
+		margin-right: 0
+	}
+	.navbar-brand img {
+		width: 40vw
+	}
+}
+@media(max-width:576px) {
+	.cc-window.cc-banner, .cc-window.cc-floating {
+		width: 100%;
+		margin-left: 0%;
+		font-size: .7em
+	}
+	.nav-item.l-border {
+		border-left: 0;
+		margin-left: 0;
+		padding-left: 0!important
+	}
+	li.nav-item {
+		margin: 5px 0
+	}
+	.row.menu-buttons .btn {
+		margin-bottom: 5px
+	}
+	.row.menu-buttons .btn, .row.menu-buttons a {
+		font-size: .8em
+	}
+}
+@media(max-width:430px) {
+	#solitaired_ad_mobile {
+		height: 50px!important;
+		overflow: hidden!important
+	}
+	#solitaired_M_A {
+		display: block
+	}
+	#congrats .congrats-title {
+		height: 64px
+	}
+	#congrats .congrats-stats {
+		min-height: 120px
+	}
+	#congrats .congrats-inner {
+		min-height: 58px
+	}
+	#congrats .trophy-month-streak-labels {
+		min-height: 25px
+	}
+	#adSidebarContainerMobile {
+		display: block!important;
+		position: absolute;
+		bottom: 85px;
+		width: 100%;
+		text-align: center;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		height: 50px!important;
+		overflow: hidden!important
+	}
+	span.navbar-brand {
+		font-size: .65em
+	}
+	.fullscreen-btn {
+		display: none
+	}
+	#congrats {
+		width: 95%;
+		top: 10%;
+		left: 2.5%;
+		transform: initial
+	}
+	#gameStatusMessage {
+		position: absolute;
+		bottom: 200px;
+		left: 10px;
+		display: inline-block;
+		height: 50px;
+		font-size: .5rem
+	}
+	#gameStatusMessage .freda {
+		height: 50px;
+		width: 60px
+	}
+	#gameStatusMessage .alert {
+		margin-bottom: .2rem
+	}
+	#info-box {
+		top: initial;
+		bottom: 172px
+	}
+	.row.menu-buttons .btn, .row.menu-buttons a {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-size: .8em
+	}
+	.row.menu-buttons .col {
+		padding-left: 11px;
+		padding-right: 2px
+	}
+	.timer_container {
+		margin-bottom: 10px
+	}
+	.timer_container .btn {
+		font-size: 11px!important
+	}
+	#timerContainer h1, #timerContainer h2 {
+		display: inline-block;
+		margin-bottom: 0;
+		position: relative;
+		font-weight: 300;
+		top: -2px;
+		margin-right: 5px;
+		padding: 3px 5px;
+		font-size: .9em;
+		line-height: 1.1
+	}
+	.mr-2, .mx-2 {
+		margin-right: 5px
+	}
+	#pauseTimer {
+		min-width: 43px;
+		display: inline-block;
+		padding-right: 5px
+	}
+	#turnCount {
+		min-width: 15px;
+		display: inline-block;
+		margin-right: 5px
+	}
+	.game-description {
+		height: 7vh
+	}
+	.page-link {
+		font-size: 1em
+	}
+	.right-hand-mode, .left-hand-mode {
+		display: block
+	}
+	#stockCount {
+		width: 18px
+	}
+}
+@media(max-width:399px) {
+	.navbar-toggler-icon {
+		width: 1em;
+		height: .5em
+	}
+	.navbar-toggler {
+		padding: .1rem;
+		margin: .25rem .5rem 1rem
+	}
+	div#cardSpriteImages {
+		background-image: none
+	}
+}
+@media(max-width:399px) and (max-height:399px) {
+	#adSidebarContainerMobile {
+		width: 0;
+		height: 0;
+		display: none
+	}
+}
+@media(max-width:919px) and (max-height:420px) {
+	#site-header {
+		height: 0;
+		display: none
+	}
+	.timer_container {
+		position: absolute;
+		width: 100px;
+		top: 0;
+		right: 1px;
+		left: initial
+	}
+	.timer-container .row.menu-buttons .col {
+		padding-left: 5px;
+		margin-left: 5px
+	}
+	.timer_container .btn {
+		margin-bottom: 5px
+	}
+	#info-box {
+		position: absolute;
+		width: 100px;
+		bottom: -100px;
+		right: 0;
+		left: initial;
+		top: initial
+	}
+	#info-box>span {
+		display: block;
+		margin-bottom: 5px
+	}
+}

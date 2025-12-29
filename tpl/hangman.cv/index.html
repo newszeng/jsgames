@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('en') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default(__('site.title')) }}</title>
+
+    <meta name="description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="keywords" content="{{ page_keywords|default(__('site.keywords')) }}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{ page_title|default(__('site.title')) }}">
+    <meta property="og:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta property="og:image" content="/static/{{ domain }}/images/preview.jpg">
+    <meta property="og:url" content="https://{{ domain }}{{ current_path|default('/') }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title|default(__('site.title')) }}">
+    <meta name="twitter:description" content="{{ page_description|default(__('site.description')) }}">
+    <meta name="twitter:image" content="/static/{{ domain }}/images/preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/{{ domain }}/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/{{ domain }}/images/apple-touch-icon.png">
+
+    <link href="{{ get_static_url('css/main.css') }}" rel="stylesheet">
+    <link href="{{ get_static_url('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_static_url('css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ get_static_url('css/flag-icons.min.css') }}">
+
+    {% if analytics_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ analytics_id }}');
+    </script>
+    {% endif %}
+
+    {% if adsense_id %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ adsense_id }}"
+        crossorigin="anonymous"></script>
+    {% endif %}
+
+    <script>
+        window.translations = {
+            wait_targets: "{{ __('game.loading')|default('Loading...') }}"
+        };
+        window.params = {
+            dictionary_code: "{{ current_lang|default('en') }}",
+            custom_word_length: 0,
+            auto_show_generator: false,
+            enable_reward_ad: false,
+            assets_version: '45.12',
+            ads: 'none'
+        };
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "{{ site_name|default('Wordle Game') }}",
+        "description": "{{ __('site.description')|default('') }}",
+        "genre": "Word Puzzle",
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game",
+        "operatingSystem": "All",
+        "url": "https://{{ domain }}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site_name|default('Wordle Game') }}"
+        }
+    }
+    </script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2 sm:gap-3">
+                <h1 class="m-0">
+                    <a href="/index.php?domain={{ domain }}&lang={{ current_lang }}" class="inline-flex items-center"
+                        title="{{ site_name|default('Wordle') }}">
+                        <img src="{{ get_static_url('images/wordly.png') }}" alt="{{ site_name|default('Wordle') }}"
+                            class="h-8 sm:h-10 w-auto" loading="lazy">
+                    </a>
+                </h1>
+            </div>
+            <nav class="flex items-center gap-3 sm:gap-4">
+                <!-- Language selector -->
+                <div class="relative">
+                    <button id="languageButton"
+                        class="text-gray-600 brand-text-hover transition p-1 flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-lg sm:text-xl"></i>
+                        <span id="currentLanguage" class="text-sm font-medium hidden sm:inline">{{
+                            current_lang_name|default('English') }}</span>
+                    </button>
+                    <div id="languageDropdown" class="language-dropdown hidden">
+                        {% for lang_code, lang_name in available_languages %}
+                        <a href="{{ get_language_url(lang_code) }}"
+                            class="flex items-center px-3 py-2 text-sm text-gray-700 brand-bg-hover hover:text-white transition-colors{% if lang_code == current_lang %} brand-bg-light brand-text{% endif %}">
+                            <span class="w-6 text-center mr-2">{{ lang_code|upper }}</span>
+                            <span>{{ lang_name }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Help button -->
+                <button id="helpButton" class="text-gray-600 brand-text-hover transition p-1" title="How to play">
+                    <i class="fa-solid fa-circle-question text-lg sm:text-xl"></i>
+                </button>
+
+                <!-- Settings button -->
+                <button id="settingsButton" class="text-gray-600 brand-text-hover transition p-1" title="Settings">
+                    <i class="fa-solid fa-gear text-lg sm:text-xl"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+
+        <!-- Game Area -->
+        <section
+            class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10 lg:mb-12 border brand-border">
+            <iframe id="gameFrame" src="/static/hangman.cv/game/" style="width: 100%; border: none; display: block; overflow: hidden;" title="Hangman Game"></iframe>
+            <noscript>
+                <div class="supports_error">
+                    <div class="rounded-xl border border-amber-200 bg-amber-50 text-amber-900 px-4 py-4 text-sm sm:text-base text-center">
+                        <div class="font-semibold text-lg sm:text-xl">JavaScript is disabled</div>
+                        <div class="mt-2">Your browser is outdated, we recommend updating it to the latest version or using another more modern one.</div>
+                    </div>
+                </div>
+            </noscript>
+            
+        </section>
+
+        <!-- Other Games -->
+        {% include 'otherGames.html' %}
+
+        <!-- Wordle Variants Section -->
+        {% include 'wordLength.html' %}
+
+        <!-- Languages Section -->
+        {% include 'languages.html' %}
+
+        <!-- Introduction Section -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+                <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg-light rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-star brand-text text-sm sm:text-base"></i>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
+                        __('intro.title')|default(site_name ~ ': Spelling Bee Game') }}</h2>
+                </div>
+                <p class="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg">
+                    {{ __('intro.description')|default('Game rules: Create the maximum number of words using 7 letters
+                    from the hive. Words must contain at least 4 letters and include the center letter. Four-letter
+                    words are worth 1 point each. Longer words earn 1 point per letter. How many words can you make with
+                    7 letters?') }}
+                </p>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-book-open text-white text-sm sm:text-base"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
+                    __('how_to_play.title')|default('How to play Spelling Bee game?') }}</h2>
+            </div>
+
+            <div class="grid gap-4 sm:gap-6">
+                {% for step in __('how_to_play.steps') %}
+                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
+                    <div class="flex items-start gap-4 sm:gap-6 mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 brand-bg rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-bold text-lg sm:text-xl">{{ loop.index }}</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">{{ step.title }}</h3>
+                            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">{{ step.description|raw }}</p>
+                        </div>
+                    </div>
+                    {% if step.image %}
+                    <div class="mt-4 flex justify-center">
+                        <img src="{{ get_static_url(step.image) }}" alt="{{ step.title }}"
+                            class="w-auto max-w-56 sm:max-w-xs h-auto" loading="lazy">
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-circle-question text-white text-sm sm:text-base"></i>
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
+                    __('faq.title')|default('Frequently Asked Questions') }}</h2>
+            </div>
+
+            <div class="faq-accordion space-y-3 sm:space-y-4">
+                {% for item in __('faq.questions') %}
+                <article class="faq-item">
+                    <input type="checkbox" id="faq-{{ loop.index }}" class="faq-toggle" hidden>
+                    <label for="faq-{{ loop.index }}" class="faq-header">
+                        <h3 class="faq-question">{{ item.q }}</h3>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </label>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="px-4 sm:px-6 pb-4 sm:pb-6">
+                                <p class="text-gray-600 leading-7 sm:leading-8 text-sm sm:text-base">{{ item.a|raw }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="mb-8 sm:mb-10 lg:mb-12">
+            <div class="brand-bg rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-white">
+                <div class="flex flex-col gap-6 items-center">
+                    <div>
+                        <div class="flex gap-3 sm:gap-4 mb-4 sm:mb-6">
+                            <i class="fa-solid fa-heart text-xl sm:text-2xl"></i>
+                            <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold">{{ __('about.title')|default('About
+                                Spelling Bee') }}</h2>
+                        </div>
+                        <p class="leading-relaxed text-sm sm:text-base lg:text-lg opacity-95">
+                            {{ __('about.description')|default('The game presents players with a grid of 7 letters
+                            arrayed in a honeycomb structure. Players must form four or more letter words using given
+                            letters and must always include the center letter. Each puzzle is guaranteed to have at
+                            least one pangram that, when found, gives the player the most points. To win the game you
+                            need to collect the maximum number of points for a given set of letters. Regular Spelling
+                            Bee games improve memory, mental clarity and slow down the aging of brain cells.') }}
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="{{ get_static_url('images/about-spelling-bee.png') }}"
+                            alt="{{ __('about.title')|default('About Spelling Bee') }}" loading="lazy"
+                            class="rounded-2xl max-w-sm w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+            <div
+                class="flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-4 sm:gap-6">
+                <div class="flex items-center sm:flex-1 sm:justify-start">
+                    <a href="/index.php?domain={{ domain }}&lang={{ current_lang }}"
+                        class="inline-flex items-center gap-2" title="{{ site_name|default('Wordle') }}">
+                        <img src="{{ get_static_url('images/wordly.png') }}" alt="{{ site_name|default('Wordle') }}"
+                            class="h-6 sm:h-8 w-auto" loading="lazy">
+                        <span class="font-semibold text-gray-700 text-sm sm:text-base">{{ site_name|default('Wordle')
+                            }}</span>
+                    </a>
+                </div>
+                <div
+                    class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-gray-500 text-xs sm:text-sm sm:flex-1">
+                    <a href="/privacy" class="brand-text-hover transition">Privacy Policy</a>
+                    <a href="/terms" class="brand-text-hover transition">Terms of Service</a>
+                    <a href="mailto:contact@{{ domain }}" class="brand-text-hover transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-3 sm:gap-4 sm:flex-1 sm:justify-end">
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter text-lg sm:text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook text-lg sm:text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram text-lg sm:text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-xs sm:text-sm mt-4 sm:mt-6">
+                {{ 'now'|date('Y') }} {{ site_name|default('Wordle') }}. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ get_static_url('js/common.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+﻿@import url(css.css);
+@import url(css2.css);
+
+body {
+    font-family: Nunito, sans-serif;
+    overflow-x: hidden !important;
+    font-size: 16px;
+    color: #161c2d;
+    margin: 0;
+    background-color: #fffdfc;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: Nunito, sans-serif;
+    font-weight: 600;
+}
+
+::-moz-selection {
+    background: rgba(47, 85, 212, .9);
+    color: #fff;
+}
+
+::selection {
+    background: rgba(47, 85, 212, .9);
+    color: #fff;
+}
+
+.Game-keyboard-button:hover {
+    background-color: #faebd7;
+}
+
+.light {
+    background-color: #fff;
+}
+
+.mode-button.active {
+    background-color: #00ac4a !important;
+    transition: .2s ease-in-out;
+}
+
+.mode-button {
+    background-color: #dde1ed00 !important;
+    transition: .2s ease-in-out;
+}
+
+.mode-button:hover {
+    background-color: #04cf5c !important;
+    transition: .2s ease-in-out;
+}

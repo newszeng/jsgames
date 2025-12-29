@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        .logo {
+            animation: turtleJumpFiveTimes linear 10s infinite;
+            background-image: url('static/image/turtle_1.png');
+            background-repeat: none;
+            background-position: center;
+            background-size: contain
+        }
+
+        .logo:hover {
+            animation: turtleJump linear .4s infinite
+        }
+
+        .logo.turd {
+            animation: turdSequenceFiveTimes linear 10s infinite;
+            background-image: url('static/image/turd_1.png')
+        }
+
+        .logo.turd:hover {
+            animation: turdSequence linear .4s infinite
+        }
+
+        @keyframes turtleJumpFiveTimes {
+
+            0%,
+            12%,
+            18%,
+            24%,
+            6% {
+                background-image: url('static/image/turtle_1.png')
+            }
+
+            1%,
+            13%,
+            19%,
+            25%,
+            7% {
+                background-image: url('static/image/turtle_2.png')
+            }
+
+            14%,
+            2%,
+            20%,
+            26%,
+            8% {
+                background-image: url('static/image/turtle_3.png')
+            }
+
+            15%,
+            21%,
+            27%,
+            3%,
+            9% {
+                background-image: url('static/image/turtle_4.png')
+            }
+
+            10%,
+            16%,
+            22%,
+            28%,
+            4% {
+                background-image: url('static/image/turtle_5.png')
+            }
+
+            11%,
+            17%,
+            23%,
+            29%,
+            5% {
+                background-image: url('static/image/turtle_1.png')
+            }
+        }
+
+        @keyframes turtleJump {
+            0% {
+                background-image: url('static/image/turtle_1.png')
+            }
+
+            20% {
+                background-image: url('static/image/turtle_2.png')
+            }
+
+            40% {
+                background-image: url('static/image/turtle_3.png')
+            }
+
+            60% {
+                background-image: url('static/image/turtle_4.png')
+            }
+
+            80% {
+                background-image: url('static/image/turtle_5.png')
+            }
+
+            100% {
+                background-image: url('static/image/turtle_1.png')
+            }
+        }
+
+        @keyframes turdSequenceFiveTimes {
+
+            0%,
+            12%,
+            18%,
+            24%,
+            6% {
+                background-image: url('static/image/turd_1.png')
+            }
+
+            1%,
+            13%,
+            19%,
+            25%,
+            7% {
+                background-image: url('static/image/turd_2.png')
+            }
+
+            14%,
+            2%,
+            20%,
+            26%,
+            8% {
+                background-image: url('static/image/turd_3.png')
+            }
+
+            15%,
+            21%,
+            27%,
+            3%,
+            9% {
+                background-image: url('static/image/turd_4.png')
+            }
+
+            10%,
+            16%,
+            22%,
+            28%,
+            4% {
+                background-image: url('static/image/turd_5.png')
+            }
+
+            11%,
+            17%,
+            23%,
+            29%,
+            5% {
+                background-image: url('static/image/turd_1.png')
+            }
+        }
+
+        @keyframes turdSequence {
+            0% {
+                background-image: url('static/image/turd_1.png')
+            }
+
+            20% {
+                background-image: url('static/image/turd_2.png')
+            }
+
+            40% {
+                background-image: url('static/image/turd_3.png')
+            }
+
+            60% {
+                background-image: url('static/image/turd_4.png')
+            }
+
+            80% {
+                background-image: url('static/image/turd_5.png')
+            }
+
+            100% {
+                background-image: url('static/image/turd_1.png')
+            }
+        }
+    </style>
+    <title>Turdle.xyz - a cute Wordle clone with turtles by Sushi Squared Games</title>
+    <script>
+        (function () {
+            if (!('serviceWorker' in navigator)) return;
+            try {
+                navigator.serviceWorker.getRegistrations().then(function (regs) {
+                    regs.forEach(function (reg) {
+                        reg.unregister();
+                    });
+                });
+                navigator.serviceWorker.register = function () {
+                    return Promise.resolve({
+                        installing: null,
+                        waiting: null,
+                        active: null,
+                        scope: location.origin + location.pathname,
+                        onupdatefound: null,
+                        update: function () { return Promise.resolve(); },
+                        unregister: function () { return Promise.resolve(true); }
+                    });
+                };
+            } catch (e) {
+            }
+        })();
+    </script>
+    <script defer="defer" src="static/js/main.1d063b34.js"></script>
+    <link href="static/css/main.de1864e6.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="../js/iframe-height.js"></script>
+</body>
+
+</html>

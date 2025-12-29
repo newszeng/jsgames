@@ -1,0 +1,339 @@
+{
+    "puzzle": {
+        "puzzleId": 268,
+        "matrix": [
+            [
+                {
+                    "letter": "P"
+                },
+                {
+                    "letter": "B"
+                },
+                {
+                    "letter": "D"
+                },
+                {
+                    "letter": "O"
+                },
+                {
+                    "letter": "C"
+                },
+                {
+                    "letter": "E"
+                }
+            ],
+            [
+                {
+                    "letter": "Z"
+                },
+                {
+                    "letter": "T"
+                },
+                {
+                    "letter": "N"
+                },
+                {
+                    "letter": "N"
+                },
+                {
+                    "letter": "A"
+                },
+                {
+                    "letter": "S"
+                }
+            ],
+            [
+                {
+                    "letter": "Y"
+                },
+                {
+                    "letter": "H"
+                },
+                {
+                    "letter": "E"
+                },
+                {
+                    "letter": "S"
+                },
+                {
+                    "letter": "H"
+                },
+                {
+                    "letter": "L"
+                }
+            ],
+            [
+                {
+                    "letter": "E"
+                },
+                {
+                    "letter": "N"
+                },
+                {
+                    "letter": "A"
+                },
+                {
+                    "letter": "M"
+                },
+                {
+                    "letter": "F"
+                },
+                {
+                    "letter": "I"
+                }
+            ],
+            [
+                {
+                    "letter": "H"
+                },
+                {
+                    "letter": "A"
+                },
+                {
+                    "letter": "G"
+                },
+                {
+                    "letter": "O"
+                },
+                {
+                    "letter": "S"
+                },
+                {
+                    "letter": "N"
+                }
+            ],
+            [
+                {
+                    "letter": "T"
+                },
+                {
+                    "letter": "R"
+                },
+                {
+                    "letter": "I"
+                },
+                {
+                    "letter": "M"
+                },
+                {
+                    "letter": "G"
+                },
+                {
+                    "letter": "T"
+                }
+            ],
+            [
+                {
+                    "letter": "B"
+                },
+                {
+                    "letter": "E"
+                },
+                {
+                    "letter": "I"
+                },
+                {
+                    "letter": "J"
+                },
+                {
+                    "letter": "A"
+                },
+                {
+                    "letter": "N"
+                }
+            ],
+            [
+                {
+                    "letter": "A"
+                },
+                {
+                    "letter": "T"
+                },
+                {
+                    "letter": "F"
+                },
+                {
+                    "letter": "F"
+                },
+                {
+                    "letter": "Y"
+                },
+                {
+                    "letter": "T"
+                }
+            ]
+        ],
+        "words": {
+            "spangram": [
+                {
+                    "posX": 0,
+                    "posY": 4
+                },
+                {
+                    "posX": 0,
+                    "posY": 3
+                },
+                {
+                    "posX": 1,
+                    "posY": 4
+                },
+                {
+                    "posX": 1,
+                    "posY": 5
+                },
+                {
+                    "posX": 0,
+                    "posY": 5
+                },
+                {
+                    "posX": 0,
+                    "posY": 6
+                },
+                {
+                    "posX": 1,
+                    "posY": 6
+                },
+                {
+                    "posX": 0,
+                    "posY": 7
+                },
+                {
+                    "posX": 1,
+                    "posY": 7
+                }
+            ],
+            "theme": [
+                [
+                    {
+                        "posX": 4,
+                        "posY": 3
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 2
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 1
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 2
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 2
+                    }
+                ],
+                [
+                    {
+                        "posX": 3,
+                        "posY": 6
+                    },
+                    {
+                        "posX": 2,
+                        "posY": 6
+                    },
+                    {
+                        "posX": 2,
+                        "posY": 7
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 7
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 7
+                    }
+                ],
+                [
+                    {
+                        "posX": 3,
+                        "posY": 5
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 4
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 3
+                    },
+                    {
+                        "posX": 2,
+                        "posY": 2
+                    },
+                    {
+                        "posX": 2,
+                        "posY": 1
+                    },
+                    {
+                        "posX": 1,
+                        "posY": 1
+                    }
+                ],
+                [
+                    {
+                        "posX": 5,
+                        "posY": 1
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 0
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 0
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 0
+                    },
+                    {
+                        "posX": 3,
+                        "posY": 1
+                    },
+                    {
+                        "posX": 2,
+                        "posY": 0
+                    }
+                ],
+                [
+                    {
+                        "posX": 5,
+                        "posY": 3
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 4
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 4
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 5
+                    },
+                    {
+                        "posX": 4,
+                        "posY": 6
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 6
+                    },
+                    {
+                        "posX": 5,
+                        "posY": 7
+                    }
+                ]
+            ]
+        },
+        "hintCost": 3,
+        "maxPathLength": 24,
+        "minPathLength": 4,
+        "header": "BLINK OF AN EYE"
+    }
+}

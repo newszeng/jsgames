@@ -1,0 +1,166 @@
+﻿/* Game Framework Base Styles - Following Chessle's dark theme */
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #121213;
+  color: white;
+}
+
+/* Navigation Header - Following Chessle's style */
+.navbar {
+  align-items: start;
+  border: none !important;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-help-button {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 0 !important;
+}
+
+.navbar-header {
+  background: #121213;
+  padding: 0.5rem 1rem;
+  border: none !important;
+  border-bottom: none !important;
+}
+
+.navbar-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+@media(min-width: 512px) {
+  .navbar-title {
+    padding-right: 40px;
+  }
+}
+
+.navbar-main-title {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-side {
+  width: 100px;
+}
+
+/* Generic modal styles for dark theme */
+.modal-content {
+  background: #414142;
+  color: white;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal-title {
+  font-size: 2rem;
+}
+
+.modal-body {
+  font-size: 1rem;
+}
+
+/* Close button styling */
+.close-modal-button {
+  color: white;
+  opacity: 0.8;
+}
+
+.close-modal-button:hover {
+  color: white;
+  opacity: 1;
+}
+
+.close:not(:disabled):not(.disabled):hover {
+  color: white;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Game-specific button style - green submit button */
+.btn-game-primary {
+  background-color: #538d4e;
+  border-color: #538d4e;
+  color: white;
+}
+
+.btn-game-primary:hover {
+  background-color: #5fa05a;
+  border-color: #5fa05a;
+  color: white;
+}
+
+.btn-game-primary:focus {
+  background-color: #538d4e;
+  border-color: #538d4e;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(83, 141, 78, 0.5);
+}
+
+/* Icon buttons */
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Generic button disabled state */
+.btn.disabled,
+.btn:disabled {
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  border-color: #6c757d !important;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+  border-color: #6c757d !important;
+}
+
+/* Ensure no gap between navbar and content */
+.navbar-header + * {
+  margin-top: 0;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 2rem;
+  }
+  
+  .navbar-side {
+    width: auto;
+  }
+}

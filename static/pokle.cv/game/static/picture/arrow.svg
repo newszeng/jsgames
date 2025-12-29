@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 289" width="345" height="289">
+	<title>horizontal-flip-svg</title>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m251 165.6v67.9l90.5-90.5-90.5-90.5v67.9h-262v-67.9l-90.5 90.5 90.5 90.5v-67.9z"/>
+	</g>
+</svg>

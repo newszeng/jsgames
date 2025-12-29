@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 89" width="133" height="89">
+	<title>envelope-icon-svg</title>
+	<defs>
+		<image  width="133" height="89" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIUAAABZAQMAAAAq6HUrAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAABVJREFUeJxjYBgFo2AUjIJRMArIAQAGQgABXcnN4QAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<g id="Layer">
+		<use id="Layer 1" href="#img1" x="0" y="0"/>
+		<path id="Layer" fill-rule="evenodd" class="s0" d="m66.1 71l24.2-24.2 36.8 36.8h-122.1l36.8-36.8zm59.7-66l-59.7 59.6-59.6-59.6zm-120.7 6.4l31.6 31.6-31.6 31.7zm122.8 66.2l-34.6-34.6 34.6-34.7z"/>
+	</g>
+</svg>

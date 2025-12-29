@@ -1,0 +1,45 @@
+/* SpellBee Theme Colors - Main: #F59E0B */
+
+.spellbee-bg {
+    background-color: #F59E0B;
+}
+
+.spellbee-bg-light {
+    background-color: #FEF3C7;
+}
+
+.spellbee-bg-lighter {
+    background-color: #FFFBEB;
+}
+
+.spellbee-bg-dark {
+    background-color: #D97706;
+}
+
+.spellbee-text {
+    color: #F59E0B;
+}
+
+.spellbee-text-dark {
+    color: #D97706;
+}
+
+.spellbee-border {
+    border-color: #F59E0B;
+}
+
+.spellbee-border-light {
+    border-color: #FEF3C7;
+}
+
+/* Card Link */
+.spellbee-card-link {
+    color: #D97706;
+    border: 1px solid #FEF3C7;
+}
+
+.spellbee-card-link:hover {
+    color: white;
+    background-color: #F59E0B;
+    border-color: #F59E0B;
+}

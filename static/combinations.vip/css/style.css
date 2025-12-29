@@ -1,0 +1,129 @@
+/* SpellBee Theme Colors */
+
+/* Red #F87171 */
+.spellsbee-red-bg {
+    background-color: #F87171;
+}
+
+.spellsbee-red-text {
+    color: #F87171;
+}
+
+.spellsbee-red-border {
+    border-color: #F87171;
+}
+
+/* Sky #38BDF8 */
+.spellsbee-sky-bg {
+    background-color: #38BDF8;
+}
+
+.spellsbee-sky-text {
+    color: #38BDF8;
+}
+
+.spellsbee-sky-border {
+    border-color: #38BDF8;
+}
+
+/* Gradient */
+.spellsbee-gradient-text {
+    background: linear-gradient(135deg, #F59E0B, #F87171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.spellsbee-gradient-bg {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+/* Primary #F59E0B */
+.spellsbee-bg {
+    background-color: #F59E0B;
+}
+
+.spellsbee-text {
+    color: #F59E0B;
+}
+
+.spellsbee-border {
+    border-color: #F59E0B;
+}
+
+.spellsbee-hover-bg:hover {
+    background-color: #F59E0B;
+}
+
+.spellsbee-hover-text:hover {
+    color: #F59E0B;
+}
+
+.spellsbee-hover-border:hover {
+    border-color: #F59E0B;
+}
+
+/* Primary Light #FEF3C7 */
+.spellsbee-light-bg {
+    background-color: #FEF3C7;
+}
+
+.spellsbee-light-text {
+    color: #FEF3C7;
+}
+
+.spellsbee-light-border {
+    border-color: #FEF3C7;
+}
+
+/* Primary Dark #D97706 */
+.spellsbee-dark-bg {
+    background-color: #D97706;
+}
+
+.spellsbee-dark-text {
+    color: #D97706;
+}
+
+.spellsbee-dark-border {
+    border-color: #D97706;
+}
+
+/* Secondary - Violet #8B5CF6 */
+.spellsbee-secondary-bg {
+    background-color: #8B5CF6;
+}
+
+.spellsbee-secondary-text {
+    color: #8B5CF6;
+}
+
+.spellsbee-secondary-border {
+    border-color: #8B5CF6;
+}
+
+/* Accent - Pink #EC4899 */
+.spellsbee-accent-bg {
+    background-color: #EC4899;
+}
+
+.spellsbee-accent-text {
+    color: #EC4899;
+}
+
+.spellsbee-accent-border {
+    border-color: #EC4899;
+}
+
+/* Teal #2DD4BF */
+.spellsbee-teal-bg {
+    background-color: #2DD4BF;
+}
+
+.spellsbee-teal-text {
+    color: #2DD4BF;
+}
+
+.spellsbee-teal-border {
+    border-color: #2DD4BF;
+}

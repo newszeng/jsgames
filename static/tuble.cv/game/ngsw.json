@@ -1,0 +1,109 @@
+{
+  "configVersion": 1,
+  "timestamp": 1676628771676,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.93d1e77e46b6face.js",
+        "/manifest.webmanifest",
+        "/polyfills.e01f373ce9a9f0ce.js",
+        "/runtime.62d2a9e7e42efb17.js",
+        "/styles.1cce0a1ae65a1035.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/MaterialIcons-Regular.14b0bb77466d9f38.woff",
+        "/MaterialIcons-Regular.d1b99623aaa86364.woff2",
+        "/Paddington.ed604d9f6fb09026.ttf",
+        "/assets/MaterialIcons-Regular.woff",
+        "/assets/MaterialIcons-Regular.woff2",
+        "/assets/Paddington.ttf",
+        "/assets/android-chrome-192x192.png",
+        "/assets/android-chrome-512x512.png",
+        "/assets/apple-touch-icon.png",
+        "/assets/favicon-16x16.png",
+        "/assets/favicon-32x32.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/line_roundels/white.svg",
+        "/assets/tube-map.png",
+        "/assets/tube.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/MaterialIcons-Regular.14b0bb77466d9f38.woff": "e5fa525648c74213cdeb8554aa77057f0c4d8488",
+    "/MaterialIcons-Regular.d1b99623aaa86364.woff2": "7e67acf56f6d527980504c3d0dd2a30d706e5339",
+    "/Paddington.ed604d9f6fb09026.ttf": "e35de87a5e30fe8a365afbf3dc7f029576539cd3",
+    "/assets/MaterialIcons-Regular.woff": "e5fa525648c74213cdeb8554aa77057f0c4d8488",
+    "/assets/MaterialIcons-Regular.woff2": "7e67acf56f6d527980504c3d0dd2a30d706e5339",
+    "/assets/Paddington.ttf": "e35de87a5e30fe8a365afbf3dc7f029576539cd3",
+    "/assets/android-chrome-192x192.png": "eac1d6d1a2bbd8fbf6b397cbd256b9f674ee1a51",
+    "/assets/android-chrome-512x512.png": "04fe0c651cac27c067586b0f9d55b7199effdd42",
+    "/assets/apple-touch-icon.png": "80914361926e637f548d62419aa4c57b508c40cf",
+    "/assets/favicon-16x16.png": "363d6067006a183dbafe72e5730c61cd07bd96e5",
+    "/assets/favicon-32x32.png": "028d41d771679e3b3cb319e4cd8487c5da41fe1d",
+    "/assets/icons/icon-128x128.png": "3184ad8f19f772e4db8b1bf3992c242c4e848119",
+    "/assets/icons/icon-144x144.png": "d368abc15dd5b5968caa8f402d888f9acc010096",
+    "/assets/icons/icon-152x152.png": "a37aed436bfcaf689917be73c4efc7f3940dfca0",
+    "/assets/icons/icon-192x192.png": "0a70fb43987f47fb50faf27e67c1c2929d2f4d6d",
+    "/assets/icons/icon-384x384.png": "ab69a98f19fabc42b9ac20d45ff2b10c5af97a81",
+    "/assets/icons/icon-512x512.png": "734b43a474f242e9c66972cd4a513cdbf4739bc9",
+    "/assets/icons/icon-72x72.png": "05c23c6f3ce4caf5ac8cd00afd3a5c8eee4e33a8",
+    "/assets/icons/icon-96x96.png": "64da7fc06b230b2155de17b19bccd11262d55dd7",
+    "/assets/line_roundels/white.svg": "9b046beb4f02dd2bef2caf7bcd13324cb47d19d5",
+    "/assets/tube-map.png": "3235fc535684d01a0e77b9d4baf6874471494f9d",
+    "/assets/tube.svg": "c22f253719725d6bb24c949505391d14f345c9f4",
+    "/favicon.ico": "a6fe314f145728c298883f9b7591f041efc62d92",
+    "/index.html": "1d87dd665377c32ad9f7a5b295a5621f177b8256",
+    "/main.93d1e77e46b6face.js": "aa6a156fecd93a311f02944f1cfd4dcb521620bc",
+    "/manifest.webmanifest": "28c4984c011c3a9a48e3ed94a553ae9760e3971f",
+    "/polyfills.e01f373ce9a9f0ce.js": "bd6c52b7c0be9734e3c29762e1d264f9074f570a",
+    "/runtime.62d2a9e7e42efb17.js": "595b0074ed13a87454e99f17fabf7bc9f7148927",
+    "/styles.1cce0a1ae65a1035.css": "d76d62af6510bb827c42cab5fc7eca1ba7ba098f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

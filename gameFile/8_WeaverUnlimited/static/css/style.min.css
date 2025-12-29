@@ -1,0 +1,49 @@
+﻿.weaver-game {
+	padding: 0 10px!important;
+	width: 66.66666%!important
+}
+
+.banner {
+    display: block;
+    margin: auto;
+}
+
+.banner_under {
+    width: 728px;
+    height: 90px;
+    margin-top:17px;
+}
+
+.banner_under_mobile {
+    display: none;
+}
+
+.banner-left, .banner-right {
+	width: 16.66666%;
+	height: 100%
+}
+
+@media (max-width:1199px) {
+	.banner-left, .banner-right {
+		display: none
+	}
+}
+
+@media (max-width:479px) {
+    .banner_under {
+        display: none
+    }
+    .banner_under_mobile {
+        display: block
+    }
+}
+
+.shareTodaysScoreButton {
+    font-family: 'Montserrat';
+}
+
+.moreActionButton {
+    font-family: 'Montserrat';
+}
+
+header{display:block;padding:0px!important}.header_menu{display:flex;justify-content:center}.darkmode--activated header{background-color:#13141c}.header_menu_link{color:#13141c;text-decoration:none;text-align:center}.darkmode--activated .header_menu_link.active{background:#cad8ff}.header_menu_link.active:hover{background:#00cb4b!important}.darkmode--activated .header_menu_link.active:hover{background:#17f067!important}.header_menu_link:hover{background:#17f067}.header_menu_link img{height: 19px;margin-right:6px;margin-bottom: -4px;/* padding: 5px; */}.header_menu_link{background:#fff;color:#13141c;font-size:14px;margin: 6px;padding: 8px 15px;border-radius:7px}.header_menu_link.active{background: #e0e7f3;color:#000;font-size:14px;font-weight:700}@media (max-width:991px){.gamb span,header{}header{z-index:100;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}}@media (max-width:767px){.header_menu{justify-content:center!important;margin:auto}}.ezmob-footer-close{font-family:Nunito,'Open Sans',sans-serif!important;line-height:22px!important;color:#fff!important;background:#b0b0c1!important;width:24px!important;border:none!important}

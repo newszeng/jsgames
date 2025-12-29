@@ -1,0 +1,71 @@
+/* SpellBee Theme Colors */
+
+/* Background Colors */
+.spellbee-bg {
+    background-color: #F59E0B;
+}
+
+.spellbee-bg-dark {
+    background-color: #D97706;
+}
+
+.spellbee-bg-light {
+    background-color: #FFFBEB;
+}
+
+.spellbee-bg-light-2 {
+    background-color: #FEF3C7;
+}
+
+/* Text Colors */
+.spellbee-text {
+    color: #F59E0B;
+}
+
+.spellbee-text-dark {
+    color: #D97706;
+}
+
+.spellbee-text-deep {
+    color: #78350F;
+}
+
+/* Border Colors */
+.spellbee-border {
+    border-color: #FDE68A;
+}
+
+.spellbee-border-hover {
+    border-color: #FCD34D;
+}
+
+/* Hover States */
+.spellbee-hover-bg:hover {
+    background-color: #F59E0B;
+}
+
+.spellbee-hover-bg-light:hover {
+    background-color: #FFFBEB;
+}
+
+.spellbee-hover-text:hover {
+    color: #F59E0B;
+}
+
+.spellbee-hover-text-dark:hover {
+    color: #D97706;
+}
+
+.spellbee-hover-border:hover {
+    border-color: #FCD34D;
+}
+
+/* Gradient Colors */
+.spellbee-gradient-light {
+    background: linear-gradient(to bottom left, #FEF3C7, transparent);
+}
+
+/* Group Hover Text */
+.group:hover .spellbee-group-hover-text {
+    color: #D97706;
+}

@@ -97,7 +97,7 @@
                 <!-- Language selector -->
                 <div class="relative">
                     <button id="languageButton"
-                        class="text-gray-600 squares-text-hover transition p-1 flex items-center gap-2">
+                        class="text-gray-600 brand-text-hover transition p-1 flex items-center gap-2">
                         <i class="fa-solid fa-globe text-lg sm:text-xl"></i>
                         <span id="currentLanguage" class="text-sm font-medium hidden sm:inline">{{
                             current_lang_name|default('English') }}</span>
@@ -105,7 +105,7 @@
                     <div id="languageDropdown" class="language-dropdown hidden">
                         {% for lang_code, lang_name in available_languages %}
                         <a href="{{ get_language_url(lang_code) }}"
-                            class="flex items-center px-3 py-2 text-sm text-gray-700 squares-bg-hover hover:text-white transition-colors{% if lang_code == current_lang %} squares-bg-light squares-text{% endif %}">
+                            class="flex items-center px-3 py-2 text-sm text-gray-700 brand-bg-hover hover:text-white transition-colors{% if lang_code == current_lang %} brand-bg-light brand-text{% endif %}">
                             <span class="w-6 text-center mr-2">{{ lang_code|upper }}</span>
                             <span>{{ lang_name }}</span>
                         </a>
@@ -114,12 +114,12 @@
                 </div>
 
                 <!-- Help button -->
-                <button id="helpButton" class="text-gray-600 squares-text-hover transition p-1" title="How to play">
+                <button id="helpButton" class="text-gray-600 brand-text-hover transition p-1" title="How to play">
                     <i class="fa-solid fa-circle-question text-lg sm:text-xl"></i>
                 </button>
 
                 <!-- Settings button -->
-                <button id="settingsButton" class="text-gray-600 squares-text-hover transition p-1" title="Settings">
+                <button id="settingsButton" class="text-gray-600 brand-text-hover transition p-1" title="Settings">
                     <i class="fa-solid fa-gear text-lg sm:text-xl"></i>
                 </button>
             </nav>
@@ -131,7 +131,8 @@
 
         <!-- Game Area -->
         <section
-            class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10 lg:mb-12 border squares-border">
+            class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-8 sm:mb-10 lg:mb-12 border brand-border">
+            <iframe id="gameFrame" src="/static/squares.cv/game/" style="width: 100%; border: none; display: block; overflow: hidden;" title="Squares Game"></iframe>
             <noscript>
                 <div class="supports_error">
                     <div class="rounded-xl border border-amber-200 bg-amber-50 text-amber-900 px-4 py-4 text-sm sm:text-base text-center">
@@ -140,7 +141,7 @@
                     </div>
                 </div>
             </noscript>
-            <iframe id="gameFrame" src="/static/{{ domain }}/game/" style="width: 100%; border: none; display: block; overflow: hidden;" title="Squares Game" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            
         </section>
 
         <!-- Other Games -->
@@ -156,8 +157,8 @@
         <section class="mb-8 sm:mb-10 lg:mb-12">
             <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
                 <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                    <div class="w-8 h-8 sm:w-10 sm:h-10 squares-bg-light rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-star squares-text text-sm sm:text-base"></i>
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg-light rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-star brand-text text-sm sm:text-base"></i>
                     </div>
                     <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
                         __('intro.title')|default(site_name ~ ': Spelling Bee Game') }}</h2>
@@ -174,7 +175,7 @@
         <!-- How to Play Section -->
         <section class="mb-8 sm:mb-10 lg:mb-12">
             <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div class="w-8 h-8 sm:w-10 sm:h-10 squares-bg rounded-full flex items-center justify-center">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg rounded-full flex items-center justify-center">
                     <i class="fa-solid fa-book-open text-white text-sm sm:text-base"></i>
                 </div>
                 <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
@@ -186,7 +187,7 @@
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6">
                     <div class="flex items-start gap-4 sm:gap-6 mb-4">
                         <div
-                            class="w-10 h-10 sm:w-12 sm:h-12 squares-bg rounded-full flex items-center justify-center flex-shrink-0">
+                            class="w-10 h-10 sm:w-12 sm:h-12 brand-bg rounded-full flex items-center justify-center flex-shrink-0">
                             <span class="text-white font-bold text-lg sm:text-xl">{{ loop.index }}</span>
                         </div>
                         <div class="flex-1">
@@ -208,7 +209,7 @@
         <!-- FAQ Section -->
         <section class="mb-8 sm:mb-10 lg:mb-12">
             <div class="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div class="w-8 h-8 sm:w-10 sm:h-10 squares-bg rounded-full flex items-center justify-center">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 brand-bg rounded-full flex items-center justify-center">
                     <i class="fa-solid fa-circle-question text-white text-sm sm:text-base"></i>
                 </div>
                 <h2 class="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-800">{{
@@ -238,7 +239,7 @@
 
         <!-- About Section -->
         <section class="mb-8 sm:mb-10 lg:mb-12">
-            <div class="squares-bg rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-white">
+            <div class="brand-bg rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 text-white">
                 <div class="flex flex-col gap-6 items-center">
                     <div>
                         <div class="flex gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -282,18 +283,18 @@
                 </div>
                 <div
                     class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-gray-500 text-xs sm:text-sm sm:flex-1">
-                    <a href="/privacy" class="squares-text-hover transition">Privacy Policy</a>
-                    <a href="/terms" class="squares-text-hover transition">Terms of Service</a>
-                    <a href="mailto:contact@{{ domain }}" class="squares-text-hover transition">Contact</a>
+                    <a href="/privacy" class="brand-text-hover transition">Privacy Policy</a>
+                    <a href="/terms" class="brand-text-hover transition">Terms of Service</a>
+                    <a href="mailto:contact@{{ domain }}" class="brand-text-hover transition">Contact</a>
                 </div>
                 <div class="flex items-center gap-3 sm:gap-4 sm:flex-1 sm:justify-end">
-                    <a href="#" class="text-gray-400 squares-text-hover transition p-1" aria-label="Twitter">
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Twitter">
                         <i class="fa-brands fa-twitter text-lg sm:text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 squares-text-hover transition p-1" aria-label="Facebook">
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Facebook">
                         <i class="fa-brands fa-facebook text-lg sm:text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 squares-text-hover transition p-1" aria-label="Instagram">
+                    <a href="#" class="text-gray-400 brand-text-hover transition p-1" aria-label="Instagram">
                         <i class="fa-brands fa-instagram text-lg sm:text-xl"></i>
                     </a>
                 </div>

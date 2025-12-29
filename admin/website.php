@@ -216,6 +216,11 @@ function copyGameFiles($domain, $type) {
     if ($type !== 'wordle') {
         return;
     }
+
+    $normalizeForMatch = function($value) {
+        $value = strtolower((string)$value);
+        return preg_replace('/[^a-z0-9]+/', '', $value);
+    };
     
     // 在gameFile目录中查找匹配的游戏文件夹
     $gameFileDir = "../gameFile";
@@ -225,6 +230,8 @@ function copyGameFiles($domain, $type) {
     
     $gameFolders = scandir($gameFileDir);
     $matchedFolder = null;
+
+    $normalizedDomain = $normalizeForMatch($domain);
     
     foreach ($gameFolders as $folder) {
         if ($folder == '.' || $folder == '..' || !is_dir("{$gameFileDir}/{$folder}")) {
@@ -233,9 +240,11 @@ function copyGameFiles($domain, $type) {
         
         // 提取文件夹名中的游戏名称（去掉数字前缀和下划线）
         $folderGameName = preg_replace('/^\d+_/', '', $folder);
-        
-        // 不区分大小写比较，匹配域名中的游戏名称
-        if (stripos($domain, $folderGameName) !== false) {
+
+        $normalizedFolderGameName = $normalizeForMatch($folderGameName);
+
+        // 不区分大小写比较，匹配域名中的游戏名称（忽略空格/符号差异）
+        if ($normalizedFolderGameName !== '' && strpos($normalizedDomain, $normalizedFolderGameName) !== false) {
             $matchedFolder = $folder;
             break;
         }

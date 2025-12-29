@@ -1,0 +1,40 @@
+{
+    "routes": {
+        "/": {
+            "type": "home",
+            "template": "home.php",
+            "title": ""
+        },
+        "/contact": {
+            "type": "static",
+            "template": "static.php",
+            "page": "contact",
+            "title": "Contact Us - Birdle"
+        },
+        "/privacy": {
+            "type": "static",
+            "template": "static.php",
+            "page": "privacy",
+            "title": "Privacy Policy - Birdle"
+        },
+        "/terms": {
+            "type": "static",
+            "template": "static.php",
+            "page": "terms",
+            "title": "Terms of Service - Birdle"
+        },
+        "/dmca": {
+            "type": "static",
+            "template": "static.php",
+            "page": "dmca",
+            "title": "DMCA Policy - Birdle"
+        }
+    },
+    "redirects": {},
+    "default_lang": "en",
+    "languages": ["en"],
+    "404_page": {
+        "template": "404.php",
+        "title": "Page Not Found - Birdle"
+    }
+}

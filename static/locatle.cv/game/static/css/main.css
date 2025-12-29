@@ -1,0 +1,241 @@
+﻿@import url('inter.css');
+
+:root {
+    --border-size: 2px;
+    --border-color: #8e8e8e;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
+body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 5.5em;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0.5em;
+    padding-top: 0;
+}
+
+footer {
+    display: flex;
+    margin: auto auto 0 auto;
+    padding: 1.2em;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer span {
+    display: inline;
+    vertical-align: super;
+    margin-right: 0.2em;
+}
+
+.mapillary {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+    margin-top: -0.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.hint {
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+
+#picture-frame {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+}
+
+#picture {
+    flex-grow: 1;
+    width: 0;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: -10px;
+}
+
+#zoom-buttons {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+}
+
+.results {
+    border: var(--border-size) solid var(--border-color);
+    border-top: 0;
+    border-left: 0;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.result-row {
+    display: grid;
+    grid-template-columns: 3fr 1.25fr;
+}
+
+.result-row:first-child,
+.result-row:last-child {
+    margin: 0;
+}
+
+.result-row>span {
+    display: inline-block;
+    padding: 0.4em;
+    border: var(--border-size) solid var(--border-color);
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.guess-area,
+.end-area {
+    display: flex;
+    flex-direction: row;
+}
+
+.end-area>.text {
+    width: 100%;
+    margin: 0;
+    line-height: 1.5em;
+    font-weight: 450;
+}
+
+.end-text {
+    font-weight: 450;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+#input {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.4em;
+    box-sizing: border-box;
+    border: var(--border-size) solid var(--border-color);
+}
+
+#input:focus,
+button:focus {
+    outline: var(--border-size) solid #5e92f3;
+    outline-offset: calc(-1 * var(--border-size));
+}
+
+button {
+    position: relative;
+    background-color: #43a047;
+    border: var(--border-size) solid var(--border-color);
+    padding: 0.4em 0.8em;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: .1s ease background-color;
+}
+
+.zoom-button {
+    background-color: white;
+    display: flex;
+    padding: 0.8em;
+
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.25em;
+    color: black;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 5px;
+}
+
+.zoom-button:hover {
+    background-color: #d1d1d1;
+}
+
+.zoom-button:disabled {
+    background-color: #e0e0e0;
+    color: #8e8e8e;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+#guess-button {
+    border-left: 0;
+}
+
+button:hover {
+    background-color: #00701a;
+}
+
+#suggestions {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#suggestions .entry {
+    display: block;
+    background-color: #eeeeee;
+    padding: 0.4em;
+    margin-bottom: calc(-1 * var(--border-size));
+    border: var(--border-size) solid var(--border-color);
+    cursor: pointer;
+}
+
+#suggestions .entry.selected,
+#suggestions .entry:hover {
+    background-color: #90caf9;
+}
+
+.toast {
+    position: fixed;
+    padding: 0.8em;
+    border-radius: 12px;
+    top: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #424242;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: 0.3s ease opacity;
+
+    box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.55);
+}
+
+.full-opacity {
+    opacity: 1;
+}
